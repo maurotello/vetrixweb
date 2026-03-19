@@ -10,6 +10,13 @@
             margin: 0;
             overflow-x: hidden;
         }
+
+        main {
+            min-height: 100vh;
+            /* O un valor fijo como 800px */
+            contain: paint;
+            /* Esto le dice al navegador que no permita que el contenido "salte" fuera */
+        }
     </style>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
@@ -202,477 +209,552 @@
                         </p>
                     </div>
                     <div
-                        class="relative w-full rounded-[2rem] overflow-hidden group shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] border border-slate-100 p-2 bg-white">
-                        <img src="../assets/img/diseno-web-seo-estrategia.avif"
+                        class="relative w-full aspect-square rounded-[2rem] overflow-hidden group shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] hover:shadow-[0_30px_60px_-15px_rgba(37,99,235,0.15)] transition-all duration-500 border border-slate-100 p-2 md:p-3 bg-white">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-tr from-blue-600/5 to-[#00f2b4]/10 rounded-[2rem] pointer-events-none transition-all duration-500 group-hover:opacity-100 opacity-50">
+                        </div>
+
+                        <img src="./assets/img/diseno-web-seo-estrategia.avif"
                             alt="Estratégia de crescimento digital e design web profissional para superar a concorrência online"
                             width="640" height="640" fetchpriority="high" loading="eager" decoding="sync"
-                            class="w-full h-auto object-cover rounded-3xl group-hover:scale-[1.02] filter group-hover:contrast-105 transition-all duration-700">
+                            class="w-full h-full object-cover rounded-3xl group-hover:scale-[1.02] filter group-hover:contrast-105 transition-all duration-700">
                     </div>
                 </div>
-        <section class="px-6 lg:px-20 py-16 md:py-20 relative overflow-hidden bg-[#0A1116]" id="sintomas">
-            <!-- Sombra de gradiente de fundo sutil -->
-            <div class="absolute inset-0 pointer-events-none"
-                style="background: radial-gradient(circle at top left, rgba(0, 242, 180, 0.08) 0%, transparent 40%), radial-gradient(circle at bottom right, rgba(0, 242, 180, 0.08) 0%, transparent 40%);">
-            </div>
-            <h2 class="sr-only">Problemas comuns em estratégias de Design Web e SEO Local</h2>
-            <div class="max-w-5xl mx-auto relative z-10">
-                <h3 class="text-white text-3xl md:text-4xl font-bold text-center mb-16 tracking-tight">Sintomas de uma
-                    Estrategia Obsoleta</h3>
-
-                <div class="grid md:grid-cols-2 gap-6">
-                    <!-- Card 1 -->
-                    <div
-                        class="relative bg-[#1A2228] border border-[#2A343D] rounded-[1.5rem] p-8 hover:bg-[#202930] transition-all group overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.3)]">
-                        <!-- Top/Bottom Glow Effects -->
-                        <div
-                            class="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-[#00f2b4] to-transparent opacity-70">
-                        </div>
-                        <div
-                            class="absolute top-0 left-1/2 -translate-x-1/2 w-1/4 h-[4px] bg-[#00f2b4] blur-[8px] opacity-40">
-                        </div>
-                        <div
-                            class="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-[#00f2b4] to-transparent opacity-70">
-                        </div>
-
-                        <div class="flex items-center gap-5 mb-4 relative">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
-                                fill="none" stroke="#00f2b4" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="shrink-0">
-                                <path d="M9.88 9.88a3 3 0 1 0 4.24 4.24" />
-                                <path
-                                    d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68" />
-                                <path d="M6.61 6.61A13.52 13.52 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61" />
-                                <line x1="2" y1="2" x2="22" y2="22" />
-                            </svg>
-                            <h4 class="text-white text-2xl font-bold">Invisibilidade no Google</h4>
-                        </div>
-                        <p class="text-slate-300 text-base leading-relaxed hidden md:block lg:block">
-                            Se os seus clientes procurarem os seus serviços no Google Maps e não o encontrarem nos primeiros
-                            resultados, está a oferecer vendas à sua concorrência a cada hora.
-                        </p>
-                        <p class="text-slate-300 text-sm leading-relaxed block md:hidden lg:hidden">
-                            Se os seus clientes procurarem os seus serviços no Google Maps e não o encontrarem nos primeiros
-                            resultados, está a oferecer vendas à sua concorrência a cada hora.
-                        </p>
+                <section class="px-6 lg:px-20 py-16 md:py-20 relative overflow-hidden bg-[#0A1116]" id="sintomas">
+                    <!-- Sombra de gradiente de fundo sutil -->
+                    <div class="absolute inset-0 pointer-events-none"
+                        style="background: radial-gradient(circle at top left, rgba(0, 242, 180, 0.08) 0%, transparent 40%), radial-gradient(circle at bottom right, rgba(0, 242, 180, 0.08) 0%, transparent 40%);">
                     </div>
+                    <h2 class="sr-only">Problemas comuns em estratégias de Design Web e SEO Local</h2>
+                    <div class="max-w-5xl mx-auto relative z-10">
+                        <h3 class="text-white text-3xl md:text-4xl font-bold text-center mb-16 tracking-tight">Sintomas
+                            de uma
+                            Estrategia Obsoleta</h3>
 
-                    <!-- Card 2 -->
-                    <div
-                        class="relative bg-[#1A2228] border border-[#2A343D] rounded-[1.5rem] p-8 hover:bg-[#202930] transition-all group overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.3)]">
-                        <!-- Top/Bottom Glow Effects -->
-                        <div
-                            class="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-[#00f2b4] to-transparent opacity-70">
-                        </div>
-                        <div
-                            class="absolute top-0 left-1/2 -translate-x-1/2 w-1/4 h-[4px] bg-[#00f2b4] blur-[8px] opacity-40">
-                        </div>
-                        <div
-                            class="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-[#00f2b4] to-transparent opacity-70">
-                        </div>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <!-- Card 1 -->
+                            <div
+                                class="relative bg-[#1A2228] border border-[#2A343D] rounded-[1.5rem] p-8 hover:bg-[#202930] transition-all group overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.3)]">
+                                <!-- Top/Bottom Glow Effects -->
+                                <div
+                                    class="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-[#00f2b4] to-transparent opacity-70">
+                                </div>
+                                <div
+                                    class="absolute top-0 left-1/2 -translate-x-1/2 w-1/4 h-[4px] bg-[#00f2b4] blur-[8px] opacity-40">
+                                </div>
+                                <div
+                                    class="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-[#00f2b4] to-transparent opacity-70">
+                                </div>
 
-                        <div class="flex items-center gap-5 mb-4 relative">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
-                                fill="none" stroke="#00f2b4" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="shrink-0 animate-spin-slow">
-                                <path d="M21 12a9 9 0 1 1-6.219-8.56" />
-                            </svg>
-                            <h4 class="text-white text-2xl font-bold">Site "Obsoleto"</h4>
-                        </div>
-                        <p class="text-slate-300 text-base leading-relaxed hidden md:block lg:block">
-                            Um site com <span class="text-[#00f2b4]/90 font-medium">baixo desempenho técnico</span> ou que
-                            não funciona bem no telemóvel afasta 70% dos utilizadores. Não é estética, é perda de autoridade.
-                        </p>
-                        <p class="text-slate-300 text-sm leading-relaxed block md:hidden lg:hidden">
-                            Um site com <span class="text-[#00f2b4]/90 font-medium">baixo desempenho técnico</span> o que
-                            não funciona bem no telemóvel afasta 70% dos utilizadores. Não é estética, é perda de autoridade.
-                        </p>
-                    </div>
+                                <div class="flex items-center gap-5 mb-4 relative">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
+                                        fill="none" stroke="#00f2b4" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="shrink-0">
+                                        <path d="M9.88 9.88a3 3 0 1 0 4.24 4.24" />
+                                        <path
+                                            d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68" />
+                                        <path
+                                            d="M6.61 6.61A13.52 13.52 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61" />
+                                        <line x1="2" y1="2" x2="22" y2="22" />
+                                    </svg>
+                                    <h4 class="text-white text-2xl font-bold">Invisibilidade no Google</h4>
+                                </div>
+                                <p class="text-slate-300 text-base leading-relaxed hidden md:block lg:block">
+                                    Se os seus clientes procurarem os seus serviços no Google Maps e não o encontrarem
+                                    nos primeiros
+                                    resultados, está a oferecer vendas à sua concorrência a cada hora.
+                                </p>
+                                <p class="text-slate-300 text-sm leading-relaxed block md:hidden lg:hidden">
+                                    Se os seus clientes procurarem os seus serviços no Google Maps e não o encontrarem
+                                    nos primeiros
+                                    resultados, está a oferecer vendas à sua concorrência a cada hora.
+                                </p>
+                            </div>
 
-                    <!-- Card 3 -->
-                    <div
-                        class="relative bg-[#1A2228] border border-[#2A343D] rounded-[1.5rem] p-8 hover:bg-[#202930] transition-all group overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.3)]">
-                        <!-- Top/Bottom Glow Effects -->
-                        <div
-                            class="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-[#00f2b4] to-transparent opacity-70">
-                        </div>
-                        <div
-                            class="absolute top-0 left-1/2 -translate-x-1/2 w-1/4 h-[4px] bg-[#00f2b4] blur-[8px] opacity-40">
-                        </div>
-                        <div
-                            class="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-[#00f2b4] to-transparent opacity-70">
-                        </div>
+                            <!-- Card 2 -->
+                            <div
+                                class="relative bg-[#1A2228] border border-[#2A343D] rounded-[1.5rem] p-8 hover:bg-[#202930] transition-all group overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.3)]">
+                                <!-- Top/Bottom Glow Effects -->
+                                <div
+                                    class="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-[#00f2b4] to-transparent opacity-70">
+                                </div>
+                                <div
+                                    class="absolute top-0 left-1/2 -translate-x-1/2 w-1/4 h-[4px] bg-[#00f2b4] blur-[8px] opacity-40">
+                                </div>
+                                <div
+                                    class="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-[#00f2b4] to-transparent opacity-70">
+                                </div>
 
-                        <div class="flex items-center gap-5 mb-4 relative">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
-                                fill="none" stroke="#00f2b4" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="shrink-0">
-                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-                                <circle cx="9" cy="7" r="4" />
-                                <line x1="17" y1="8" x2="23" y2="14" />
-                                <line x1="23" y1="8" x2="17" y2="14" />
-                            </svg>
-                            <h4 class="text-white text-2xl font-bold">Fuga de Leads</h4>
-                        </div>
-                        <p class="text-slate-300 text-base leading-relaxed hidden md:block lg:block">
-                            O seu site recebe visitas mas ninguém escreve. Sem um Sistema claro de Conversão, o seu site 
-                            é um gasto passivo em vez de uma máquina de vendas.
-                        </p>
-                        <p class="text-slate-300 text-sm leading-relaxed block md:hidden lg:hidden">
-                            O seu site recebe visitas mas ninguém escreve. Sem um Sistema claro de Conversão, o seu site 
-                            é um gasto passivo em vez de uma máquina de vendas.
-                        </p>
-                    </div>
+                                <div class="flex items-center gap-5 mb-4 relative">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
+                                        fill="none" stroke="#00f2b4" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="shrink-0 animate-spin-slow">
+                                        <path d="M21 12a9 9 0 1 1-6.219-8.56" />
+                                    </svg>
+                                    <h4 class="text-white text-2xl font-bold">Site "Obsoleto"</h4>
+                                </div>
+                                <p class="text-slate-300 text-base leading-relaxed hidden md:block lg:block">
+                                    Um site com <span class="text-[#00f2b4]/90 font-medium">baixo desempenho
+                                        técnico</span> ou que
+                                    não funciona bem no telemóvel afasta 70% dos utilizadores. Não é estética, é perda
+                                    de autoridade.
+                                </p>
+                                <p class="text-slate-300 text-sm leading-relaxed block md:hidden lg:hidden">
+                                    Um site com <span class="text-[#00f2b4]/90 font-medium">baixo desempenho
+                                        técnico</span> o que
+                                    não funciona bem no telemóvel afasta 70% dos utilizadores. Não é estética, é perda
+                                    de autoridade.
+                                </p>
+                            </div>
 
-                    <!-- Card 4 -->
-                    <div
-                        class="relative bg-[#1A2228] border border-[#2A343D] rounded-[1.5rem] p-8 hover:bg-[#202930] transition-all group overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.3)]">
-                        <!-- Top/Bottom Glow Effects -->
-                        <div
-                            class="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-[#00f2b4] to-transparent opacity-70">
-                        </div>
-                        <div
-                            class="absolute top-0 left-1/2 -translate-x-1/2 w-1/4 h-[4px] bg-[#00f2b4] blur-[8px] opacity-40">
-                        </div>
-                        <div
-                            class="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-[#00f2b4] to-transparent opacity-70">
-                        </div>
+                            <!-- Card 3 -->
+                            <div
+                                class="relative bg-[#1A2228] border border-[#2A343D] rounded-[1.5rem] p-8 hover:bg-[#202930] transition-all group overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.3)]">
+                                <!-- Top/Bottom Glow Effects -->
+                                <div
+                                    class="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-[#00f2b4] to-transparent opacity-70">
+                                </div>
+                                <div
+                                    class="absolute top-0 left-1/2 -translate-x-1/2 w-1/4 h-[4px] bg-[#00f2b4] blur-[8px] opacity-40">
+                                </div>
+                                <div
+                                    class="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-[#00f2b4] to-transparent opacity-70">
+                                </div>
 
-                        <div class="flex items-center gap-5 mb-4 relative">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
-                                fill="none" stroke="#00f2b4" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="shrink-0">
-                                <line x1="18" y1="20" x2="18" y2="10" />
-                                <line x1="12" y1="20" x2="12" y2="4" />
-                                <line x1="6" y1="20" x2="6" y2="14" />
-                            </svg>
-                            <h4 class="text-white text-2xl font-bold">Zero Dados Reais</h4>
-                        </div>
-                        <p class="text-slate-300 text-sm md:text-base leading-relaxed">
-                            Sabe de onde vêm os seus clientes? Sem métricas avançadas, está a navegar às cegas enquanto 
-                            a concorrência optimiza cada dólar investido.
-                        </p>
-                    </div>
-                </div>
+                                <div class="flex items-center gap-5 mb-4 relative">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
+                                        fill="none" stroke="#00f2b4" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="shrink-0">
+                                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                                        <circle cx="9" cy="7" r="4" />
+                                        <line x1="17" y1="8" x2="23" y2="14" />
+                                        <line x1="23" y1="8" x2="17" y2="14" />
+                                    </svg>
+                                    <h4 class="text-white text-2xl font-bold">Fuga de Leads</h4>
+                                </div>
+                                <p class="text-slate-300 text-base leading-relaxed hidden md:block lg:block">
+                                    O seu site recebe visitas mas ninguém escreve. Sem um Sistema claro de Conversão, o
+                                    seu site
+                                    é um gasto passivo em vez de uma máquina de vendas.
+                                </p>
+                                <p class="text-slate-300 text-sm leading-relaxed block md:hidden lg:hidden">
+                                    O seu site recebe visitas mas ninguém escreve. Sem um Sistema claro de Conversão, o
+                                    seu site
+                                    é um gasto passivo em vez de uma máquina de vendas.
+                                </p>
+                            </div>
 
-                <div class="mt-16 flex flex-col md:flex-row items-center justify-center gap-4">
-                    <p class="text-slate-200 text-lg">O seu negócio sofre de algum destes pontos?</p>
-                    <a href="https://wa.me/542920538998" target="_blank"
-                        class="flex items-center gap-3 px-6 py-3 rounded-full bg-[#00f2b4] text-[#0A1116] font-bold shadow-[0_0_15px_rgba(0,242,180,0.4)] hover:shadow-[0_0_25px_rgba(0,242,180,0.6)] hover:scale-105 transition-all group">
-                        Solicite o seu diagnóstico
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
-                            class="transition-transform group-hover:translate-x-1">
-                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                            <polyline points="12 5 19 12 12 19"></polyline>
-                    </a>
-                </div>
-            </div>
-        </section>
+                            <!-- Card 4 -->
+                            <div
+                                class="relative bg-[#1A2228] border border-[#2A343D] rounded-[1.5rem] p-8 hover:bg-[#202930] transition-all group overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.3)]">
+                                <!-- Top/Bottom Glow Effects -->
+                                <div
+                                    class="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-[#00f2b4] to-transparent opacity-70">
+                                </div>
+                                <div
+                                    class="absolute top-0 left-1/2 -translate-x-1/2 w-1/4 h-[4px] bg-[#00f2b4] blur-[8px] opacity-40">
+                                </div>
+                                <div
+                                    class="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-[#00f2b4] to-transparent opacity-70">
+                                </div>
 
-        <section class="px-6 lg:px-20 py-16 md:py-20 bg-white text-slate-900 border-y border-slate-100" id="pilares">
-            <div class="max-w-4xl mx-auto text-center mb-20">
-                <p class="text-blue-600 text-sm font-bold uppercase tracking-[0.4em] mb-4">Serviços Estratégicos</p>
-                <h3 class="text-slate-900 text-3xl md:text-5xl font-black tracking-tight uppercase">COMO FAREMOS SEU
-                    NEGÓCIO CRESCER</h3>
-                <div class="w-20 h-1 bg-[#00f2b4] mx-auto mt-8"></div>
-            </div>
-            <div class="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto items-stretch">
-                <div
-                    class="p-10 bg-slate-50 border border-slate-300 rounded-2xl hover:border-blue-300 transition-all flex flex-col h-full group">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
-                        stroke="#2563eb" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-                        class="mb-6 group-hover:scale-110 transition-transform duration-500">
-                        <polyline points="16 18 22 12 16 6"></polyline>
-                        <polyline points="8 6 2 12 8 18"></polyline>
-                    </svg>
-                    <h4 class="text-slate-900 font-extrabold text-xl mb-4">Design e Desenvolvimento Web</h4>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-8 flex-grow">
-                        Arquiteturas web de <span class="font-bold text-slate-900">alta performance</span>. Criamos
-                        plataformas rápidas, seguras e otimizadas para uma experiência premium em qualquer dispositivo.
-                    </p>
-                    <div class="h-1 w-full bg-slate-200 rounded-full mt-auto">
-                        <div class="h-full w-[99%] bg-blue-600"></div>
-                    </div>
-                </div>
-                <div
-                    class="p-10 bg-slate-50 border border-slate-300 rounded-2xl hover:border-blue-300 transition-all flex flex-col h-full group">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
-                        stroke="#2563eb" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-                        class="mb-6 group-hover:scale-110 transition-transform duration-500">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <line x1="2" y1="12" x2="22" y2="12"></line>
-                        <path
-                            d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
-                        </path>
-                    </svg>
-                    <h4 class="text-slate-900 font-extrabold text-xl mb-4">Posicionamento SEO</h4>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-8 flex-grow">
-                        Dominamos os algoritmos do <span class="font-bold text-slate-900">Google e Google Maps</span>
-                        para que sua marca apareça exatamente onde seus clientes buscam.
-                    </p>
-                    <div class="h-1 w-full bg-slate-200 rounded-full mt-auto">
-                        <div class="h-full w-[94%] bg-blue-600"></div>
-                    </div>
-                </div>
-                <div
-                    class="p-10 bg-slate-50 border border-slate-300 rounded-2xl hover:border-blue-300 transition-all flex flex-col h-full group">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
-                        stroke="#2563eb" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-                        class="mb-6 group-hover:scale-110 transition-transform duration-500">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <path d="m14.31 8 5.74 9.94"></path>
-                        <path d="M9.69 8h11.48"></path>
-                        <path d="m7.38 12 5.74-9.94"></path>
-                        <path d="M9.69 16 3.95 6.06"></path>
-                        <path d="M14.31 16H2.83"></path>
-                        <path d="m16.62 12-5.74 9.94"></path>
-                    </svg>
-                    <h4 class="text-slate-900 font-extrabold text-xl mb-4">Conversão e Funis</h4>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-8 flex-grow">
-                        Desenhamos <span class="font-bold text-slate-900">sistemas de captação</span> otimizados para
-                        transformar tráfego frio em leads qualificados.
-                    </p>
-                    <div class="h-1 w-full bg-slate-200 rounded-full mt-auto">
-                        <div class="h-full w-[97%] bg-blue-600"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="px-6 lg:px-20 py-16 md:py-20 bg-[#0A1116]" id="proceso">
-            <div class="max-w-5xl mx-auto">
-                <div class="text-center mb-24">
-                    <p class="text-[#00f2b4] text-sm font-bold uppercase tracking-[0.4em] mb-4">Metodologia de Elite</p>
-                    <h3 class="text-white text-3xl md:text-5xl font-black tracking-tight">Quatro passos para o seu
-                        crescimento global</h3>
-                    <div class="w-20 h-1 bg-[#00f2b4] mx-auto mt-8"></div>
-                </div>
-                <div class="relative max-w-4xl mx-auto pl-8 md:pl-20 space-y-12">
-                    <div
-                        class="absolute top-0 bottom-0 left-0 md:left-10 w-[2px] bg-gradient-to-b from-[#00f2b4] to-transparent">
-                    </div>
-
-                    <div class="relative group">
-                        <div
-                            class="absolute -left-12 md:-left-14 top-2 w-8 h-8 md:w-10 md:h-10 bg-blue-600 text-white text-sm font-black rounded-full flex items-center justify-center">
-                            01</div>
-                        <div
-                            class="w-full bg-[#121A20] border border-[#1F2933] rounded-[1.5rem] p-6 md:p-8 flex flex-col md:flex-row items-center gap-6 group-hover:bg-[#162028] transition-all">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
-                                fill="none" stroke="#00f2b4" stroke-width="1.5" stroke-linecap="round"
-                                stroke-linejoin="round" class="shrink-0 transition-transform group-hover:scale-110 duration-500">
-                                <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                                <path d="M11 8v6m-3-3h6"></path>
-                            </svg>
-                            <div>
-                                <h4 class="text-white font-bold text-xl md:text-2xl mb-2">Diagnóstico Estratégico</h4>
-                                <p class="text-slate-400 text-sm md:text-base leading-relaxed">Análise exaustiva da sua
-                                    presença atual, estudo da concorrência internacional e deteção de nichos com
-                                    potencial de escalabilidade.</p>
+                                <div class="flex items-center gap-5 mb-4 relative">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
+                                        fill="none" stroke="#00f2b4" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="shrink-0">
+                                        <line x1="18" y1="20" x2="18" y2="10" />
+                                        <line x1="12" y1="20" x2="12" y2="4" />
+                                        <line x1="6" y1="20" x2="6" y2="14" />
+                                    </svg>
+                                    <h4 class="text-white text-2xl font-bold">Zero Dados Reais</h4>
+                                </div>
+                                <p class="text-slate-300 text-sm md:text-base leading-relaxed">
+                                    Sabe de onde vêm os seus clientes? Sem métricas avançadas, está a navegar às cegas
+                                    enquanto
+                                    a concorrência optimiza cada dólar investido.
+                                </p>
                             </div>
                         </div>
+
+                        <div class="mt-16 flex flex-col md:flex-row items-center justify-center gap-4">
+                            <p class="text-slate-200 text-lg">O seu negócio sofre de algum destes pontos?</p>
+                            <a href="https://wa.me/542920538998" target="_blank"
+                                class="flex items-center gap-3 px-6 py-3 rounded-full bg-[#00f2b4] text-[#0A1116] font-bold shadow-[0_0_15px_rgba(0,242,180,0.4)] hover:shadow-[0_0_25px_rgba(0,242,180,0.6)] hover:scale-105 transition-all group">
+                                Solicite o seu diagnóstico
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round" class="transition-transform group-hover:translate-x-1">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                            </a>
+                        </div>
                     </div>
-                    <div class="relative group">
+                </section>
+
+                <section class="px-6 lg:px-20 py-16 md:py-20 bg-white text-slate-900 border-y border-slate-100"
+                    id="pilares">
+                    <div class="max-w-4xl mx-auto text-center mb-20">
+                        <p class="text-blue-600 text-sm font-bold uppercase tracking-[0.4em] mb-4">Serviços Estratégicos
+                        </p>
+                        <h3 class="text-slate-900 text-3xl md:text-5xl font-black tracking-tight uppercase">COMO FAREMOS
+                            SEU
+                            NEGÓCIO CRESCER</h3>
+                        <div class="w-20 h-1 bg-[#00f2b4] mx-auto mt-8"></div>
+                    </div>
+                    <div class="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto items-stretch">
                         <div
-                            class="absolute -left-12 md:-left-14 top-2 w-8 h-8 md:w-10 md:h-10 bg-blue-600 text-white text-sm font-black rounded-full flex items-center justify-center">
-                            02</div>
-                        <div
-                            class="w-full bg-[#121A20] border border-[#1F2933] rounded-[1.5rem] p-6 md:p-8 flex flex-col md:flex-row items-center gap-6 group-hover:bg-[#162028] transition-all">
+                            class="p-10 bg-slate-50 border border-slate-300 rounded-2xl hover:border-blue-300 transition-all flex flex-col h-full group">
                             <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
-                                fill="none" stroke="#00f2b4" stroke-width="1.5" stroke-linecap="round"
-                                stroke-linejoin="round" class="shrink-0 transition-transform group-hover:scale-110 duration-500">
+                                fill="none" stroke="#2563eb" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="mb-6 group-hover:scale-110 transition-transform duration-500">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                            </svg>
+                            <h4 class="text-slate-900 font-extrabold text-xl mb-4">Design e Desenvolvimento Web</h4>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-8 flex-grow">
+                                Arquiteturas web de <span class="font-bold text-slate-900">alta performance</span>.
+                                Criamos
+                                plataformas rápidas, seguras e otimizadas para uma experiência premium em qualquer
+                                dispositivo.
+                            </p>
+                            <div class="h-1 w-full bg-slate-200 rounded-full mt-auto">
+                                <div class="h-full w-[99%] bg-blue-600"></div>
+                            </div>
+                        </div>
+                        <div
+                            class="p-10 bg-slate-50 border border-slate-300 rounded-2xl hover:border-blue-300 transition-all flex flex-col h-full group">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
+                                fill="none" stroke="#2563eb" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="mb-6 group-hover:scale-110 transition-transform duration-500">
                                 <circle cx="12" cy="12" r="10"></circle>
-                                <circle cx="12" cy="12" r="6"></circle>
-                                <circle cx="12" cy="12" r="2"></circle>
+                                <line x1="2" y1="12" x2="22" y2="12"></line>
+                                <path
+                                    d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                                </path>
                             </svg>
-                            <div>
-                                <h4 class="text-white font-bold text-xl md:text-2xl mb-2">Definição de Objetivos</h4>
-                                <p class="text-slate-400 text-sm md:text-base leading-relaxed">Alinhamento técnico com as
-                                    suas metas de negócio. Definimos o perfil do cliente ideal para garantir um ROI
-                                    sólido.</p>
+                            <h4 class="text-slate-900 font-extrabold text-xl mb-4">Posicionamento SEO</h4>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-8 flex-grow">
+                                Dominamos os algoritmos do <span class="font-bold text-slate-900">Google e Google
+                                    Maps</span>
+                                para que sua marca apareça exatamente onde seus clientes buscam.
+                            </p>
+                            <div class="h-1 w-full bg-slate-200 rounded-full mt-auto">
+                                <div class="h-full w-[94%] bg-blue-600"></div>
                             </div>
                         </div>
-                    </div>
-                    <div class="relative group">
                         <div
-                            class="absolute -left-12 md:-left-14 top-2 w-8 h-8 md:w-10 md:h-10 bg-blue-600 text-white text-sm font-black rounded-full flex items-center justify-center">
-                            03</div>
-                        <div
-                            class="w-full bg-[#121A20] border border-[#1F2933] rounded-[1.5rem] p-6 md:p-8 flex flex-col md:flex-row items-center gap-6 group-hover:bg-[#162028] transition-all">
+                            class="p-10 bg-slate-50 border border-slate-300 rounded-2xl hover:border-blue-300 transition-all flex flex-col h-full group">
                             <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
-                                fill="none" stroke="#00f2b4" stroke-width="1.5" stroke-linecap="round"
-                                stroke-linejoin="round" class="shrink-0 transition-transform group-hover:rotate-12 duration-500">
-                                <path
-                                    d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.71-2.13.71-2.13l-1.56-3.12s-1.29 0-2.15.71z">
-                                </path>
-                                <path
-                                    d="M15 15l-3.5 3.5s-.58-.58-.58-1.5c0-1.75 2-5.5 2-5.5s3.75 2 5.5 2c.92 0 1.5.58 1.5.58L15 15z">
-                                </path>
-                                <path d="M13 13l3.5-3.5"></path>
-                                <path
-                                    d="M12.5 12.5s2.5-1 4.5-5 2.5-6.5 2.5-6.5-2.5.5-6.5 2.5-5 4.5-5 4.5l4.5 4.5z">
-                                </path>
+                                fill="none" stroke="#2563eb" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="mb-6 group-hover:scale-110 transition-transform duration-500">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="m14.31 8 5.74 9.94"></path>
+                                <path d="M9.69 8h11.48"></path>
+                                <path d="m7.38 12 5.74-9.94"></path>
+                                <path d="M9.69 16 3.95 6.06"></path>
+                                <path d="M14.31 16H2.83"></path>
+                                <path d="m16.62 12-5.74 9.94"></path>
                             </svg>
-                            <div>
-                                <h4 class="text-white font-bold text-xl md:text-2xl mb-2">Ativação de Infraestrutura</h4>
-                                <p class="text-slate-400 text-sm md:text-base leading-relaxed">Implementação do framework
-                                    de autoridade digital e implantação de sistemas de captação de alto desempenho
-                                    desenhados para converter visitas em faturação.</p>
+                            <h4 class="text-slate-900 font-extrabold text-xl mb-4">Conversão e Funis</h4>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-8 flex-grow">
+                                Desenhamos <span class="font-bold text-slate-900">sistemas de captação</span> otimizados
+                                para
+                                transformar tráfego frio em leads qualificados.
+                            </p>
+                            <div class="h-1 w-full bg-slate-200 rounded-full mt-auto">
+                                <div class="h-full w-[97%] bg-blue-600"></div>
                             </div>
                         </div>
                     </div>
-                    <div class="relative group">
-                        <div
-                            class="absolute -left-12 md:-left-14 top-2 w-8 h-8 md:w-10 md:h-10 bg-blue-600 text-white text-sm font-black rounded-full flex items-center justify-center">
-                            04</div>
-                        <div
-                            class="w-full bg-[#121A20] border border-[#1F2933] rounded-[1.5rem] p-6 md:p-8 flex flex-col md:flex-row items-center gap-6 group-hover:bg-[#162028] transition-all">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
-                                fill="none" stroke="#00f2b4" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="shrink-0 transition-transform group-hover:scale-110 duration-500">
-                                <line x1="18" y1="20" x2="18" y2="10" />
-                                <line x1="12" y1="20" x2="12" y2="4" />
-                                <line x1="6" y1="20" x2="6" y2="14" />
-                            </svg>
-                            <div>
-                                <h4 class="text-white font-bold text-xl md:text-2xl mb-2">Optimização Contínua</h4>
-                                <p class="text-slate-400 text-sm md:text-base leading-relaxed">Auditoria constante de
-                                    métricas e evolução estratégica baseada em dados para manter a liderança no seu
-                                    mercado alvo.</p>
+                </section>
+
+                <section class="px-6 lg:px-20 py-16 md:py-20 bg-[#0A1116]" id="proceso">
+                    <div class="max-w-5xl mx-auto">
+                        <div class="text-center mb-24">
+                            <p class="text-[#00f2b4] text-sm font-bold uppercase tracking-[0.4em] mb-4">Metodologia de
+                                Elite</p>
+                            <h3 class="text-white text-3xl md:text-5xl font-black tracking-tight">Quatro passos para o
+                                seu
+                                crescimento global</h3>
+                            <div class="w-20 h-1 bg-[#00f2b4] mx-auto mt-8"></div>
+                        </div>
+                        <div class="relative max-w-4xl mx-auto pl-8 md:pl-20 space-y-12">
+                            <div
+                                class="absolute top-0 bottom-0 left-0 md:left-10 w-[2px] bg-gradient-to-b from-[#00f2b4] to-transparent">
+                            </div>
+
+                            <div class="relative group">
+                                <div
+                                    class="absolute -left-12 md:-left-14 top-2 w-8 h-8 md:w-10 md:h-10 bg-blue-600 text-white text-sm font-black rounded-full flex items-center justify-center">
+                                    01</div>
+                                <div
+                                    class="w-full bg-[#121A20] border border-[#1F2933] rounded-[1.5rem] p-6 md:p-8 flex flex-col md:flex-row items-center gap-6 group-hover:bg-[#162028] transition-all">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
+                                        fill="none" stroke="#00f2b4" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="shrink-0 transition-transform group-hover:scale-110 duration-500">
+                                        <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                        <path d="M11 8v6m-3-3h6"></path>
+                                    </svg>
+                                    <div>
+                                        <h4 class="text-white font-bold text-xl md:text-2xl mb-2">Diagnóstico
+                                            Estratégico</h4>
+                                        <p class="text-slate-400 text-sm md:text-base leading-relaxed">Análise exaustiva
+                                            da sua
+                                            presença atual, estudo da concorrência internacional e deteção de nichos com
+                                            potencial de escalabilidade.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="relative group">
+                                <div
+                                    class="absolute -left-12 md:-left-14 top-2 w-8 h-8 md:w-10 md:h-10 bg-blue-600 text-white text-sm font-black rounded-full flex items-center justify-center">
+                                    02</div>
+                                <div
+                                    class="w-full bg-[#121A20] border border-[#1F2933] rounded-[1.5rem] p-6 md:p-8 flex flex-col md:flex-row items-center gap-6 group-hover:bg-[#162028] transition-all">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
+                                        fill="none" stroke="#00f2b4" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="shrink-0 transition-transform group-hover:scale-110 duration-500">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <circle cx="12" cy="12" r="6"></circle>
+                                        <circle cx="12" cy="12" r="2"></circle>
+                                    </svg>
+                                    <div>
+                                        <h4 class="text-white font-bold text-xl md:text-2xl mb-2">Definição de Objetivos
+                                        </h4>
+                                        <p class="text-slate-400 text-sm md:text-base leading-relaxed">Alinhamento
+                                            técnico com as
+                                            suas metas de negócio. Definimos o perfil do cliente ideal para garantir um
+                                            ROI
+                                            sólido.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="relative group">
+                                <div
+                                    class="absolute -left-12 md:-left-14 top-2 w-8 h-8 md:w-10 md:h-10 bg-blue-600 text-white text-sm font-black rounded-full flex items-center justify-center">
+                                    03</div>
+                                <div
+                                    class="w-full bg-[#121A20] border border-[#1F2933] rounded-[1.5rem] p-6 md:p-8 flex flex-col md:flex-row items-center gap-6 group-hover:bg-[#162028] transition-all">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
+                                        fill="none" stroke="#00f2b4" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="shrink-0 transition-transform group-hover:rotate-12 duration-500">
+                                        <path
+                                            d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.71-2.13.71-2.13l-1.56-3.12s-1.29 0-2.15.71z">
+                                        </path>
+                                        <path
+                                            d="M15 15l-3.5 3.5s-.58-.58-.58-1.5c0-1.75 2-5.5 2-5.5s3.75 2 5.5 2c.92 0 1.5.58 1.5.58L15 15z">
+                                        </path>
+                                        <path d="M13 13l3.5-3.5"></path>
+                                        <path
+                                            d="M12.5 12.5s2.5-1 4.5-5 2.5-6.5 2.5-6.5-2.5.5-6.5 2.5-5 4.5-5 4.5l4.5 4.5z">
+                                        </path>
+                                    </svg>
+                                    <div>
+                                        <h4 class="text-white font-bold text-xl md:text-2xl mb-2">Ativação de
+                                            Infraestrutura</h4>
+                                        <p class="text-slate-400 text-sm md:text-base leading-relaxed">Implementação do
+                                            framework
+                                            de autoridade digital e implantação de sistemas de captação de alto
+                                            desempenho
+                                            desenhados para converter visitas em faturação.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="relative group">
+                                <div
+                                    class="absolute -left-12 md:-left-14 top-2 w-8 h-8 md:w-10 md:h-10 bg-blue-600 text-white text-sm font-black rounded-full flex items-center justify-center">
+                                    04</div>
+                                <div
+                                    class="w-full bg-[#121A20] border border-[#1F2933] rounded-[1.5rem] p-6 md:p-8 flex flex-col md:flex-row items-center gap-6 group-hover:bg-[#162028] transition-all">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
+                                        fill="none" stroke="#00f2b4" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="shrink-0 transition-transform group-hover:scale-110 duration-500">
+                                        <line x1="18" y1="20" x2="18" y2="10" />
+                                        <line x1="12" y1="20" x2="12" y2="4" />
+                                        <line x1="6" y1="20" x2="6" y2="14" />
+                                    </svg>
+                                    <div>
+                                        <h4 class="text-white font-bold text-xl md:text-2xl mb-2">Optimização Contínua
+                                        </h4>
+                                        <p class="text-slate-400 text-sm md:text-base leading-relaxed">Auditoria
+                                            constante de
+                                            métricas e evolução estratégica baseada em dados para manter a liderança no
+                                            seu
+                                            mercado alvo.</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        <section class="px-6 lg:px-20 pt-16 md:pt-20 pb-[34px] bg-slate-50 text-slate-900" id="roi">
-            <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
-                <div class="flex-1 space-y-8">
-                    <div>
-                        <p class="text-blue-600 text-sm font-bold uppercase tracking-[0.4em] mb-4">Estratégia de ROI & Conversão</p>
-                        <h3 class="text-slate-900 text-4xl lg:text-5xl font-black tracking-tight leading-tight">NÃO CRIAMOS APENAS SITES;<br><span class="text-blue-600">DESENHAMOS ACTIVOS FINANCEIROS</span></h3>
-                    </div>
-                    <p class="text-slate-600 text-lg leading-relaxed">
-                        A nossa abordagem foca-se na rentabilidade. Combinamos psicologia de consumo com tecnologia de ponta para garantir que cada visita tenha a máxima probabilidade de conversão.
-                    </p>
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
-                            <h4 class="font-bold text-slate-900 mb-2">Design de Luxo que Vende</h4>
-                            <p class="text-slate-500 text-sm">Arquitectura visual que transmite autoridade imediata e confiança premium.</p>
+                    <section class="px-6 lg:px-20 pt-16 md:pt-20 pb-[34px] bg-slate-50 text-slate-900" id="roi">
+                        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
+                            <div class="flex-1 space-y-8">
+                                <div>
+                                    <p class="text-blue-600 text-sm font-bold uppercase tracking-[0.4em] mb-4">
+                                        Estratégia de ROI & Conversão</p>
+                                    <h3
+                                        class="text-slate-900 text-4xl lg:text-5xl font-black tracking-tight leading-tight">
+                                        NÃO CRIAMOS APENAS SITES;<br><span class="text-blue-600">DESENHAMOS ACTIVOS
+                                            FINANCEIROS</span></h3>
+                                </div>
+                                <p class="text-slate-600 text-lg leading-relaxed">
+                                    A nossa abordagem foca-se na rentabilidade. Combinamos psicologia de consumo com
+                                    tecnologia de ponta para garantir que cada visita tenha a máxima probabilidade de
+                                    conversão.
+                                </p>
+                                <div class="grid md:grid-cols-2 gap-6">
+                                    <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
+                                        <h4 class="font-bold text-slate-900 mb-2">Design de Luxo que Vende</h4>
+                                        <p class="text-slate-500 text-sm">Arquitectura visual que transmite autoridade
+                                            imediata e confiança premium.</p>
+                                    </div>
+                                    <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
+                                        <h4 class="font-bold text-slate-900 mb-2">Tecnologia de Alta Performance</h4>
+                                        <p class="text-slate-500 text-sm">Velocidade extrema e segurança para evitar a
+                                            perda de leads qualificados.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex-1 relative">
+                                <div class="absolute -inset-4 bg-blue-600/5 rounded-[2.5rem] blur-2xl"></div>
+                                <img src="../assets/img/diseno-web-seo-estrategia.avif"
+                                    alt="Estratégia de Retorno sobre Investimento"
+                                    class="relative rounded-[2rem] shadow-2xl border border-white/50">
+                            </div>
                         </div>
-                        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
-                            <h4 class="font-bold text-slate-900 mb-2">Tecnologia de Alta Performance</h4>
-                            <p class="text-slate-500 text-sm">Velocidade extrema e segurança para evitar a perda de leads qualificados.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex-1 relative">
-                    <div class="absolute -inset-4 bg-blue-600/5 rounded-[2.5rem] blur-2xl"></div>
-                    <img src="../assets/img/diseno-web-seo-estrategia.avif" 
-                         alt="Estratégia de Retorno sobre Investimento"
-                         class="relative rounded-[2rem] shadow-2xl border border-white/50">
-                </div>
-            </div>
-        </section>
+                    </section>
 
-        <section class="px-6 lg:px-20 pt-[34px] pb-16 md:pb-20 bg-white" id="faq">
-            <div class="max-w-4xl mx-auto">
-                <h3 class="text-slate-900 text-3xl font-black mb-12 text-center uppercase tracking-tight">Perguntas Frequentes</h3>
-                <div class="space-y-4">
-                    <details class="group bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden transition-all">
-                        <summary class="flex items-center justify-between p-6 cursor-pointer list-none font-bold text-slate-900">
-                            Quanto tempo demora para ver resultados?
-                            <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
-                        </summary>
-                        <div class="px-6 pb-6 text-slate-600 leading-relaxed">
-                            A optimização técnica e o design têm impacto imediato na credibilidade da marca. Os ganhos em posicionamento e conversão começam a ser visíveis nas primeiras semanas após a implementação.
+                    <section class="px-6 lg:px-20 pt-[34px] pb-16 md:pb-20 bg-white" id="faq">
+                        <div class="max-w-4xl mx-auto">
+                            <h3 class="text-slate-900 text-3xl font-black mb-12 text-center uppercase tracking-tight">
+                                Perguntas Frequentes</h3>
+                            <div class="space-y-4">
+                                <details
+                                    class="group bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden transition-all">
+                                    <summary
+                                        class="flex items-center justify-between p-6 cursor-pointer list-none font-bold text-slate-900">
+                                        Quanto tempo demora para ver resultados?
+                                        <span
+                                            class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+                                    </summary>
+                                    <div class="px-6 pb-6 text-slate-600 leading-relaxed">
+                                        A optimização técnica e o design têm impacto imediato na credibilidade da marca.
+                                        Os ganhos em posicionamento e conversão começam a ser visíveis nas primeiras
+                                        semanas após a implementação.
+                                    </div>
+                                </details>
+                                <details
+                                    class="group bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden transition-all">
+                                    <summary
+                                        class="flex items-center justify-between p-6 cursor-pointer list-none font-bold text-slate-900">
+                                        Já tenho um site, por que preciso de outro?
+                                        <span
+                                            class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+                                    </summary>
+                                    <div class="px-6 pb-6 text-slate-600 leading-relaxed">
+                                        Se o seu site actual não gera leads qualificados de forma automática, ele é um
+                                        gasto passivo. Nós transformamos a sua presença digital num activo que trabalha
+                                        para o seu crescimento.
+                                    </div>
+                                </details>
+                                <details
+                                    class="group bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden transition-all">
+                                    <summary
+                                        class="flex items-center justify-between p-6 cursor-pointer list-none font-bold text-slate-900">
+                                        O Diagnóstico Estratégico tem custo?
+                                        <span
+                                            class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+                                    </summary>
+                                    <div class="px-6 pb-6 text-slate-600 leading-relaxed">
+                                        Não. O nosso diagnóstico inicial é gratuito e serve para detectar falhas na sua
+                                        estratégia actual e mostrar o potencial real de crescimento do seu negócio antes
+                                        de qualquer investimento.
+                                    </div>
+                                </details>
+                            </div>
                         </div>
-                    </details>
-                    <details class="group bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden transition-all">
-                        <summary class="flex items-center justify-between p-6 cursor-pointer list-none font-bold text-slate-900">
-                            Já tenho um site, por que preciso de outro?
-                            <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
-                        </summary>
-                        <div class="px-6 pb-6 text-slate-600 leading-relaxed">
-                            Se o seu site actual não gera leads qualificados de forma automática, ele é um gasto passivo. Nós transformamos a sua presença digital num activo que trabalha para o seu crescimento.
-                        </div>
-                    </details>
-                    <details class="group bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden transition-all">
-                        <summary class="flex items-center justify-between p-6 cursor-pointer list-none font-bold text-slate-900">
-                            O Diagnóstico Estratégico tem custo?
-                            <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
-                        </summary>
-                        <div class="px-6 pb-6 text-slate-600 leading-relaxed">
-                            Não. O nosso diagnóstico inicial é gratuito e serve para detectar falhas na sua estratégia actual e mostrar o potencial real de crescimento do seu negócio antes de qualquer investimento.
-                        </div>
-                    </details>
-                </div>
-            </div>
-        </section>
+                    </section>
 
-        <section class="px-6 lg:px-20 py-16 md:py-20 bg-[#0A1116] text-white text-center border-t border-white/5"
-            id="cta">
-            <div class="max-w-4xl mx-auto space-y-12">
-                <h3 class="text-4xl lg:text-6xl font-black tracking-tight leading-tight">
-                    Pronto para liderar seu mercado com uma <span class="text-neon-cyan">presença digital</span> de alto
-                    impacto?
-                </h3>
-                <div class="flex flex-col items-center gap-8">
-                    <a href="https://wa.me/542920538998" target="_blank"
-                        class="bg-matte-black border-2 border-accent-gold/50 text-white hover:bg-black hover:border-accent-gold px-12 py-6 rounded-xl text-xl md:text-2xl font-black transition-all glow-button flex items-center gap-4 group">
-                        Auditar minha Presença Digital <span
-                            class="material-symbols-outlined text-accent-gold group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">rocket_launch</span>
-                    </a>
-                </div>
-            </div>
-        </section>
+                    <section
+                        class="px-6 lg:px-20 py-16 md:py-20 bg-[#0A1116] text-white text-center border-t border-white/5"
+                        id="cta">
+                        <div class="max-w-4xl mx-auto space-y-12">
+                            <h3 class="text-4xl lg:text-6xl font-black tracking-tight leading-tight">
+                                Pronto para liderar seu mercado com uma <span class="text-neon-cyan">presença
+                                    digital</span> de alto
+                                impacto?
+                            </h3>
+                            <div class="flex flex-col items-center gap-8">
+                                <a href="https://wa.me/542920538998" target="_blank"
+                                    class="bg-matte-black border-2 border-accent-gold/50 text-white hover:bg-black hover:border-accent-gold px-12 py-6 rounded-xl text-xl md:text-2xl font-black transition-all glow-button flex items-center gap-4 group">
+                                    Auditar minha Presença Digital <span
+                                        class="material-symbols-outlined text-accent-gold group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">rocket_launch</span>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
 
-        <section class="px-6 lg:px-20 py-16 md:py-20 bg-white" id="contacto">
-            <div class="max-w-4xl mx-auto text-center mb-16">
-                <h2 class="text-blue-600 text-sm font-bold uppercase tracking-[0.4em] mb-4">Contato Direto</h2>
-                <h3 class="text-slate-900 text-4xl lg:text-5xl font-black tracking-tight">Vamos falar do seu negócio
-                </h3>
-                <div class="w-20 h-1 bg-[#00f2b4] mx-auto mt-8"></div>
-            </div>
-            <form action="../mailer.php" method="POST" id="contacto-form"
-                class="max-w-4xl mx-auto bg-slate-50 p-8 md:p-12 rounded-[2rem] border border-slate-300 shadow-sm">
-                <div class="grid md:grid-cols-2 gap-8 mb-8">
-                    <div>
-                        <label class="block text-xs font-bold text-slate-700 mb-2 uppercase">Nome Completo</label>
-                        <input type="text" name="nombre" id="nombre" required
-                            class="w-full bg-white border border-slate-200 rounded-xl px-6 py-4"
-                            placeholder="Ex: João Silva">
-                    </div>
-                    <div>
-                        <label class="block text-xs font-bold text-slate-700 mb-2 uppercase">E-mail</label>
-                        <input type="email" name="email" id="email" required
-                            class="w-full bg-white border border-slate-200 rounded-xl px-6 py-4"
-                            placeholder="joao@empresa.com">
-                    </div>
-                </div>
-                <div class="mb-8">
-                    <label class="block text-xs font-bold text-slate-700 mb-2 uppercase">Telefone (com código do
-                        país)</label>
-                    <input type="tel" name="telefono" id="telefono" required
-                        class="w-full bg-white border border-slate-200 rounded-xl px-6 py-4"
-                        placeholder="+55 11 91234 5678">
-                </div>
-                <div class="mb-10">
-                    <label class="block text-xs font-bold text-slate-700 mb-2 uppercase">Como podemos potencializar sua
-                        marca?</label>
-                    <textarea rows="4" name="mensaje" id="mensaje" required
-                        class="w-full bg-white border border-slate-200 rounded-xl px-6 py-4 resize-none"
-                        placeholder="Conte-nos seu desafio atual..."></textarea>
-                </div>
-                <button type="submit"
-                    class="w-full bg-blue-600 hover:bg-blue-700 text-white font-black text-xl py-6 rounded-xl transition-all flex items-center justify-center gap-3 group">
-                    Solicitar meu Diagnóstico Gratuito <span
-                        class="material-symbols-outlined group-hover:translate-x-1 transition-transform">send</span>
-                </button>
-                <p class="text-center text-[11px] text-slate-400 mt-8 font-bold uppercase">Seus dados serão tratados com
-                    estrita confidencialidade profissional.</p>
-                <div id="form-message" class="hidden mt-4 text-center text-sm font-bold p-4 rounded-lg"></div>
-            </form>
-        </section>
+                    <section class="px-6 lg:px-20 py-16 md:py-20 bg-white" id="contacto">
+                        <div class="max-w-4xl mx-auto text-center mb-16">
+                            <h2 class="text-blue-600 text-sm font-bold uppercase tracking-[0.4em] mb-4">Contato Direto
+                            </h2>
+                            <h3 class="text-slate-900 text-4xl lg:text-5xl font-black tracking-tight">Vamos falar do seu
+                                negócio
+                            </h3>
+                            <div class="w-20 h-1 bg-[#00f2b4] mx-auto mt-8"></div>
+                        </div>
+                        <form action="../mailer.php" method="POST" id="contacto-form"
+                            class="max-w-4xl mx-auto bg-slate-50 p-8 md:p-12 rounded-[2rem] border border-slate-300 shadow-sm">
+                            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 mb-2 uppercase">Nome
+                                        Completo</label>
+                                    <input type="text" name="nombre" id="nombre" required
+                                        class="w-full bg-white border border-slate-200 rounded-xl px-6 py-4"
+                                        placeholder="Ex: João Silva">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 mb-2 uppercase">E-mail</label>
+                                    <input type="email" name="email" id="email" required
+                                        class="w-full bg-white border border-slate-200 rounded-xl px-6 py-4"
+                                        placeholder="joao@empresa.com">
+                                </div>
+                            </div>
+                            <div class="mb-8">
+                                <label class="block text-xs font-bold text-slate-700 mb-2 uppercase">Telefone (com
+                                    código do
+                                    país)</label>
+                                <input type="tel" name="telefono" id="telefono" required
+                                    class="w-full bg-white border border-slate-200 rounded-xl px-6 py-4"
+                                    placeholder="+55 11 91234 5678">
+                            </div>
+                            <div class="mb-10">
+                                <label class="block text-xs font-bold text-slate-700 mb-2 uppercase">Como podemos
+                                    potencializar sua
+                                    marca?</label>
+                                <textarea rows="4" name="mensaje" id="mensaje" required
+                                    class="w-full bg-white border border-slate-200 rounded-xl px-6 py-4 resize-none"
+                                    placeholder="Conte-nos seu desafio atual..."></textarea>
+                            </div>
+                            <button type="submit"
+                                class="w-full bg-blue-600 hover:bg-blue-700 text-white font-black text-xl py-6 rounded-xl transition-all flex items-center justify-center gap-3 group">
+                                Solicitar meu Diagnóstico Gratuito <span
+                                    class="material-symbols-outlined group-hover:translate-x-1 transition-transform">send</span>
+                            </button>
+                            <p class="text-center text-[11px] text-slate-400 mt-8 font-bold uppercase">Seus dados serão
+                                tratados com
+                                estrita confidencialidade profissional.</p>
+                            <div id="form-message" class="hidden mt-4 text-center text-sm font-bold p-4 rounded-lg">
+                            </div>
+                        </form>
+                    </section>
     </main>
 
     <footer class="px-6 lg:px-20 py-16 hero-mesh border-t border-white/5">
@@ -724,7 +806,8 @@
                         <span class="material-symbols-outlined hover:text-white transition-colors">payments</span>
                         <span class="text-[10px] font-bold border border-slate-700 px-2 py-1 rounded">STRIPE</span>
                         <span class="text-[10px] font-bold border border-slate-700 px-2 py-1 rounded">CRYPTO</span>
-                        <span class="text-[10px] font-bold border border-slate-700 px-2 py-1 rounded">TRANSFERÊNCIA</span>
+                        <span
+                            class="text-[10px] font-bold border border-slate-700 px-2 py-1 rounded">TRANSFERÊNCIA</span>
                     </div>
                 </div>
             </div>

@@ -10,6 +10,13 @@
             margin: 0;
             overflow-x: hidden;
         }
+
+        main {
+            min-height: 100vh;
+            /* O un valor fijo como 800px */
+            contain: paint;
+            /* Esto le dice al navegador que no permita que el contenido "salte" fuera */
+        }
     </style>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
@@ -360,14 +367,15 @@
 
                     <!-- Columna Derecha: Imagen Ilustrativa -->
                     <div
-                        class="relative w-full rounded-[2rem] overflow-hidden group shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] hover:shadow-[0_30px_60px_-15px_rgba(37,99,235,0.15)] transition-all duration-500 border border-slate-100 p-2 md:p-3 bg-white">
+                        class="relative w-full aspect-square rounded-[2rem] overflow-hidden group shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] hover:shadow-[0_30px_60px_-15px_rgba(37,99,235,0.15)] transition-all duration-500 border border-slate-100 p-2 md:p-3 bg-white">
                         <div
                             class="absolute inset-0 bg-gradient-to-tr from-blue-600/5 to-[#00f2b4]/10 rounded-[2rem] pointer-events-none transition-all duration-500 group-hover:opacity-100 opacity-50">
                         </div>
+
                         <img src="./assets/img/diseno-web-seo-estrategia.avif"
                             alt="Estrategia de crecimiento digital y diseño web profesional para superar a la competencia online"
                             width="640" height="640" fetchpriority="high" loading="eager" decoding="sync"
-                            class="w-full h-auto object-cover rounded-3xl group-hover:scale-[1.02] filter group-hover:contrast-105 transition-all duration-700">
+                            class="w-full h-full object-cover rounded-3xl group-hover:scale-[1.02] filter group-hover:contrast-105 transition-all duration-700">
                     </div>
                 </div>
             </div>
