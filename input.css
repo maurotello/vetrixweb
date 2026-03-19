@@ -11,6 +11,7 @@
 }
 
 /* Fuente variable normal */
+/*
 @font-face {
     font-family: 'Inter';
     src: url('../fonts/InterVariable.woff2') format('woff2-variations');
@@ -26,9 +27,16 @@
     font-style: italic;
     font-display: swap;
 }
-
+    */
+/*
 body {
     font-family: 'Inter', sans-serif;
+}*/
+
+/* Borrá los @font-face de InterVariable */
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
 .hero-mesh {

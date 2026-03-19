@@ -31,15 +31,20 @@
     <link rel="alternate" hreflang="pt" href="https://vetrixweb.com/pt/" />
     <link rel="alternate" hreflang="x-default" href="https://vetrixweb.com/" />
 
-
+    <!--
     <link rel="preload" href="assets/fonts/InterVariable.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="assets/fonts/InterVariable-Italic.woff2" as="font" type="font/woff2"
-        crossorigin="anonymous">
+        crossorigin="anonymous">-->
 
     <link rel="preload" href="assets/css/main.v2.min.css" as="style" onload="this.rel='stylesheet'; this.onload=null;">
     <noscript>
         <link rel="stylesheet" href="assets/css/main.v2.min.css">
     </noscript>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 
     <!-- App Favicons -->
     <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
@@ -205,8 +210,15 @@
             <!-- Selector de Idioma -->
             <div class="hidden md:block relative group">
                 <button
-                    class="flex items-center gap-1.5 text-slate-400 hover:text-white transition-colors text-[10px] font-black uppercase tracking-[0.2em] px-3 py-2 rounded-lg border border-white/5 bg-white/5">
-                    <span class="material-symbols-outlined text-base text-[#00f2b4]">language</span>
+                    class="flex items-center gap-2 text-slate-400 hover:text-white transition-colors text-[10px] font-black uppercase tracking-[0.2em] px-4 py-2.5 rounded-lg border border-white/5 bg-white/5 group">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="#00f2b4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                        class="transition-transform group-hover:rotate-12">
+                        <circle cx="12" cy="12" r="10" />
+                        <line x1="2" y1="12" x2="22" y2="12" />
+                        <path
+                            d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                    </svg>
                     <span>IDIOMA</span>
                 </button>
                 <div
