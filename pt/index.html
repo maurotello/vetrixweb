@@ -142,22 +142,23 @@
                     </a>
                 </div>
             </div>
-            <div class="flex-1 w-full max-w-[650px] relative">
+            <div class="flex-1 w-full max-w-[650px] relative aspect-[1274/849]" id="inicio-imagen">
                 <picture>
                     <source type="image/avif" srcset="
-            ../assets/img/cover4-640.avif   640w,
-            ../assets/img/cover4-800.avif   800w,
+            ../assets/img/cover4-640.avif 640w,
+            ../assets/img/cover4-800.avif 800w,
             ../assets/img/cover4-1274.avif 1274w
-        " sizes="(max-width: 640px) 75vw, (max-width: 1024px) 80vw, 1274px">
+        " sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 650px">
 
                     <source type="image/webp" srcset="
-            ../assets/img/cover4-640.webp   640w,
-            ../assets/img/cover4-800.webp   800w,
+            ../assets/img/cover4-640.webp 640w,
+            ../assets/img/cover4-800.webp 800w,
             ../assets/img/cover4-1274.webp 1274w
-        " sizes="(max-width: 640px) 75vw, (max-width: 1024px) 80vw, 1274px">
+        " sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 650px">
 
                     <img src="../assets/img/cover4-1274.avif" width="1274" height="849" alt="Diseño Web Profesional"
-                        fetchpriority="high" decoding="async" loading="eager" class="w-full h-auto">
+                        fetchpriority="high" decoding="sync" loading="eager"
+                        class="w-full h-auto block shadow-2xl rounded-2xl">
                 </picture>
             </div>
         </section>
