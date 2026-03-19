@@ -43,7 +43,8 @@ body {
 
 /* Forzamos que el H1 tenga siempre el mismo espacio */
 h1 {
-    contain: layout;
-    min-height: 150px;
-    /* Ajustalo a lo que mide tu H1 en mobile */
+    /* Forzá la altura para que el navegador reserve el lugar antes de que llegue la fuente */
+    line-height: 1.1;
+    min-height: 3.3em;
+    /* Ajustá esto según cuántas líneas ocupe tu título */
 }
