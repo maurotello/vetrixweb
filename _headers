@@ -1,8 +1,31 @@
-/*
+# HTML — nunca cachear, siempre fresco
+/*.html
+  Cache-Control: no-cache, no-store, must-revalidate
+
+/
+  Cache-Control: no-cache, no-store, must-revalidate
+
+/en/
+  Cache-Control: no-cache, no-store, must-revalidate
+
+/pt/
+  Cache-Control: no-cache, no-store, must-revalidate
+
+# CSS y JS versionados — caché agresivo
+/assets/css/*
   Cache-Control: public, max-age=31536000, immutable
 
+/assets/js/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Imágenes — caché agresivo
 /assets/img/*
   Cache-Control: public, max-age=31536000, immutable
 
+# Fuentes — caché agresivo
 /assets/fonts/*
   Cache-Control: public, max-age=31536000, immutable
+
+# Webmanifest — caché moderado
+/site.webmanifest
+  Cache-Control: public, max-age=86400
