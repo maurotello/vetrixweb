@@ -11,6 +11,19 @@
             overflow-x: hidden;
         }
 
+        h1 {
+            line-height: 1.2;
+            /* Reservamos el espacio exacto que ocupa tu título en móvil */
+            min-height: 150px;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        /* El párrafo también con una base fija si es posible */
+        p {
+            min-height: 60px;
+        }
+
         main {
             min-height: 100vh;
             /* O un valor fijo como 800px */
@@ -160,7 +173,8 @@
                     </a>
                 </div>
             </div>
-            <div class="flex-1 w-full max-w-[650px] relative aspect-[1274/849]" id="inicio-imagen">
+            <div class="flex-1 w-full max-w-[650px] relative aspect-[1274/849] overflow-hidden bg-slate-900/10 rounded-2xl"
+                id="inicio-imagen">
                 <picture>
                     <source type="image/avif" srcset="
             ../assets/img/cover4-640.avif 640w,
@@ -174,9 +188,9 @@
             ../assets/img/cover4-1274.webp 1274w
         " sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 650px">
 
-                    <img src="../assets/img/cover4-1274.avif" width="1274" height="849" alt="Diseño Web Profesional"
+                    <img src="../assets/img/cover4-1274.avif" width="1274" height="849" alt="Design web profissional"
                         fetchpriority="high" decoding="sync" loading="eager"
-                        class="w-full h-auto block shadow-2xl rounded-2xl">
+                        class="w-full h-full object-cover block shadow-2xl rounded-2xl">
                 </picture>
             </div>
         </section>
