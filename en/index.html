@@ -2,6 +2,16 @@
 <html lang="en">
 
 <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <!-- AÑADIR justo después del <head> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload"
+        href="https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiJ-Ek-_EeA.woff2"
+        as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap&display=optional">
     <style>
         body {
             background-color: #05070a;
@@ -12,16 +22,8 @@
         }
 
         h1 {
-            line-height: 1.2;
-            /* Reservamos el espacio exacto que ocupa tu título en móvil */
-            min-height: 150px;
+            line-height: 1.1;
             margin-bottom: 1rem;
-            display: block;
-        }
-
-        /* El párrafo también con una base fija si es posible */
-        p {
-            min-height: 60px;
         }
 
         main {
@@ -31,8 +33,13 @@
             /* Esto le dice al navegador que no permita que el contenido "salte" fuera */
         }
     </style>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+
+    <link rel="preload" as="image" href="../assets/img/cover4-640.avif"
+        imagesrcset="../assets/img/cover4-640.avif 640w, ../assets/img/cover4-800.avif 800w, ../assets/img/cover4-1274.avif 1274w"
+        imagesizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 650px" fetchpriority="high">
+
+
     <meta name="google" content="notranslate">
     <title>Web Design Agency & International SEO | Vetrixweb</title>
     <meta name="description"
@@ -53,10 +60,6 @@
     <link rel="alternate" hreflang="pt" href="https://vetrixweb.com/pt/" />
     <link rel="alternate" hreflang="x-default" href="https://vetrixweb.com/" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=block" rel="stylesheet">
-
 
     <link rel="preload" href="/assets/css/main.v2.min.css" as="style" onload="this.rel='stylesheet'; this.onload=null;">
     <noscript>
@@ -70,6 +73,83 @@
     <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg" />
     <link rel="apple-touch-icon" href="../assets/img/favicon.svg" />
     <meta name="theme-color" content="#0A1116" />
+
+    <!-- Schema.org / JSON-LD -->
+    <script type="application/ld+json">
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Vetrix Web",
+        "image": "https://vetrixweb.com/assets/img/vetrixweb-perfil-redes.svg",
+        "@id": "https://vetrixweb.com",
+        "url": "https://vetrixweb.com/en/",
+        "telephone": "+542920538998",
+        "email": "info@vetrixweb.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Jaime Harris 118",
+          "addressLocality": "Carmen de Patagones",
+          "addressRegion": "Buenos Aires",
+          "postalCode": "8504",
+          "addressCountry": "AR"
+        },
+        "areaServed": {
+            "@type": "GeoCircle",
+            "geoMidpoint": {
+                "@type": "GeoCoordinates",
+                "latitude": "0",
+                "longitude": "0"
+            },
+            "geoRadius": "20000000" 
+        },
+        "priceRange": "$$",
+        "slogan": "High-Performance Infrastructure and International SEO",
+        "description": "Agency specializing in high-performance Web Design and International SEO strategies. We optimize digital authority and conversion for global businesses.",
+        "areaServed": ["AR", "ES", "MX", "US", "CL", "UY", "CO"],
+        "paymentAccepted": ["PayPal", "Stripe", "Credit Card", "Cryptocurrency", "Bank Transfer"],
+        "currenciesAccepted": ["USD", "EUR", "ARS"],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Vetrixweb Service Catalog",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Web Design and Development"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Local SEO Strategy and Organic Positioning"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Technical Consulting on Conversion Infrastructure"
+          }
+        }
+      ]
+    },
+        "knowsAbout": [
+        "Professional Web Design",
+        "International SEO",
+        "Conversion Rate Optimization (CRO)",
+        "Web Application Development",
+        "Growth Marketing Strategies",
+        "Google Maps Positioning",
+        "Information Architecture",
+        "SaaS Booking Systems"
+        ]
+      }
+    ]
+    </script>
+
 </head>
 
 <body class="bg-background-dark text-slate-300 font-display selection:bg-neon-cyan/20">
@@ -149,8 +229,7 @@
                     <span class="size-1.5 rounded-full bg-neon-cyan animate-pulse"></span> Professional Web Development
                     + Local SEO
                 </div>
-                <h1
-                    class="text-white text-3xl md:text-5xl lg:text-[3.2rem] font-black leading-[1.1] tracking-tight min-h-[140px] md:min-h-0">
+                <h1 class="text-white text-3xl md:text-5xl lg:text-[3.2rem] font-black leading-[1.1] tracking-tight">
                     Expertos en <strong>Desarrollo Web y SEO Local</strong> para
                     <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-[#00f2b4]">
                         potenciar tu negocio en Google.
@@ -177,7 +256,8 @@
                     </a>
                 </div>
             </div>
-            <div class="flex-1 w-full max-w-[650px] relative aspect-[1274/849] overflow-hidden bg-slate-900/10 rounded-2xl"
+            <div class="flex-1 w-full max-w-[650px] relative overflow-hidden bg-slate-900/10 rounded-2xl"
+                style="aspect-ratio: 1274/849; contain-intrinsic-size: 650px 433px; content-visibility: auto;"
                 id="inicio-imagen">
                 <picture>
                     <source type="image/avif" srcset="

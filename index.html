@@ -2,6 +2,16 @@
 <html lang="es-ES">
 
 <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <!-- AÑADIR justo después del <head> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload"
+        href="https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiJ-Ek-_EeA.woff2"
+        as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap&display=optional">
     <style>
         body {
             background-color: #05070a;
@@ -12,16 +22,8 @@
         }
 
         h1 {
-            line-height: 1.2;
-            /* Reservamos el espacio exacto que ocupa tu título en móvil */
-            min-height: 150px;
+            line-height: 1.1;
             margin-bottom: 1rem;
-            display: block;
-        }
-
-        /* El párrafo también con una base fija si es posible */
-        p {
-            min-height: 60px;
         }
 
         main {
@@ -31,8 +33,10 @@
             /* Esto le dice al navegador que no permita que el contenido "salte" fuera */
         }
     </style>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <link rel="preload" as="image" href="assets/img/cover4-640.avif"
+        imagesrcset="assets/img/cover4-640.avif 640w, assets/img/cover4-800.avif 800w, assets/img/cover4-1274.avif 1274w"
+        imagesizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 650px" fetchpriority="high">
     <meta name="google" content="notranslate">
     <!-- SEO Básico -->
     <title>Agencia de Diseño Web y SEO Internacional | Vetrixweb</title>
@@ -60,8 +64,6 @@
     <link rel="alternate" hreflang="pt" href="https://vetrixweb.com/pt/" />
     <link rel="alternate" hreflang="x-default" href="https://vetrixweb.com/" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link rel="preload" href="assets/css/main.v2.min.css" as="style" onload="this.rel='stylesheet'; this.onload=null;">
     <noscript>
@@ -102,7 +104,7 @@
                 "longitude": "0"
             },
             "geoRadius": "20000000" 
-        }
+        },
         "priceRange": "$$",
         "slogan": "Infraestructura de Alto Rendimiento y SEO Internacional",
         "description": "Agencia especializada en Diseño Web de alto rendimiento y estrategias de SEO Internacional. Optimizamos la autoridad digital y la conversión para negocios globales.",
@@ -275,8 +277,7 @@
                     <span class="size-1.5 rounded-full bg-neon-cyan animate-pulse"></span> Desarrollo Web Profesional +
                     SEO Local
                 </div>
-                <h1
-                    class="text-white text-3xl md:text-5xl lg:text-[3.2rem] font-black leading-[1.1] tracking-tight min-h-[140px] md:min-h-">
+                <h1 class="text-white text-3xl md:text-5xl lg:text-[3.2rem] font-black leading-[1.1] tracking-tight">
                     Expertos en <strong>Desarrollo Web y SEO Local</strong> para
                     <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-[#00f2b4]">
                         potenciar tu negocio en Google.
@@ -303,7 +304,8 @@
                     </a>
                 </div>
             </div>
-            <div class="flex-1 w-full max-w-[650px] relative aspect-[1274/849] overflow-hidden bg-slate-900/10 rounded-2xl"
+            <div class="flex-1 w-full max-w-[650px] relative overflow-hidden bg-slate-900/10 rounded-2xl"
+                style="aspect-ratio: 1274/849; contain-intrinsic-size: 650px 433px; content-visibility: auto;"
                 id="inicio-imagen">
                 <picture>
                     <source type="image/avif" srcset="
@@ -1385,8 +1387,7 @@
             else window.location.href = 'index.html';
         };
     </script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap"
-        media="print" onload="this.media='all'">
+
 </body>
 
 </html>
