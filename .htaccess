@@ -1,0 +1,11 @@
+# Language Redirection based on browser setting
+RewriteEngine On
+RewriteBase /
+
+# Redirect to English if browser is set to English and visiting the root
+RewriteCond %{HTTP:Accept-Language} ^en [NC]
+RewriteRule ^$ en/index.html [L,R=302]
+
+# Redirect to Portuguese if browser is set to Portuguese and visiting the root
+RewriteCond %{HTTP:Accept-Language} ^pt [NC]
+RewriteRule ^$ pt/index.html [L,R=302]

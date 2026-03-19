@@ -1,0 +1,15 @@
+{
+    "name": "Vetrix Web",
+    "short_name": "VetrixWeb",
+    "icons": [
+        {
+            "src": "assets/img/favicon.svg",
+            "sizes": "192x192 512x512",
+            "type": "image/svg+xml",
+            "purpose": "any maskable"
+        }
+    ],
+    "theme_color": "#0A1116",
+    "background_color": "#0A1116",
+    "display": "standalone"
+}
