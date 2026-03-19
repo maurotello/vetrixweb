@@ -16,9 +16,11 @@
 */
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-display);
     @apply bg-background-dark text-slate-300 antialiased;
     overflow-x: hidden;
+    text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
 }
 
 .hero-mesh {
@@ -31,11 +33,6 @@ body {
 
 .glow-button {
     box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
-}
-
-/* Si ya pasaste todos tus iconos a SVG, BORRÁ este bloque de material-symbols */
-.material-symbols-outlined {
-    font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
 }
 
 .glass-panel {
