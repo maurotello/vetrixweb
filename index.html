@@ -37,7 +37,7 @@
         }
     </style>
 
-    <link rel="preload" as="image" href="assets/img/cover4-640.avif"
+    <link rel="preload" as="image" href=".assets/img/cover4-640.avif"
         imagesrcset="assets/img/cover4-640.avif 640w, assets/img/cover4-800.avif 800w, assets/img/cover4-1274.avif 1274w"
         imagesizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 650px" fetchpriority="high">
     <meta name="google" content="notranslate">
@@ -54,8 +54,10 @@
     <meta property="og:url" content="https://vetrixweb.com/" />
     <meta property="og:title" content="Vetrix Web | Infraestructura de Conversión" />
     <meta property="og:description" content="Posicionamiento SEO Local y desarrollo web de alto rendimiento." />
-    <meta property="og:image" content="https://vetrixweb.com/assets/img/vetrixweb-perfil-redes.svg" />
-    <meta property="og:site_name" content="Vetrix Web" />
+    <meta property="og:image" content="https://vetrixweb.com/assets/img/image-og-es-oscura.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Vetrix Web - Expertos en Desarrollo Web y SEO Local" />
 
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary" />
@@ -250,11 +252,11 @@
                 </button>
                 <div
                     class="absolute right-0 mt-2 w-40 bg-matte-black border border-white/10 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-[60] overflow-hidden backdrop-blur-xl">
-                    <a href="index.html"
+                    <a href="/"
                         class="block px-4 py-3 text-[10px] font-black hover:bg-neon-cyan/10 hover:text-neon-cyan transition-colors uppercase tracking-widest text-white bg-white/5 border-b border-white/5">Español</a>
-                    <a href="en/index.html"
+                    <a href="/en/"
                         class="block px-4 py-3 text-[10px] font-black hover:bg-neon-cyan/10 hover:text-neon-cyan transition-colors uppercase tracking-widest text-slate-300 border-b border-white/5">English</a>
-                    <a href="pt/index.html"
+                    <a href="/pt/"
                         class="block px-4 py-3 text-[10px] font-black hover:bg-neon-cyan/10 hover:text-neon-cyan transition-colors uppercase tracking-widest text-slate-300">Português</a>
                 </div>
             </div>
@@ -312,18 +314,18 @@
                 id="inicio-imagen">
                 <picture>
                     <source type="image/avif" srcset="
-            /assets/img/cover4-640.avif 640w,
-            /assets/img/cover4-800.avif 800w,
-            /assets/img/cover4-1274.avif 1274w
+            ./assets/img/cover4-640.avif 640w,
+            ./assets/img/cover4-800.avif 800w,
+            ./assets/img/cover4-1274.avif 1274w
         " sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 650px">
 
                     <source type="image/webp" srcset="
-            /assets/img/cover4-640.webp 640w,
-            /assets/img/cover4-800.webp 800w,
-            /assets/img/cover4-1274.webp 1274w
+            ./assets/img/cover4-640.webp 640w,
+            ./assets/img/cover4-800.webp 800w,
+            ./assets/img/cover4-1274.webp 1274w
         " sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 650px">
 
-                    <img src="/assets/img/cover4-1274.avif" width="1274" height="849" alt="Diseño Web Profesional"
+                    <img src="./assets/img/cover4-1274.avif" width="1274" height="849" alt="Diseño Web Profesional"
                         fetchpriority="high" decoding="sync" loading="eager"
                         class="w-full h-full object-cover block shadow-2xl rounded-2xl">
                 </picture>
@@ -365,7 +367,15 @@
                             <ul class="space-y-4">
                                 <li
                                     class="flex items-start gap-4 p-4 rounded-xl bg-slate-50 border border-slate-100 hover:border-blue-200 transition-colors">
-                                    <span class="material-symbols-outlined text-blue-600 mt-0.5">language</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="shrink-0 mt-0.5">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <line x1="2" y1="12" x2="22" y2="12"></line>
+                                        <path
+                                            d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                                        </path>
+                                    </svg>
                                     <span class="text-slate-700 font-semibold leading-snug">El 93% de las experiencias
                                         online comienzan con un motor de búsqueda.</span>
                                 </li>
@@ -391,10 +401,22 @@
                             class="absolute inset-0 bg-gradient-to-tr from-blue-600/5 to-[#00f2b4]/10 rounded-[2rem] pointer-events-none transition-all duration-500 group-hover:opacity-100 opacity-50">
                         </div>
 
-                        <img src="./assets/img/diseno-web-seo-estrategia.avif"
-                            alt="Estrategia de crecimiento digital y diseño web profesional para superar a la competencia online"
-                            width="640" height="640" fetchpriority="high" loading="eager" decoding="sync"
-                            class="w-full h-full object-cover rounded-3xl group-hover:scale-[1.02] filter group-hover:contrast-105 transition-all duration-700">
+                        <picture>
+                            <source type="image/avif" srcset="
+                ./assets/img/diseno-web-seo-estrategia-400.avif 400w,
+                ./assets/img/diseno-web-seo-estrategia-574.avif 574w
+            " sizes="(max-width: 768px) calc(100vw - 3rem), 574px">
+
+                            <source type="image/webp" srcset="
+                ./assets/img/diseno-web-seo-estrategia-400.webp 400w,
+                ./assets/img/diseno-web-seo-estrategia-574.webp 574w
+            " sizes="(max-width: 768px) calc(100vw - 3rem), 574px">
+
+                            <img src="./assets/img/diseno-web-seo-estrategia-574.avif"
+                                alt="Estrategia de crecimiento digital y diseño web profesional" width="574"
+                                height="574" loading="lazy" decoding="async"
+                                class="w-full h-full object-cover rounded-3xl group-hover:scale-[1.02] filter group-hover:contrast-105 transition-all duration-700">
+                        </picture>
                     </div>
                 </div>
             </div>
@@ -1159,7 +1181,7 @@
 
                     <button type="submit"
                         class="w-full bg-blue-600 hover:bg-blue-700 text-white font-black text-xl py-6 rounded-xl transition-all shadow-lg shadow-blue-600/20 hover:shadow-blue-600/40 hover:-translate-y-1 flex items-center justify-center gap-3 group">
-                        Solicitar mi Diagnóstico Gratuito
+                        Contáctanos
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                             class="group-hover:translate-x-1 transition-transform shrink-0">
@@ -1168,8 +1190,14 @@
                         </svg>
                     </button>
 
-                    <p class="text-center text-[11px] text-slate-400 mt-8 font-bold uppercase tracking-widest">
-                        Sus datos serán tratados con estricta confidencialidad profesional.
+                    <p
+                        class="text-center text-[10px] text-slate-500 mt-8 font-medium uppercase tracking-widest px-4 leading-relaxed">
+                        Al enviar este formulario, usted acepta nuestros <a href="/terminos"
+                            class="underline text-blue-600 hover:text-[#00f2b4] transition-colors">Términos y
+                            Condiciones</a> y nuestra <a href="/privacidad"
+                            class="underline text-blue-600 hover:text-[#00f2b4] transition-colors">Política de
+                            Privacidad</a>.
+                        <br>Sus datos serán tratados con estricta confidencialidad profesional.
                     </p>
 
                     <div id="form-message" class="hidden mt-4 text-center text-sm font-bold p-4 rounded-lg border">
@@ -1237,8 +1265,8 @@
 
             <div class="flex flex-col md:flex-row justify-between items-center gap-8">
                 <div class="flex gap-8 text-[10px] text-slate-500 font-bold uppercase tracking-widest">
-                    <a class="hover:text-neon-cyan transition-colors" href="privacidad.html">Privacidad</a>
-                    <a class="hover:text-neon-cyan transition-colors" href="terminos.html">Términos</a>
+                    <a class="hover:text-neon-cyan transition-colors" href="/privacidad">Privacidad</a>
+                    <a class="hover:text-neon-cyan transition-colors" href="/terminos">Términos</a>
                     <a class="hover:text-neon-cyan transition-colors" href="#contacto">Contacto</a>
                 </div>
 
@@ -1385,9 +1413,9 @@
         // Función para guardar preferencia de idioma y redirigir
         window.changeLanguage = function (lang) {
             sessionStorage.setItem('lang_redirected', 'true');
-            if (lang === 'en') window.location.href = 'en/index.html';
-            else if (lang === 'pt') window.location.href = 'pt/index.html';
-            else window.location.href = 'index.html';
+            if (lang === 'en') window.location.href = '/en/';
+            else if (lang === 'pt') window.location.href = '/pt/';
+            else window.location.href = '/';
         };
     </script>
 
