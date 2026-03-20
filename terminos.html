@@ -1,24 +1,59 @@
 <!DOCTYPE html>
-<html lang="es-AR">
+<html lang="es-ES">
 
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <!-- AÑADIR justo después del <head> -->
+    <style>
+        @font-face {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400 900;
+            font-display: optional;
+            src: url('https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiJ-Ek-_EeA.woff2') format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2020, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+    </style>
+    <style>
+        body {
+            background-color: #05070a;
+            color: #cbd5e1;
+            font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            line-height: 1.1;
+            margin-bottom: 1rem;
+        }
+
+        main {
+            min-height: 100vh;
+            /* O un valor fijo como 800px */
+            contain: paint;
+            /* Esto le dice al navegador que no permita que el contenido "salte" fuera */
+        }
+    </style>
+
+    <link rel="preload" as="image" href=".assets/img/cover4-640.avif"
+        imagesrcset="assets/img/cover4-640.avif 640w, assets/img/cover4-800.avif 800w, assets/img/cover4-1274.avif 1274w"
+        imagesizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 650px" fetchpriority="high">
     <meta name="google" content="notranslate">
     <!-- SEO Básico -->
-    <title>Términos y Condiciones | Vetrix Web</title>
+    <title>Términos y Condiciones | Vetrixweb</title>
     <meta name="description"
-        content="Términos y condiciones de uso de Vetrix Web. Marco de trabajo, exención tecnológica y políticas de Copyright e Inteligencia Artificial aplicada." />
-    <meta name="author" content="Vetrix Web - Mauro Tello" />
+        content="Potenciamos tu presencia digital con diseño web profesional y estrategias de SEO local y técnico. Escalamos tu negocio en Google para captar clientes en todo el mundo. ¡Pedí tu presupuesto hoy!" />
+    <meta name="author" content="Vetrix Web" />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://vetrixweb.com/terminos" />
+    <link rel="canonical" href="https://vetrixweb.com/" />
 
     <!-- Open Graph (WhatsApp, LinkedIn, Facebook) -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://vetrixweb.com/terminos" />
-    <meta property="og:title" content="Términos Legales y Condiciones de Uso | Vetrix Web" />
-    <meta property="og:description"
-        content="Propiedad Intelectual, exención tecnológica y bases normativas para la solicitud de servicios de ingeniería y posicionamiento en Vetrix." />
+    <meta property="og:url" content="https://vetrixweb.com/" />
+    <meta property="og:title" content="Vetrix Web | Infraestructura de Conversión" />
+    <meta property="og:description" content="Posicionamiento SEO Local y desarrollo web de alto rendimiento." />
     <meta property="og:image" content="https://vetrixweb.com/assets/img/image-og-es-oscura.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -26,46 +61,19 @@
 
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Términos y Condiciones" />
-    <meta name="twitter:description" content="Regulaciones y uso de servicios o consultas en Vetrix Web." />
-    <meta name="twitter:image" content="/assets/img/vetrixweb-perfil-redes.svg" />
+    <meta name="twitter:title" content="Vetrix Web | Autoridad Digital" />
+    <meta name="twitter:description" content="Sistemas de visibilidad y conversión de alto rendimiento." />
+    <meta name="twitter:image" content="assets/img/vetrixweb-perfil-redes.svg" />
+    <link rel="alternate" hreflang="es" href="https://vetrixweb.com/" />
+    <link rel="alternate" hreflang="en" href="https://vetrixweb.com/en/" />
+    <link rel="alternate" hreflang="pt" href="https://vetrixweb.com/pt/" />
+    <link rel="alternate" hreflang="x-default" href="https://vetrixweb.com/" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=block" rel="stylesheet">
 
-    <link rel="stylesheet" href="assets/css/main.v2.min.css">
-
-    <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#0f172a",
-                        "accent-gold": "#d4af37",
-                        "neon-cyan": "#00f2b4",
-                        "background-dark": "#05070a",
-                        "matte-black": "#121212",
-                        "deep-navy": "#0a1324",
-                    },
-                    fontFamily: {
-                        "display": ["Inter", "sans-serif"]
-                    }
-                },
-            },
-        }
-    </script>
-    <style type="text/tailwindcss">
-        body { font-family: 'Inter', sans-serif; }
-        .hero-mesh { 
-            background-color: #0A1116; 
-            background-image: 
-                radial-gradient(at 0% 0%, rgba(0, 242, 180, 0.05) 0, transparent 50%), 
-                radial-gradient(at 100% 0%, rgba(212, 175, 55, 0.08) 0, transparent 50%),
-                radial-gradient(at 50% 100%, rgba(15, 23, 42, 0.1) 0, transparent 50%); 
-        }
-    </style>
+    <link rel="preload" href="assets/css/main.v2.min.css" as="style" onload="this.rel='stylesheet'; this.onload=null;">
+    <noscript>
+        <link rel="stylesheet" href="assets/css/main.v2.min.css?v=1.1">
+    </noscript>
 
     <!-- App Favicons -->
     <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
@@ -95,7 +103,7 @@
 <body class="bg-background-dark text-slate-300 font-display selection:bg-neon-cyan/20">
     <header
         class="sticky top-0 z-50 w-full hero-mesh backdrop-blur-md border-b border-white/5 px-6 lg:px-20 py-4 flex items-center justify-between">
-        <a href="/index" class="flex items-center gap-3 group select-none">
+        <div class="flex items-center gap-3 group select-none">
             <div
                 class="size-9 rounded-xl bg-gradient-to-br from-slate-800 to-black border border-white/10 shadow-[0_0_15px_rgba(0,242,180,0.15)] flex items-center justify-center relative overflow-hidden shrink-0">
                 <div class="absolute inset-0 bg-[#00f2b4]/10"></div>
@@ -108,44 +116,52 @@
             <h2
                 class="text-white text-xl font-black tracking-tighter uppercase relative z-10 transition-transform group-hover:scale-105">
                 VETRIX<span class="text-[#00f2b4] drop-shadow-[0_0_8px_rgba(0,242,180,0.4)]">WEB</span></h2>
-        </a>
+        </div>
         <nav class="hidden md:flex items-center gap-10">
             <a class="text-slate-400 hover:text-neon-cyan text-sm font-semibold transition-colors uppercase tracking-widest"
-                href="/">Inicio</a>
+                href="#">Inicio</a>
             <a class="text-slate-400 hover:text-neon-cyan text-sm font-semibold transition-colors uppercase tracking-widest"
-                href="/#sintomas">Síntomas</a>
+                href="#sintomas">Síntomas</a>
             <a class="text-slate-400 hover:text-neon-cyan text-sm font-semibold transition-colors uppercase tracking-widest"
-                href="/#pilares">Autoridad</a>
+                href="#pilares">Autoridad</a>
             <a class="text-slate-400 hover:text-neon-cyan text-sm font-semibold transition-colors uppercase tracking-widest"
-                href="/#proceso">Metodología</a>
+                href="#proceso">Metodología</a>
             <a class="text-slate-400 hover:text-neon-cyan text-sm font-semibold transition-colors uppercase tracking-widest"
-                href="/#faq">Faqs</a>
+                href="#faq">Faqs</a>
             <a class="text-slate-400 hover:text-neon-cyan text-sm font-semibold transition-colors uppercase tracking-widest"
-                href="/#contacto">Contacto</a>
+                href="#contacto">Contacto</a>
         </nav>
         <div class="flex items-center gap-4">
             <!-- Selector de Idioma -->
             <div class="hidden md:block relative group">
                 <button
-                    class="flex items-center gap-1.5 text-slate-400 hover:text-white transition-colors text-[10px] font-black uppercase tracking-[0.2em] px-3 py-2 rounded-lg border border-white/5 bg-white/5">
-                    <span class="material-symbols-outlined text-base text-[#00f2b4]">language</span>
+                    class="flex items-center gap-2 text-slate-400 hover:text-white transition-colors text-[10px] font-black uppercase tracking-[0.2em] px-4 py-2.5 rounded-lg border border-white/5 bg-white/5 group">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="#00f2b4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                        class="transition-transform group-hover:rotate-12">
+                        <circle cx="12" cy="12" r="10" />
+                        <line x1="2" y1="12" x2="22" y2="12" />
+                        <path
+                            d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                    </svg>
                     <span>IDIOMA</span>
                 </button>
                 <div
                     class="absolute right-0 mt-2 w-40 bg-matte-black border border-white/10 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-[60] overflow-hidden backdrop-blur-xl">
-                    <a href="terminos"
+                    <a href="/"
                         class="block px-4 py-3 text-[10px] font-black hover:bg-neon-cyan/10 hover:text-neon-cyan transition-colors uppercase tracking-widest text-white bg-white/5 border-b border-white/5">Español</a>
-                    <a href="/en/terms"
-                        class="block px-4 py-3 text-[10px] font-black hover:bg-neon-cyan/10 hover:text-neon-cyan transition-colors uppercase tracking-widest text-slate-300 border-b border-white/5">English</a>
-                    <a href="/pt/termos"
-                        class="block px-4 py-3 text-[10px] font-black hover:bg-neon-cyan/10 hover:text-neon-cyan transition-colors uppercase tracking-widest text-slate-300">Português</a>
+                    <a href="/en/"
+                        class="block px-4 py-3 text-[10px] font-black hover:bg-neon-cyan/10 hover:text-neon-cyan transition-colors uppercase tracking-widest text-slate-300 border-b border-white/5">Inglés</a>
+                    <a href="/pt/"
+                        class="block px-4 py-3 text-[10px] font-black hover:bg-neon-cyan/10 hover:text-neon-cyan transition-colors uppercase tracking-widest text-slate-300">Portugues</a>
                 </div>
             </div>
 
             <a href="https://wa.me/542920538998" target="_blank"
-                class="hidden md:inline-block bg-matte-black border border-white/10 hover:border-accent-gold/50 text-white px-6 py-2.5 rounded-lg text-xs font-bold transition-all shadow-[0_0_15px_rgba(212,175,55,0.3)] tracking-widest uppercase">
-                Solicitar Diagnóstico
+                class="hidden md:inline-block bg-matte-black border border-white/10 hover:border-accent-gold/50 text-white px-6 py-2.5 rounded-lg text-xs font-bold transition-all glow-button tracking-widest uppercase">
+                Solicitar Presupuesto
             </a>
+            <!-- Botón Menú Móvil -->
             <button id="mobile-menu-btn"
                 class="md:hidden text-white focus:outline-none flex items-center justify-center">
                 <span class="material-symbols-outlined text-3xl">menu</span>
@@ -287,8 +303,8 @@
 
             <div class="flex flex-col md:flex-row justify-between items-center gap-8">
                 <div class="flex gap-8 text-[10px] text-slate-500 font-bold uppercase tracking-widest">
-                    <a class="hover:text-neon-cyan transition-colors" href="privacidad">Privacidad</a>
-                    <a class="hover:text-neon-cyan transition-colors" href="terminos">Términos</a>
+                    <a class="hover:text-neon-cyan transition-colors" href="/privacidad">Privacidad</a>
+                    <a class="hover:text-neon-cyan transition-colors" href="/terminos">Términos</a>
                     <a class="hover:text-neon-cyan transition-colors" href="#contacto">Contacto</a>
                 </div>
 
