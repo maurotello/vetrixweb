@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>404 - Página no encontrada | VetrixWeb</title>
+    <meta name="description"
+        content="La página que buscas no existe o ha sido movida. Vuelve al inicio para seguir explorando nuestros servicios." />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+    <link rel="apple-touch-icon" href="assets/img/favicon.svg" />
+
+    <!-- Critical CSS -->
+    <link rel="stylesheet" href="assets/css/main.v2.min.css">
+
+    <style>
+        @font-face {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400 900;
+            font-display: optional;
+            src: url('https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiJ-Ek-_EeA.woff2') format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2020, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        :root {
+            --neon-green: #00f2b4;
+            --bg-dark: #05070a;
+            --slate-400: #94a3b8;
+            --slate-300: #cbd5e1;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--slate-300);
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        .error-number {
+            font-size: clamp(8.5rem, 28vw, 22rem);
+            line-height: 0.8;
+            font-weight: 900;
+            letter-spacing: -0.05em;
+            background: linear-gradient(to bottom, #00f2b4, #008f6a);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 0 35px rgba(0, 242, 180, 0.45));
+            margin: 2rem 0;
+        }
+
+        .badge-premium {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.6rem 1.25rem;
+            background: rgba(0, 242, 180, 0.08);
+            border: 1px solid rgba(0, 242, 180, 0.2);
+            border-radius: 9999px;
+            color: var(--neon-green);
+            font-size: 0.75rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            backdrop-filter: blur(8px);
+        }
+
+        .badge-dot {
+            width: 8px;
+            height: 8px;
+            background-color: var(--neon-green);
+            border-radius: 50%;
+            position: relative;
+        }
+
+        .badge-dot::after {
+            content: '';
+            position: absolute;
+            inset: -4px;
+            border-radius: 50%;
+            background-color: var(--neon-green);
+            opacity: 0.4;
+            animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+        }
+
+        @keyframes ping {
+
+            75%,
+            100% {
+                transform: scale(2.8);
+                opacity: 0;
+            }
+        }
+
+        .btn-premium-primary {
+            position: relative;
+            background: var(--neon-green);
+            color: #05070a;
+            font-weight: 800;
+            font-size: 1rem;
+            padding: 1.25rem 2.5rem;
+            border-radius: 1.25rem;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            box-shadow: 0 0 25px rgba(0, 242, 180, 0.4);
+        }
+
+        .btn-premium-primary:hover {
+
+            box-shadow: 0 0 45px rgba(0, 242, 180, 0.6);
+            background: #fff;
+        }
+
+        .btn-premium-secondary {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            color: #fff;
+            font-weight: 800;
+            font-size: 1rem;
+            padding: 1.25rem 2.5rem;
+            border-radius: 1.25rem;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-premium-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(0, 242, 180, 0.5);
+            transform: translateY(-3px);
+        }
+
+        .floating-whatsapp-trigger {
+            position: fixed;
+            bottom: 2.5rem;
+            right: 2.5rem;
+            z-index: 999;
+            background: #25D366;
+            width: 68px;
+            height: 68px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            box-shadow: 0 10px 35px rgba(37, 211, 102, 0.45);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            animation: float-wa 4s ease-in-out infinite;
+        }
+
+        .floating-whatsapp-trigger:hover {
+            transform: scale(1.18) rotate(15deg);
+            box-shadow: 0 15px 45px rgba(37, 211, 102, 0.65);
+        }
+
+        @keyframes float-wa {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        .description-focused {
+            font-size: 1.35rem;
+            line-height: 1.6;
+            color: var(--slate-400);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .description-focused {
+                max-width: 100%;
+                font-size: 1.15rem;
+            }
+        }
+
+        #buttons {
+            margin-top: 35px;
+        }
+    </style>
+</head>
+
+<body class="bg-[#05070a] text-slate-300 font-display selection:bg-neon-cyan/20 overflow-x-hidden">
+    <!-- Header original restaurado -->
+    <header
+        class="sticky top-0 z-50 w-full backdrop-blur-md border-b border-white/5 px-6 lg:px-20 py-4 flex items-center justify-between">
+        <a href="index.html" class="flex items-center gap-3 group select-none">
+            <div
+                class="size-9 rounded-xl bg-gradient-to-br from-slate-800 to-black border border-white/10 shadow-[0_0_15px_rgba(0,242,180,0.15)] flex items-center justify-center relative overflow-hidden shrink-0">
+                <div class="absolute inset-0 bg-[#00f2b4]/10"></div>
+                <svg class="size-5 text-[#00f2b4] relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2" />
+                </svg>
+            </div>
+            <h2
+                class="text-white text-xl font-black tracking-tighter uppercase relative z-10 transition-transform group-hover:scale-105">
+                VETRIX<span class="text-[#00f2b4] drop-shadow-[0_0_8px_rgba(0,242,180,0.4)]">WEB</span></h2>
+        </a>
+        <nav class="hidden md:flex items-center gap-10">
+            <a id="nav-inicio"
+                class="text-slate-400 hover:text-neon-cyan text-sm font-semibold transition-colors uppercase tracking-widest"
+                href="/">Inicio</a>
+            <a id="nav-sintomas"
+                class="text-slate-400 hover:text-neon-cyan text-sm font-semibold transition-colors uppercase tracking-widest"
+                href="/#sintomas">Síntomas</a>
+            <a id="nav-pilares"
+                class="text-slate-400 hover:text-neon-cyan text-sm font-semibold transition-colors uppercase tracking-widest"
+                href="/#pilares">Autoridad</a>
+            <a id="nav-proceso"
+                class="text-slate-400 hover:text-neon-cyan text-sm font-semibold transition-colors uppercase tracking-widest"
+                href="/#proceso">Metodología</a>
+            <a id="nav-faq"
+                class="text-slate-400 hover:text-neon-cyan text-sm font-semibold transition-colors uppercase tracking-widest"
+                href="/#faq">FAQs</a>
+            <a id="nav-contacto"
+                class="text-slate-400 hover:text-neon-cyan text-sm font-semibold transition-colors uppercase tracking-widest"
+                href="/#contacto">Contacto</a>
+        </nav>
+        <div class="flex items-center gap-4">
+            <!-- Selector de Idioma -->
+            <div class="hidden md:block relative group">
+                <button
+                    class="flex items-center gap-2 text-slate-400 hover:text-white transition-colors text-[10px] font-black uppercase tracking-[0.2em] px-4 py-2.5 rounded-lg border border-white/5 bg-white/5 group">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="#00f2b4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                        class="transition-transform group-hover:rotate-12">
+                        <circle cx="12" cy="12" r="10" />
+                        <line x1="2" y1="12" x2="22" y2="12" />
+                        <path
+                            d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                    </svg>
+                    <span>IDIOMA</span>
+                </button>
+                <div
+                    class="absolute right-0 mt-2 w-40 bg-[#0A1116] border border-white/10 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-[60] overflow-hidden backdrop-blur-xl">
+                    <a href="/"
+                        class="block px-4 py-3 text-[10px] font-black hover:bg-neon-cyan/10 hover:text-neon-cyan transition-colors uppercase tracking-widest text-white bg-white/5 border-b border-white/5">Español</a>
+                    <a href="/en/"
+                        class="block px-4 py-3 text-[10px] font-black hover:bg-neon-cyan/10 hover:text-neon-cyan transition-colors uppercase tracking-widest text-slate-300 border-b border-white/5">Inglés</a>
+                    <a href="/pt/"
+                        class="block px-4 py-3 text-[10px] font-black hover:bg-neon-cyan/10 hover:text-neon-cyan transition-colors uppercase tracking-widest text-slate-300">Portugues</a>
+                </div>
+            </div>
+
+            <a id="btn-presupuesto" href="https://wa.me/542920538998" target="_blank"
+                class="hidden md:inline-block bg-white/5 border border-white/10 hover:border-[#00f2b4]/50 text-white px-6 py-2.5 rounded-lg text-[10px] font-black transition-all tracking-widest uppercase">
+                Solicitar Presupuesto
+            </a>
+            <!-- Botón Menú Móvil -->
+            <button id="mobile-menu-btn"
+                class="md:hidden text-white focus:outline-none flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="6" x2="21" y2="6" />
+                    <line x1="3" y1="12" x2="21" y2="12" />
+                    <line x1="3" y1="18" x2="21" y2="18" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main class="relative min-h-[85vh] flex flex-col items-center justify-center px-6 py-20 bg-[#05070a] overflow-hidden">
+        <!-- Luces de fondo dinámicas -->
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-blue-600/5 blur-[120px] rounded-full animate-float"
+                style="animation-duration: 8s;"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-[#00f2b4]/5 blur-[120px] rounded-full animate-float"
+                style="animation-duration: 10s;"></div>
+        </div>
+
+        <div class="relative z-10 text-center max-w-4xl mx-auto">
+            <div class="badge-premium mb-10">
+                <span class="badge-dot"></span>
+                <span id="badge-text">Protocolo 404 Activado</span>
+            </div>
+
+            <div class="error-number">404</div>
+
+            <div class="mt-4 mb-14 space-y-8">
+                <h1 id="titulo-404" class="text-5xl md:text-7xl font-black text-white tracking-tight">
+                    Página no encontrada
+                </h1>
+                <p id="descripcion-404" class="description-focused">
+                    La URL que ingresaste no existe o ha sido movida. No te preocupes, nuestra infraestructura te
+                    ayudará a encontrar el camino de regreso.
+                </p>
+            </div>
+
+            <div id="buttons" class="flex flex-col sm:flex-row items-center justify-center gap-6 pt-12">
+                <a id="btn-home" href="/" class="btn-premium-primary">
+                    Volver al inicio
+                </a>
+                <a id="btn-contacto" href="https://wa.me/542920538998" target="_blank" class="btn-premium-secondary">
+                    Hablar con un experto
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer original restaurado -->
+    <footer class="px-6 lg:px-20 py-16 border-t border-white/5 bg-[#05070a]">
+        <div class="max-w-7xl mx-auto space-y-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
+                <div class="space-y-6">
+                    <div class="flex items-center gap-3 group select-none">
+                        <div
+                            class="size-10 rounded-xl bg-gradient-to-br from-slate-800 to-black border border-white/10 shadow-[0_0_15px_rgba(0,242,180,0.15)] flex items-center justify-center relative overflow-hidden shrink-0">
+                            <div class="absolute inset-0 bg-[#00f2b4]/10"></div>
+                            <svg viewBox="0 0 24 24" fill="none" class="w-6 h-6 stroke-[#00f2b4] relative z-10"
+                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 17l8-10 8 10" />
+                                <path d="M12 7v14" class="stroke-[#00f2b4]/30" stroke-width="1.5"
+                                    stroke-dasharray="2 2" />
+                            </svg>
+                        </div>
+                        <h2
+                            class="text-white text-2xl font-black tracking-tighter uppercase transition-transform group-hover:scale-105">
+                            VETRIX<span class="text-[#00f2b4] drop-shadow-[0_0_8px_rgba(0,242,180,0.4)]">WEB</span>
+                        </h2>
+                    </div>
+                    <p class="text-slate-500 text-xs leading-relaxed max-w-xs font-medium uppercase tracking-wider">
+                        Infraestructura de alto rendimiento y SEO técnico. Desarrollado desde la Patagonia
+                        Argentina
+                        para el mundo.
+                    </p>
+                </div>
+
+                <div class="space-y-4">
+                    <p class="text-[10px] text-neon-cyan/80 font-bold uppercase tracking-[0.4em]">Engineered
+                        with</p>
+                    <div
+                        class="flex flex-wrap justify-start gap-x-4 gap-y-2 text-[10px] font-bold text-slate-500 uppercase tracking-widest">
+                        <span class="hover:text-slate-300 transition-colors cursor-default">Bootstrap</span>
+                        <span class="hover:text-slate-300 transition-colors cursor-default">Next.js</span>
+                        <span class="hover:text-slate-300 transition-colors cursor-default">React</span>
+                        <span class="hover:text-slate-300 transition-colors cursor-default">Laravel</span>
+                        <span class="hover:text-slate-300 transition-colors cursor-default">PostgreSQL</span>
+                        <span class="hover:text-slate-300 transition-colors cursor-default">TypeScript</span>
+                        <span class="hover:text-slate-300 transition-colors cursor-default">CI/CD</span>
+                        <span class="text-neon-cyan font-black italic">IA Powered</span>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <p class="text-[10px] text-slate-400 font-bold uppercase tracking-[0.3em]">Global Payments
+                    </p>
+                    <div class="flex flex-wrap gap-4 text-slate-400">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <rect x="2" y="5" width="20" height="14" rx="2" stroke-width="2" />
+                            <line x1="2" y1="10" x2="22" y2="10" stroke-width="2" />
+                        </svg>
+                        <span class="text-[10px] font-bold border border-slate-700 px-2 py-1 rounded">STRIPE</span>
+                        <span class="text-[10px] font-bold border border-slate-700 px-2 py-1 rounded">CRYPTO</span>
+                        <span
+                            class="text-[10px] font-bold border border-slate-700 px-2 py-1 rounded">TRANSFERENCIA</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="h-px w-full bg-gradient-to-r from-transparent via-white/5 to-transparent"></div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="flex gap-8 text-[10px] text-slate-500 font-bold uppercase tracking-widest">
+                    <a class="hover:text-neon-cyan transition-colors" href="/privacidad">Privacidad</a>
+                    <a class="hover:text-neon-cyan transition-colors" href="/terminos">Términos</a>
+                    <a class="hover:text-neon-cyan transition-colors" href="#contacto">Contacto</a>
+                </div>
+
+                <div class="flex flex-col items-center md:items-end gap-3">
+                    <p class="text-slate-600 text-[10px] font-bold uppercase tracking-widest">
+                        © 2026 Vetrix Web Infrastructure
+                    </p>
+                    <div
+                        class="flex items-center gap-3 text-slate-400 text-sm md:text-base font-black uppercase tracking-widest">
+                        <span>Designed by</span>
+                        <span class="text-white hover:text-neon-cyan transition-colors cursor-default">VetrixWeb</span>
+
+                        <div class="flex items-center shadow-lg rounded-sm overflow-hidden border border-white/10">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 22" class="w-7 h-auto block">
+                                <rect width="33" height="22" fill="#74acdf" />
+                                <rect width="33" height="7.33" y="7.33" fill="#fff" />
+                                <circle cx="16.5" cy="11" r="2.5" fill="#f6b43e" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Overlay de Menú Móvil original -->
+    <div id="mobile-menu" class="fixed inset-0 bg-[#0A1116] z-[200] hidden flex-col items-center justify-center">
+        <button id="close-menu-btn"
+            class="absolute top-6 right-6 text-white focus:outline-none flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+        </button>
+        <nav class="flex flex-col items-center gap-6 text-center mt-8">
+            <a id="mob-inicio"
+                class="mobile-link text-white hover:text-neon-cyan text-lg font-bold transition-colors uppercase tracking-widest"
+                href="/">Inicio</a>
+            <a id="mob-sintomas"
+                class="mobile-link text-white hover:text-neon-cyan text-lg font-bold transition-colors uppercase tracking-widest"
+                href="/#sintomas">Síntomas</a>
+            <a id="mob-pilares"
+                class="mobile-link text-white hover:text-neon-cyan text-lg font-bold transition-colors uppercase tracking-widest"
+                href="/#pilares">Autoridad</a>
+            <a id="mob-proceso"
+                class="mobile-link text-white hover:text-neon-cyan text-lg font-bold transition-colors uppercase tracking-widest"
+                href="/#proceso">Metodología</a>
+            <a id="mob-faq"
+                class="mobile-link text-white hover:text-neon-cyan text-lg font-bold transition-colors uppercase tracking-widest"
+                href="/#faq">FAQs</a>
+            <a id="mob-contacto"
+                class="mobile-link text-white hover:text-neon-cyan text-lg font-bold transition-colors uppercase tracking-widest"
+                href="/#contacto">Contacto</a>
+        </nav>
+        <div class="flex gap-4 mt-8 pt-8 border-t border-white/5">
+            <button onclick="window.location.href='/'"
+                class="text-white text-xs font-bold px-3 py-1 border border-white/10 rounded hover:bg-white/5">ES</button>
+            <button onclick="window.location.href='/en/'"
+                class="text-white text-xs font-bold px-3 py-1 border border-white/10 rounded hover:bg-white/5">EN</button>
+            <button onclick="window.location.href='/pt/'"
+                class="text-white text-xs font-bold px-3 py-1 border border-white/10 rounded hover:bg-white/5">PT</button>
+        </div>
+    </div>
+
+    <!-- Script Menu Movil original -->
+    <!--
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuBtn && closeMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.remove('hidden');
+                mobileMenu.classList.add('flex');
+                document.body.style.overflow = 'hidden';
+            });
+            closeMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+                document.body.style.overflow = '';
+            });
+        }
+    </script>-->
+
+    <!-- Botón WhatsApp Flotante -->
+    <a id="btn-presupuesto" href="https://wa.me/542920538998" class="floating-whatsapp-trigger" target="_blank"
+        aria-label="Chat on WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="currentColor">
+            <path
+                d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.588-5.946 0-6.556 5.332-11.891 11.894-11.891 3.181 0 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.481 8.403 0 6.556-5.332 11.891-11.891 11.891-2.01 0-3.987-.512-5.741-1.488l-6.255 1.646zm6.304-3.564c1.611.956 3.23 1.439 4.811 1.439 5.513 0 10-4.487 10-10s-4.487-10-10-10-10 4.487-10 10c0 1.832.502 3.566 1.451 5.018l-.946 3.456 3.684-.913zm9.213-5.832c-.288-.144-1.705-.842-1.968-.938-.263-.096-.454-.144-.645.144-.191.288-.741.938-.908 1.129-.167.191-.334.215-.623.071-.288-.145-1.218-.449-2.321-1.434-.858-.766-1.438-1.711-1.605-2-.167-.288-.018-.444.126-.587.13-.129.288-.335.432-.503.144-.167.191-.287.288-.479.096-.191.047-.359-.024-.503-.072-.144-.645-1.554-.886-2.13-.233-.559-.47-.482-.645-.491l-.55-.006c-.191 0-.501.071-.764.359-.263.288-1.003.982-1.003 2.396 0 1.415 1.027 2.783 1.17 2.975.144.191 2.02 3.084 4.895 4.326.684.296 1.218.473 1.635.606.688.219 1.314.188 1.808.115.551-.081 1.706-.697 1.946-1.37.24-.674.24-1.251.167-1.37-.072-.119-.262-.191-.551-.335z" />
+        </svg>
+    </a>
+
+    <script>
+        // ─── DETECCIÓN DE IDIOMA ───────────────────────────────────────────────
+        // Español es el default — está en la raíz, sin carpeta
+        // Inglés → /en/  |  Portugués → /pt/
+        const path = window.location.pathname;
+        let lang = 'es';
+        if (path.startsWith('/en/') || path === '/en') lang = 'en';
+        if (path.startsWith('/pt/') || path === '/pt') lang = 'pt';
+
+        // Ajusta el atributo lang del <html>
+        document.documentElement.lang = { es: 'es-ES', en: 'en', pt: 'pt-BR' }[lang];
+
+        // ─── TEXTOS Y RUTAS POR IDIOMA ─────────────────────────────────────────
+        const i18n = {
+            es: {
+                // Textos
+                badge: 'Protocolo 404 Activado',
+                titulo: 'Página no encontrada',
+                descripcion: 'La URL que ingresaste no existe o ha sido movida. No te preocupes, desde acá podés volver al inicio o contactarnos directamente.',
+                btnHome: 'Volver al inicio',
+                btnContacto: 'Hablar con un experto',
+                presupuesto: 'Solicitar Presupuesto',
+                mobWhatsapp: 'Solicitar Diagnóstico',
+                inicio: 'Inicio',
+                sintomas: 'Síntomas',
+                pilares: 'Autoridad',
+                proceso: 'Metodología',
+                faq: 'FAQs',
+                contacto: 'Contacto',
+                privacidad: 'Privacidad',
+                terminos: 'Términos',
+                // Rutas — Español está en la raíz
+                homeUrl: '/',
+                sintomasUrl: '/#sintomas',
+                pilaresUrl: '/#pilares',
+                procesoUrl: '/#proceso',
+                faqUrl: '/#faq',
+                contactoUrl: '/#contacto',
+                privacidadUrl: '/privacidad',
+                terminosUrl: '/terminos',
+                footerContacto: '/#contacto',
+            },
+            en: {
+                badge: '404 Protocol Activated',
+                titulo: 'Page not found',
+                descripcion: "The URL you entered doesn't exist or has been moved. Don't worry — you can go back to the homepage or contact us directly.",
+                btnHome: 'Back to home',
+                btnContacto: 'Talk to an expert',
+                presupuesto: 'Request a Quote',
+                mobWhatsapp: 'Request Diagnosis',
+                inicio: 'Home',
+                sintomas: 'Symptoms',
+                pilares: 'Authority',
+                proceso: 'Methodology',
+                faq: 'FAQs',
+                contacto: 'Contact',
+                privacidad: 'Privacy',
+                terminos: 'Terms',
+                // Rutas — Inglés en /en/
+                homeUrl: '/en/',
+                sintomasUrl: '/en/#sintomas',
+                pilaresUrl: '/en/#pilares',
+                procesoUrl: '/en/#proceso',
+                faqUrl: '/en/#faq',
+                contactoUrl: '/en/#contacto',
+                privacidadUrl: '/en/privacy',
+                terminosUrl: '/en/terms',
+                footerContacto: '/en/#contacto',
+            },
+            pt: {
+                badge: 'Protocolo 404 Ativado',
+                titulo: 'Página não encontrada',
+                descripcion: 'A URL que você digitou não existe ou foi movida. Não se preocupe — você pode voltar ao início ou falar conosco diretamente.',
+                btnHome: 'Voltar ao início',
+                btnContacto: 'Falar com um especialista',
+                presupuesto: 'Solicitar Orçamento',
+                mobWhatsapp: 'Solicitar Diagnóstico',
+                inicio: 'Início',
+                sintomas: 'Sintomas',
+                pilares: 'Autoridade',
+                proceso: 'Metodologia',
+                faq: 'FAQs',
+                contacto: 'Contato',
+                privacidad: 'Privacidade',
+                terminos: 'Termos',
+                // Rutas — Portugués en /pt/
+                homeUrl: '/pt/',
+                sintomasUrl: '/pt/#sintomas',
+                pilaresUrl: '/pt/#pilares',
+                procesoUrl: '/pt/#proceso',
+                faqUrl: '/pt/#faq',
+                contactoUrl: '/pt/#contacto',
+                privacidadUrl: '/pt/privacidade',
+                terminosUrl: '/pt/termos',
+                footerContacto: '/pt/#contacto',
+            }
+        };
+
+        const t = i18n[lang];
+
+        // ─── APLICAR TEXTOS ────────────────────────────────────────────────────
+        document.getElementById('badge-text').textContent = t.badge;
+        document.getElementById('titulo-404').textContent = t.titulo;
+        document.getElementById('descripcion-404').textContent = t.descripcion;
+        document.getElementById('btn-home').textContent = t.btnHome;
+        document.getElementById('btn-contacto').textContent = t.btnContacto;
+        document.getElementById('btn-presupuesto').textContent = t.presupuesto;
+        document.getElementById('mob-whatsapp').textContent = t.mobWhatsapp;
+
+        // Menú desktop
+        document.getElementById('nav-inicio').textContent = t.inicio;
+        document.getElementById('nav-sintomas').textContent = t.sintomas;
+        document.getElementById('nav-pilares').textContent = t.pilares;
+        document.getElementById('nav-proceso').textContent = t.proceso;
+        document.getElementById('nav-faq').textContent = t.faq;
+        document.getElementById('nav-contacto').textContent = t.contacto;
+
+        // Menú móvil
+        document.getElementById('mob-inicio').textContent = t.inicio;
+        document.getElementById('mob-sintomas').textContent = t.sintomas;
+        document.getElementById('mob-pilares').textContent = t.pilares;
+        document.getElementById('mob-proceso').textContent = t.proceso;
+        document.getElementById('mob-faq').textContent = t.faq;
+        document.getElementById('mob-contacto').textContent = t.contacto;
+
+        // Footer
+        document.getElementById('footer-privacidad').textContent = t.privacidad;
+        document.getElementById('footer-terminos').textContent = t.terminos;
+
+        // ─── APLICAR RUTAS ─────────────────────────────────────────────────────
+        document.getElementById('header-logo').href = t.homeUrl;
+        document.getElementById('btn-home').href = t.homeUrl;
+
+        // Menú desktop
+        document.getElementById('nav-inicio').href = t.homeUrl;
+        document.getElementById('nav-sintomas').href = t.sintomasUrl;
+        document.getElementById('nav-pilares').href = t.pilaresUrl;
+        document.getElementById('nav-proceso').href = t.procesoUrl;
+        document.getElementById('nav-faq').href = t.faqUrl;
+        document.getElementById('nav-contacto').href = t.contactoUrl;
+
+        // Menú móvil
+        document.getElementById('mob-inicio').href = t.homeUrl;
+        document.getElementById('mob-sintomas').href = t.sintomasUrl;
+        document.getElementById('mob-pilares').href = t.pilaresUrl;
+        document.getElementById('mob-proceso').href = t.procesoUrl;
+        document.getElementById('mob-faq').href = t.faqUrl;
+        document.getElementById('mob-contacto').href = t.contactoUrl;
+
+        // Footer
+        document.getElementById('footer-privacidad').href = t.privacidadUrl;
+        document.getElementById('footer-terminos').href = t.terminosUrl;
+        document.getElementById('footer-contacto').href = t.footerContacto;
+
+        // ─── MENÚ MÓVIL — ABRIR / CERRAR ──────────────────────────────────────
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        if (mobileMenuBtn && closeMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.remove('hidden');
+                mobileMenu.classList.add('flex');
+                document.body.style.overflow = 'hidden';
+            });
+            closeMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+                document.body.style.overflow = '';
+            });
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenu.classList.remove('flex');
+                    document.body.style.overflow = '';
+                });
+            });
+        }
+    </script>
+</body>
+
+</html>
