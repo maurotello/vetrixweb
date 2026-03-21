@@ -1,0 +1,123 @@
+<header id="main-header-element"
+    class="sticky top-0 z-50 w-full backdrop-blur-md border-b border-white/5 px-6 lg:px-20 py-4 flex items-center justify-between">
+    <a id="header-logo" href="/" class="flex items-center gap-3 group select-none">
+        <div
+            class="size-9 rounded-xl bg-gradient-to-br from-slate-800 to-black border border-white/10 shadow-[0_0_15px_rgba(0,242,180,0.15)] flex items-center justify-center relative overflow-hidden shrink-0">
+            <div class="absolute inset-0 bg-[#00f2b4]/10"></div>
+            <svg viewBox="0 0 24 24" fill="none" class="w-5 h-5 stroke-[#00f2b4] relative z-10" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 17l8-10 8 10" />
+                <path d="M12 7v14" class="stroke-[#00f2b4]/30" stroke-width="1.5" stroke-dasharray="2 2" />
+            </svg>
+        </div>
+        <h2
+            class="text-white text-xl font-black tracking-tighter uppercase relative z-10 transition-transform group-hover:scale-105">
+            VETRIX<span class="text-[#00f2b4] drop-shadow-[0_0_8px_rgba(0,242,180,0.4)]">WEB</span>
+        </h2>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-10">
+        <a id="nav-inicio"
+            class="text-slate-400 hover:text-neon-cyan text-sm font-semibold transition-colors uppercase tracking-widest"
+            href="/">Inicio</a>
+        <a id="nav-sintomas"
+            class="text-slate-400 hover:text-neon-cyan text-sm font-semibold transition-colors uppercase tracking-widest"
+            href="/#sintomas">Síntomas</a>
+        <a id="nav-pilares"
+            class="text-slate-400 hover:text-neon-cyan text-sm font-semibold transition-colors uppercase tracking-widest"
+            href="/#pilares">Autoridad</a>
+        <a id="nav-proceso"
+            class="text-slate-400 hover:text-neon-cyan text-sm font-semibold transition-colors uppercase tracking-widest"
+            href="/#proceso">Metodología</a>
+        <a id="nav-faq"
+            class="text-slate-400 hover:text-neon-cyan text-sm font-semibold transition-colors uppercase tracking-widest"
+            href="/#faq">FAQs</a>
+        <a id="nav-contacto"
+            class="text-slate-400 hover:text-neon-cyan text-sm font-semibold transition-colors uppercase tracking-widest"
+            href="/#contacto">Contacto</a>
+    </nav>
+
+    <div class="flex items-center gap-4">
+        <div class="hidden md:block relative group">
+            <button
+                class="flex items-center gap-2 text-slate-400 hover:text-white transition-colors text-[10px] font-black uppercase tracking-[0.2em] px-4 py-2.5 rounded-lg border border-white/5 bg-white/5 group">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="#00f2b4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                    class="transition-transform group-hover:rotate-12">
+                    <circle cx="12" cy="12" r="10" />
+                    <line x1="2" y1="12" x2="22" y2="12" />
+                    <path
+                        d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                </svg>
+                <span id="lang-label">IDIOMA</span>
+            </button>
+            <div
+                class="absolute right-0 mt-2 w-40 bg-[#0A1116] border border-white/10 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-[60] overflow-hidden backdrop-blur-xl">
+                <a href="javascript:void(0)" onclick="window.changeLanguage('es')"
+                    class="block px-4 py-3 text-[10px] font-black hover:bg-neon-cyan/10 hover:text-neon-cyan transition-colors uppercase tracking-widest text-slate-300 border-b border-white/5">Español</a>
+                <a href="javascript:void(0)" onclick="window.changeLanguage('en')"
+                    class="block px-4 py-3 text-[10px] font-black hover:bg-neon-cyan/10 hover:text-neon-cyan transition-colors uppercase tracking-widest text-slate-300 border-b border-white/5">English</a>
+                <a href="javascript:void(0)" onclick="window.changeLanguage('pt')"
+                    class="block px-4 py-3 text-[10px] font-black hover:bg-neon-cyan/10 hover:text-neon-cyan transition-colors uppercase tracking-widest text-slate-300">Português</a>
+            </div>
+        </div>
+
+        <a id="btn-presupuesto-header" href="https://wa.me/542920538998" target="_blank"
+            class="hidden md:inline-block bg-white/5 border border-white/10 hover:border-[#00f2b4]/50 text-white px-6 py-2.5 rounded-lg text-[10px] font-black transition-all tracking-widest uppercase">
+            Solicitar Presupuesto
+        </a>
+
+        <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <line x1="3" y1="12" x2="21" y2="12" />
+                <line x1="3" y1="18" x2="21" y2="18" />
+            </svg>
+        </button>
+    </div>
+</header>
+
+<!-- Overlay de Menú Móvil -->
+<div id="mobile-menu" class="fixed inset-0 bg-[#0A1116] z-[200] hidden flex-col items-center justify-center">
+    <button id="close-menu-btn"
+        class="absolute top-6 right-6 text-white focus:outline-none flex items-center justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+    </button>
+    <nav class="flex flex-col items-center gap-6 text-center mt-8">
+        <a id="mob-inicio"
+            class="mobile-link text-white hover:text-neon-cyan text-lg font-bold transition-colors uppercase tracking-widest"
+            href="/">Inicio</a>
+        <a id="mob-sintomas"
+            class="mobile-link text-white hover:text-neon-cyan text-lg font-bold transition-colors uppercase tracking-widest"
+            href="/#sintomas">Síntomas</a>
+        <a id="mob-pilares"
+            class="mobile-link text-white hover:text-neon-cyan text-lg font-bold transition-colors uppercase tracking-widest"
+            href="/#pilares">Autoridad</a>
+        <a id="mob-proceso"
+            class="mobile-link text-white hover:text-neon-cyan text-lg font-bold transition-colors uppercase tracking-widest"
+            href="/#proceso">Metodología</a>
+        <a id="mob-faq"
+            class="mobile-link text-white hover:text-neon-cyan text-lg font-bold transition-colors uppercase tracking-widest"
+            href="/#faq">FAQs</a>
+        <a id="mob-contacto"
+            class="mobile-link text-white hover:text-neon-cyan text-lg font-bold transition-colors uppercase tracking-widest"
+            href="/#contacto">Contacto</a>
+    </nav>
+    <div class="flex gap-4 mt-8 pt-8 border-t border-white/5">
+        <button onclick="window.changeLanguage('es')"
+            class="text-white text-xs font-bold px-3 py-1 border border-white/10 rounded hover:bg-white/5">ES</button>
+        <button onclick="window.changeLanguage('en')"
+            class="text-white text-xs font-bold px-3 py-1 border border-white/10 rounded hover:bg-white/5">EN</button>
+        <button onclick="window.changeLanguage('pt')"
+            class="text-white text-xs font-bold px-3 py-1 border border-white/10 rounded hover:bg-white/5">PT</button>
+    </div>
+    <a id="mob-whatsapp" href="https://wa.me/542920538998" target="_blank"
+        class="mobile-link mt-10 bg-neon-cyan text-[#0A1116] hover:bg-white px-6 py-3 rounded-lg text-base font-black transition-all shadow-[0_0_15px_rgba(0,242,180,0.4)] flex items-center gap-2">
+        Solicitar Diagnóstico
+    </a>
+</div>
