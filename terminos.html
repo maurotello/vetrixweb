@@ -1,184 +1,158 @@
 <!DOCTYPE html>
-<html lang="es-ES">
-
+<html class="dark scroll-smooth overflow-x-hidden" lang="es">
 <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <!-- AÑADIR justo después del <head> -->
-    <style>
-        @font-face {
-            font-family: 'Inter';
-            font-style: normal;
-            font-weight: 400 900;
-            font-display: optional;
-            src: url('https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiJ-Ek-_EeA.woff2') format('woff2');
-            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2020, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-        }
-    </style>
-    <style>
-        body {
-            background-color: #05070a;
-            color: #cbd5e1;
-            font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
-            margin: 0;
-            overflow-x: hidden;
-        }
-
-        h1 {
-            line-height: 1.1;
-            margin-bottom: 1rem;
-        }
-
-        main {
-            min-height: 100vh;
-            /* O un valor fijo como 800px */
-            contain: paint;
-            /* Esto le dice al navegador que no permita que el contenido "salte" fuera */
-        }
-    </style>
-
-    <link rel="preload" as="image" href=".assets/img/cover4-640.avif"
-        imagesrcset="assets/img/cover4-640.avif 640w, assets/img/cover4-800.avif 800w, assets/img/cover4-1274.avif 1274w"
-        imagesizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 650px" fetchpriority="high">
-    <meta name="google" content="notranslate">
-    <!-- SEO Básico -->
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Términos y Condiciones | Vetrixweb</title>
-    <meta name="description"
-        content="Leé los términos y condiciones de uso del sitio web de Vetrix Web. Información sobre navegación, servicios y responsabilidades legales del usuario." />
-    <meta name="author" content="Vetrix Web" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://vetrixweb.com/terminos" />
-
-    <!-- Open Graph (WhatsApp, LinkedIn, Facebook) -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://vetrixweb.com/terminos" />
-    <meta property="og:title" content="Términos y Condiciones | Vetrix Web" />
-    <meta property="og:description" content="Lee nuestros términos y condiciones de uso de la plataforma Vetrix Web." />
-    <meta property="og:image" content="https://vetrixweb.com/assets/img/image-og-es-oscura.jpg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Vetrix Web - Expertos en Desarrollo Web y SEO Local" />
-
-    <!-- Twitter Cards -->
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Términos y Condiciones | Vetrix Web" />
-    <meta name="twitter:description" content="Normas y condiciones de uso de nuestros servicios digitales." />
-    <meta name="twitter:image" content="assets/img/vetrixweb-perfil-redes.svg" />
-    <link rel="alternate" hreflang="es" href="https://vetrixweb.com/terminos" />
-    <link rel="alternate" hreflang="en" href="https://vetrixweb.com/en/terms" />
-    <link rel="alternate" hreflang="pt" href="https://vetrixweb.com/pt/termos" />
-    <link rel="alternate" hreflang="x-default" href="https://vetrixweb.com/terminos" />
-
-
-    <link rel="preload" href="assets/css/main.v2.min.css" as="style" onload="this.rel='stylesheet'; this.onload=null;">
-    <noscript>
-        <link rel="stylesheet" href="assets/css/main.v2.min.css?v=1.1">
-    </noscript>
-
-    <!-- App Favicons -->
-    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
-    <link rel="apple-touch-icon" href="assets/img/favicon.svg" />
-    <meta name="theme-color" content="#0A1116" />
-    <link rel="manifest" href="site.webmanifest" />
-
-    <!-- Schema.org / JSON-LD -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "Términos y Condiciones | Vetrix Web",
-      "url": "https://vetrixweb.com/terminos",
-      "publisher": {
-        "@type": "Organization",
-        "name": "Vetrix Web",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://vetrixweb.com/assets/img/image-og-es-oscura.jpg"
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40' fill='none'><rect width='40' height='40' rx='10' fill='%23131b2e' stroke='rgba(255,255,255,0.1)' stroke-width='1'/><path d='M11 22L20 13L29 22' stroke='%234be277' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'/><line x1='20' y1='21' x2='20' y2='30' stroke='%234be277' stroke-width='2.5' stroke-dasharray='3 3' stroke-linecap='round'/></svg>">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="assets/css/styles.css" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#4be277",
+                "on-primary": "#003915",
+                "surface": "#0b1326",
+                "surface-container": "#171f33",
+                "surface-container-low": "#131b2e",
+                "surface-container-lowest": "#060e20",
+                "background-deep": "#020617",
+                "text-primary": "#f8fafc",
+                "text-secondary": "#94a3b8"
+              }
+            }
+          }
         }
-      }
-    }
     </script>
 </head>
+<body class="bg-background-deep text-text-primary min-h-screen selection:bg-primary/30 selection:text-primary">
+    <div class="overflow-x-hidden w-full relative flex flex-col min-h-screen">
+        <!-- TopNavBar Component -->
+        <nav class="bg-surface/80 backdrop-blur-xl text-primary font-bold w-full top-0 sticky border-b border-white/10 shadow-sm z-50 transition-all duration-300">
+            <div class="flex justify-between items-center px-6 md:px-16 py-4 max-w-[1280px] mx-auto">
+                <a class="flex items-center gap-3 tracking-tighter hover:opacity-90 transition-opacity" href="index.html">
+                    <div class="flex items-center justify-center bg-surface-container-low border border-white/10 rounded-xl p-2 w-10 h-10 shadow-[0_0_15px_rgba(75,226,119,0.15)]">
+                        <svg class="w-full h-full text-primary" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 22L20 13L29 22" stroke="#4be277" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <line x1="20" y1="21" x2="20" y2="30" stroke="#4be277" stroke-width="2.5" stroke-dasharray="3 3" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <span class="text-2xl font-black flex items-center">
+                        <span class="text-text-primary">VETRIX</span><span class="text-primary">WEB</span>
+                    </span>
+                </a>
+                <!-- Desktop Nav -->
+                <ul class="hidden md:flex gap-8 items-center text-sm font-semibold tracking-wider">
+                    <li><a class="text-on-surface-variant hover:text-primary transition-colors hover:glow-primary transition-all duration-300" href="index.html#inicio">Inicio</a></li>
+                    <li><a class="text-on-surface-variant hover:text-primary transition-colors hover:glow-primary transition-all duration-300" href="index.html#beneficios">Beneficios</a></li>
+                    <li><a class="text-on-surface-variant hover:text-primary transition-colors hover:glow-primary transition-all duration-300" href="index.html#proceso">Proceso</a></li>
+                    <li><a class="text-on-surface-variant hover:text-primary transition-colors hover:glow-primary transition-all duration-300" href="index.html#planes">Planes</a></li>
+                    <li><a class="text-on-surface-variant hover:text-primary transition-colors hover:glow-primary transition-all duration-300" href="index.html#contacto">Contacto</a></li>
+                </ul>
+                <a class="hidden md:block bg-primary text-on-primary px-6 py-2 rounded text-sm hover:glow-primary transition-all duration-300 scale-95 active:scale-90" href="index.html#contacto">Cotizar Proyecto</a>
+                <!-- Mobile Menu Toggle -->
+                <button class="md:hidden text-primary focus:outline-none" onclick="toggleMobileMenu()">
+                    <span id="menu-icon" class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu (Drawer/Overlay) -->
+        <div id="mobile-menu" class="hidden md:hidden fixed inset-x-0 top-[73px] bg-surface/95 backdrop-blur-2xl border-b border-white/10 z-40 py-6 px-6 flex flex-col gap-6 shadow-2xl transition-all duration-300">
+          <ul class="flex flex-col gap-4 font-bold text-center">
+            <li><a class="block text-lg text-text-primary hover:text-primary py-2 border-b border-white/5 transition-colors" href="index.html#inicio" onclick="toggleMobileMenu()">Inicio</a></li>
+            <li><a class="block text-lg text-text-primary hover:text-primary py-2 border-b border-white/5 transition-colors" href="index.html#beneficios" onclick="toggleMobileMenu()">Beneficios</a></li>
+            <li><a class="block text-lg text-text-primary hover:text-primary py-2 border-b border-white/5 transition-colors" href="index.html#proceso" onclick="toggleMobileMenu()">Proceso</a></li>
+            <li><a class="block text-lg text-text-primary hover:text-primary py-2 border-b border-white/5 transition-colors" href="index.html#planes" onclick="toggleMobileMenu()">Planes</a></li>
+            <li><a class="block text-lg text-text-primary hover:text-primary py-2 transition-colors" href="index.html#contacto" onclick="toggleMobileMenu()">Contacto</a></li>
+          </ul>
+          <a class="w-full bg-primary text-on-primary py-3 rounded font-bold text-center hover:glow-primary transition-all duration-300" href="index.html#contacto" onclick="toggleMobileMenu()">Cotizar Proyecto</a>
+        </div>
 
-<body class="bg-background-dark text-slate-300 font-display selection:bg-neon-cyan/20">
-    <div id="header-placeholder"></div>
+        <main class="flex-grow py-16 px-6 md:px-16 max-w-4xl mx-auto w-full">
+            <h1 class="text-4xl font-extrabold text-text-primary mb-8 border-b border-white/10 pb-4">Términos y Condiciones de Servicio</h1>
+            
+            <div class="glass-card rounded-2xl p-8 border border-white/10 space-y-6 text-text-secondary leading-relaxed">
+                <p><strong>Última actualización: Junio de 2026</strong></p>
+                
+                <p>Bienvenido a <strong>Vetrixweb</strong>. Estos Términos y Condiciones regulan la contratación de nuestros servicios de diseño, desarrollo y montaje de ecosistemas de comercio electrónico (e-commerce). Al solicitar nuestros servicios de forma directa o a través de nuestros canales de contacto, declarás aceptar en su totalidad los términos aquí estipulados.</p>
 
-    <main class="px-6 lg:px-20 py-20 lg:py-32">
-        <article
-            class="max-w-4xl mx-auto prose prose-invert prose-headings:font-bold prose-h1:text-4xl prose-h1:text-white prose-p:text-slate-400 prose-a:text-neon-cyan hover:prose-a:text-white transition-colors">
+                <h2 class="text-2xl font-bold text-text-primary mt-6">1. Objeto del Servicio</h2>
+                <p>Vetrixweb ofrece servicios de diseño, desarrollo y montaje técnico de tiendas online estructuradas bajo dos modalidades:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li><strong>Plataforma Cerrada (Tienda Nube):</strong> Configuración técnica, diseño a medida sobre plantilla y puesta en marcha del ecosistema en Tienda Nube.</li>
+                    <li><strong>Plataforma Independiente (WordPress & WooCommerce):</strong> Desarrollo a medida sobre código propio, configuraciones de bases de datos, pasarelas de pago, integraciones logísticas complejas, optimizaciones SEO y entrega del código fuente.</li>
+                </ul>
 
-            <h1 class="mb-4">Términos y Condiciones</h1>
-            <p class="text-sm text-slate-500 uppercase tracking-widest font-bold">Última actualización: Febrero 2026</p>
+                <h2 class="text-2xl font-bold text-text-primary mt-6">2. Responsabilidades del Cliente</h2>
+                <p>Para la correcta ejecución y entrega de los proyectos, el cliente se compromete a:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>Proveer los accesos técnicos requeridos en tiempo y forma (dominios, hosting si es propio, credenciales de pasarelas de pago y logística).</li>
+                    <li>Suministrar el material gráfico, catálogo de productos, precios, políticas comerciales de su negocio, logos y datos de contacto según el plan contratado.</li>
+                    <li>Cumplir con las obligaciones fiscales y legales correspondientes a la venta de los productos ofrecidos en su tienda en Argentina.</li>
+                </ul>
 
-            <hr class="border-white/10 my-10">
+                <h2 class="text-2xl font-bold text-text-primary mt-6">3. Condiciones de Pago e Inversión Única</h2>
+                <p>Los precios cotizados corresponden a pagos únicos por el desarrollo e integración de los sistemas. El cliente entiende que:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>En los planes con **Tienda Nube**, el cliente es responsable de pagar directamente a la plataforma su respectivo abono de servicio mensual.</li>
+                    <li>En los planes con **WooCommerce**, no existen abonos mensuales de plataforma. Si contrata nuestro hosting especializado, el abono se facturará anualmente de forma separada.</li>
+                    <li>Los proyectos se inician con un pago anticipado (señal) y se cancelan al momento de la entrega o publicación oficial, según lo acordado en la propuesta comercial.</li>
+                </ul>
 
-            <h2>1. Identificación del Titular del Sitio Web</h2>
-            <p>El presente documento establece los términos o condiciones generales de uso del sitio web de "Vetrix
-                Web". Toda la plataforma está operada bajo el dominio principal vetrixweb.com, administrado y de
-                propiedad única de:</p>
-            <ul>
-                <li><strong>Propietario Legal:</strong> Mauro Tello</li>
-                <li><strong>Documento (DNI/CUIT):</strong> 23.063.889</li>
-                <li><strong>Ubicación Geográfica:</strong> Jaime Harris 118, Localidad Carmen de Patagones (CP 8504),
-                    Provincia de Buenos Aires, República Argentina.</li>
-                <li><strong>Vía de Contacto:</strong> info@vetrixweb.com</li>
-            </ul>
-            <p>La sola navegación, acceso o utilización del formulario de contacto integrado en este portal web le
-                atribuye a quien lo realice la condición de <strong>Usuario</strong> e implica la aceptación cabal e
-                incondicional de los presentes Términos.</p>
+                <h2 class="text-2xl font-bold text-text-primary mt-6">4. Propiedad Intelectual y Garantías</h2>
+                <p>Una vez completado el pago total del servicio, el diseño final de la tienda y sus contenidos configurados son propiedad exclusiva del cliente. Las licencias de plugins, plantillas o herramientas de terceros necesarias para el funcionamiento serán configuradas a nombre del cliente, quien asume el cumplimiento de sus licencias.</p>
+                <p>Vetrixweb ofrece una garantía técnica de funcionamiento y soporte de acuerdo con el plan seleccionado (Starter: estándar; Professional/Premium: 15 y 30 días respectivamente) contados a partir del lanzamiento.</p>
 
-            <h2>2. Finalidad Informativa de la Web y Limitación de Servicios</h2>
-            <p>La página "Vetrix Web" tiene como naturaleza exponer la "arquitectura", el concepto de "rentabilidad
-                digital", los "síntomas" de infraestructuras deficientes y el método de trabajo por fases ofrecido a los
-                profesionales y empresas. Como tal, la web constituye una *landing page* de tipo informativo y captación
-                o generación de leads (potenciales prospectos/consultas).</p>
-            <p>A través de la web no se perfeccionan cobros transaccionales inmediatos ni firmas de contratos. Toda
-                prestación de desarrollo web que termine siendo contratada constará y se regirá por un marco de
-                presupuesto u orden independiente (contrato posterior) fuera del entorno de esta web.</p>
+                <h2 class="text-2xl font-bold text-text-primary mt-6">5. Limitación de Responsabilidad</h2>
+                <p>Vetrixweb no será responsable por pérdidas de facturación, caídas del servicio de hosting ajenos a nuestro control, fallas operativas de las pasarelas de pago (Mercado Pago, Stripe, PayPal) ni demoras de las empresas de envíos (Andreani, Correo Argentino). La responsabilidad del correcto despacho de los productos recae enteramente en el titular del negocio.</p>
 
-            <h2>3. Propiedad Intelectual: Uso de Textos e Imágenes generadas por Inteligencia Artificial</h2>
-            <p>Vetrix Web protege rigurosamente a cada visitante o empresa, minimizando el riesgo de problemas derivados
-                o ligados a registros de patentes de recursos gráficos. Es vital y de suma relevancia exponer
-                públicamente nuestro método constructivo del presente material estético en este dominio web:</p>
-            <ul>
-                <li><strong>Imágenes:</strong> Ninguna de las ilustraciones, personajes isométricos y gráficos provistos
-                    en el presente sitio (incluyendo la sección de la realidad del mercado, el logo o gráficos en
-                    pilares) ostentan el derecho de propiedad o Copyright ajeno de un tercero, banco de fotos ni de un
-                    fotógrafo. Las mismas <strong>han sido elaboradas 100% mediante algoritmos de Inteligencia
-                        Artificial (IA)</strong> para dotarlas de originalidad y exención total de limitaciones
-                    artísticas de terceros. El uso o descargas particulares de esta web están prohibidos sin previa
-                    charla.</li>
-                <li><strong>Textos:</strong> Los bloques de redacción argumentativos y el Copywriting también fueron
-                    concebidos con modelos avanzados de lenguaje de IA para estructurar su base, siendo luego
-                    configurados y dispuestos estructuralmente en la actual plantilla bajo lineamientos y la supervisión
-                    del humano titular.</li>
-            </ul>
+                <h2 class="text-2xl font-bold text-text-primary mt-6">6. Ley Aplicable y Jurisdicción</h2>
+                <p>Estos Términos y Condiciones se rigen por las leyes vigentes de la República Argentina. Ante cualquier divergencia o conflicto derivado de la interpretación o cumplimiento de estos términos, las partes acuerdan someterse a la jurisdicción de los Tribunales Ordinarios de la Provincia de Río Negro (Viedma), renunciando a cualquier otro fuero que pudiera corresponder.</p>
+            </div>
+        </main>
 
-            <h2>4. Disposiciones Legales de Responsabilidad y Continuidad</h2>
-            <p>El responsable, Mauro Tello, procurará el normal funcionamiento virtual y seguro de esta Web usando
-                alojamiento de prestigio, para que cualquier empresa consultante reciba información íntegra. No
-                obstante, Vetrix Web no se responsabilizará por daños ocasionados a sistemas informáticos derivados de
-                caídas o virus producidos por vulnerabilidades de internet originadas ajenas a su servidor. </p>
-
-            <h2>5. Vínculos a Sitios Externos</h2>
-            <p>Este sitio podría contener enlaces directos o redirigidos hacia sitios externos (por ejemplo, aplicación
-                de enlace o <em>"Deep Link"</em> hacia los servidores nativos de WhatsApp Messenger para la comunicación
-                y cotización de presupuestos, alojados en sus respectivos dominios de Meta Inc.). Al salir de
-                vetrixweb.com usted queda sujeto a la política reguladora de dicha plataforma elegida, limitando en
-                absolución la responsabilidad de Vetrix Web respecto de interceptaciones, cortes o la interrupción a
-                dichos servidores paralelos.</p>
-
-            <h2>6. Legislación Vigente y Jurisdicción Aplicable</h2>
-            <p>Toda controversia legal generada a partir del acceso y uso libre del actual sitio web bajo en este
-                entorno "vetrixweb.com" o referente al tratamiento de los datos recogidos, resultará en la aplicación y
-                acatamiento de la legislación civil y comercial de la República Argentina. Ambas partes involucradas
-                deciden someterse expresamente a la jurisdicción de la Competencia Local correspondiente a Carmen de
-                Patagones, Provincia de Buenos Aires, en el departamento que ataña.</p>
-        </article>
-    </main>
-
-    <div id="footer-placeholder"></div>
-    <script src="/assets/js/layout.js"></script>
+        <!-- Footer Component -->
+        <footer class="bg-background-deep text-text-secondary font-body-md text-sm w-full border-t border-white/5 mt-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center px-6 md:px-16 py-8 max-w-[1280px] mx-auto gap-4 text-center md:text-left opacity-80 hover:opacity-100 transition-opacity">
+                <div class="flex flex-col gap-2 items-center md:items-start text-left">
+                    <div class="text-xs uppercase tracking-wider text-text-secondary/60 font-semibold">
+                        © 2026 VETRIX WEB INFRASTRUCTURE
+                    </div>
+                    <div class="flex items-center gap-2 font-black text-sm uppercase tracking-wide">
+                        <span class="text-text-secondary/80 font-bold text-xs">DESIGNED BY</span> 
+                        <span class="text-text-primary">VETRIXWEB</span>
+                        <svg class="inline-block w-6 h-4 rounded-sm shadow-sm" viewBox="0 0 36 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="36" height="24" rx="3" fill="#75AADB"/>
+                            <rect y="8" width="36" height="8" fill="white"/>
+                            <circle cx="18" cy="12" r="2.5" fill="#F4B41A"/>
+                            <circle cx="18" cy="12" r="1" fill="#D49400"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="flex gap-4 flex-wrap justify-center text-xs">
+                    <a class="hover:text-primary transition-all duration-300" href="privacidad.html">Política de Privacidad</a>
+                    <a class="hover:text-primary transition-all duration-300" href="terminos.html">Términos y Condiciones</a>
+                    <a class="hover:text-primary transition-all duration-300" href="cookies.html">Política de Cookies</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                icon.textContent = 'close';
+            } else {
+                menu.classList.add('hidden');
+                icon.textContent = 'menu';
+            }
+        }
+    </script>
 </body>
-
 </html>

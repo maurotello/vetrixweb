@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 50" width="100%" height="100%">
+  <!-- Andreani Swirl Symbol -->
+  <circle cx="20" cy="25" r="12" fill="none" stroke="#94a3b8" stroke-width="4" stroke-dasharray="60 15" transform="rotate(-45 20 25)" />
+  <circle cx="20" cy="25" r="5" fill="#94a3b8" />
+  <!-- Text: andreani -->
+  <text x="38" y="33" font-family="'Inter', 'Arial Black', sans-serif" font-size="22" font-weight="900" font-style="italic" letter-spacing="-0.5" fill="#94a3b8">andreani</text>
+</svg>

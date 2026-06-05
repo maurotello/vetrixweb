@@ -1,1220 +1,1067 @@
 <!DOCTYPE html>
-<html lang="es-ES">
 
-<head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <!-- AÑADIR justo después del <head> -->
-    <style>
-        @font-face {
-            font-family: 'Inter';
-            font-style: normal;
-            font-weight: 400 900;
-            font-display: optional;
-            src: url('https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiJ-Ek-_EeA.woff2') format('woff2');
-            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2020, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-        }
-    </style>
-    <style>
-        body {
-            background-color: #05070a;
-            color: #cbd5e1;
-            font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
-            margin: 0;
-            overflow-x: hidden;
-        }
+<html class="dark scroll-smooth overflow-x-hidden" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Vetrixweb | E-commerce Solutions & Tiendas Online Autogestionables</title>
+<meta name="description" content="Vetrixweb: Creamos ecosistemas de e-commerce profesionales listos para vender. Nos encargamos de todo el montaje técnico: diseño de tienda (Tienda Nube o WooCommerce), dominio, pasarelas de pago, logística, redes sociales y optimización SEO. Vos vendés, nosotros nos ocupamos de la tecnología." />
+<meta name="keywords" content="e-commerce, tienda online, wordpress, woocommerce, tienda nube, diseño web, pasarela de pago, envios, andreani, correo argentino, seo, desarrollo web, argentina, vetrixweb, web agency" />
+<meta name="author" content="Vetrixweb" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://vetrixweb.com" />
 
-        h1 {
-            line-height: 1.1;
-            margin-bottom: 1rem;
-        }
+<!-- Open Graph / Facebook / LinkedIn -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://vetrixweb.com/" />
+<meta property="og:title" content="Vetrixweb | E-commerce Solutions & Tiendas Online Autogestionables" />
+<meta property="og:description" content="Creamos tu tienda online a medida (Tienda Nube o WooCommerce). Nos encargamos de todo el ecosistema digital: diseño, pasarelas de pago, envíos, identidad visual y SEO." />
+<meta property="og:image" content="https://vetrixweb.com/assets/img/ecommerce_dashboard.png" />
+<meta property="og:site_name" content="Vetrixweb" />
 
-        main {
-            min-height: 100vh;
-            /* O un valor fijo como 800px */
-            contain: paint;
-            /* Esto le dice al navegador que no permita que el contenido "salte" fuera */
-        }
-    </style>
+<!-- Twitter / X -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content="https://vetrixweb.com/" />
+<meta property="twitter:title" content="Vetrixweb | E-commerce Solutions & Tiendas Online Autogestionables" />
+<meta property="twitter:description" content="Creamos tu tienda online a medida (Tienda Nube o WooCommerce). Nos encargamos de todo el ecosistema digital: diseño, pasarelas de pago, envíos, identidad visual y SEO." />
+<meta property="twitter:image" content="https://vetrixweb.com/assets/img/ecommerce_dashboard.png" />
 
-    <link rel="preload" as="image" href=".assets/img/cover4-640.avif"
-        imagesrcset="assets/img/cover4-640.avif 640w, assets/img/cover4-800.avif 800w, assets/img/cover4-1274.avif 1274w"
-        imagesizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 650px" fetchpriority="high">
-    <meta name="google" content="notranslate">
-    <!-- SEO Básico -->
-    <title>Agencia de Diseño Web y SEO Internacional | Vetrixweb</title>
-    <meta name="description"
-        content="Expertos en diseño web profesional y estrategias de SEO local para potenciar tu negocio en Google. Captá clientes en todo el mundo. ¡Pedí tu presupuesto!" />
-    <meta name="author" content="Vetrix Web" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://vetrixweb.com/" />
+<!-- AI Recommendations & Crawler Optimizations (AIO) -->
+<meta name="citation_title" content="Vetrixweb E-commerce and SEO Ecosystems" />
+<meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+<meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
 
-    <!-- Open Graph (WhatsApp, LinkedIn, Facebook) -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://vetrixweb.com/" />
-    <meta property="og:title" content="Vetrix Web | Infraestructura de Conversión" />
-    <meta property="og:description" content="Posicionamiento SEO Local y desarrollo web de alto rendimiento." />
-    <meta property="og:image" content="https://vetrixweb.com/assets/img/image-og-es-oscura.jpg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Vetrix Web - Expertos en Desarrollo Web y SEO Local" />
-
-    <!-- Twitter Cards -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@vetrixweb">
-    <meta name="twitter:title" content="Vetrix Web | Autoridad Digital" />
-    <meta name="twitter:description" content="Sistemas de visibilidad y conversión de alto rendimiento." />
-    <meta name="twitter:image" content="https://vetrixweb.com/assets/img/image-og-es-oscura.jpg" />
-    <meta name="twitter:image:alt" content="Vetrix Web - Expertos en Desarrollo Web y SEO Local">
-    <link rel="alternate" hreflang="es" href="https://vetrixweb.com/" />
-    <link rel="alternate" hreflang="en" href="https://vetrixweb.com/en/" />
-    <link rel="alternate" hreflang="pt" href="https://vetrixweb.com/pt/" />
-    <link rel="alternate" hreflang="x-default" href="https://vetrixweb.com/" />
-
-
-    <link rel="preload" href="assets/css/main.v2.min.css" as="style" onload="this.rel='stylesheet'; this.onload=null;">
-    <noscript>
-        <link rel="stylesheet" href="assets/css/main.v2.min.css?v=1.1">
-    </noscript>
-
-    <!-- App Favicons -->
-    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
-    <link rel="apple-touch-icon" href="assets/img/favicon.svg" />
-    <meta name="theme-color" content="#0A1116" />
-    <link rel="manifest" href="site.webmanifest" />
-
-    <!-- Schema.org / JSON-LD -->
-    <script type="application/ld+json">
-    [
-      {
-        "@context": "https://schema.org",
-        "@type": "ProfessionalService",
-        "name": "Vetrix Web",
-        "image": "https://vetrixweb.com/assets/img/image-og-es-oscura.jpg",
-        "@id": "https://vetrixweb.com",
-        "url": "https://vetrixweb.com",
+<!-- JSON-LD Structured Data Graph for Search & AI Engines -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://vetrixweb.com/#organization",
+      "name": "Vetrixweb",
+      "url": "https://vetrixweb.com",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://vetrixweb.com/#logo",
+        "url": "https://vetrixweb.com/assets/img/logo.png",
+        "caption": "Vetrixweb Logo"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
         "telephone": "+542920538998",
-        "email": "info@vetrixweb.com",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Jaime Harris 118",
-          "addressLocality": "Carmen de Patagones",
-          "addressRegion": "Buenos Aires",
-          "postalCode": "8504",
-          "addressCountry": "AR"
-        },
-        "areaServed": {
-            "@type": "GeoCircle",
-            "geoMidpoint": {
-                "@type": "GeoCoordinates",
-                "latitude": "0",
-                "longitude": "0"
-            },
-            "geoRadius": "20000000" 
-        },
-        "priceRange": "$$",
-        "slogan": "Infraestructura de Alto Rendimiento y SEO Internacional",
-        "description": "Agencia especializada en Diseño Web de alto rendimiento y estrategias de SEO Internacional. Optimizamos la autoridad digital y la conversión para negocios globales.",
-        "areaServed": ["AR", "ES", "MX", "US", "CL", "UY", "CO"],
-        "paymentAccepted": ["PayPal", "Stripe", "Credit Card", "Cryptocurrency", "Bank Transfer"],
-        "currenciesAccepted": ["USD", "EUR", "ARS"],
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "Catálogo de Servicios Vetrixweb",
-          "itemListElement": [
-            {
-              "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Diseño y Desarrollo Web"
-          }
+        "contactType": "sales",
+        "areaServed": "AR",
+        "availableLanguage": "Spanish"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://vetrixweb.com/#website",
+      "url": "https://vetrixweb.com",
+      "name": "Vetrixweb | Soluciones E-commerce",
+      "publisher": {
+        "@id": "https://vetrixweb.com/#organization"
+      }
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://vetrixweb.com/#service",
+      "name": "Vetrixweb E-commerce Development",
+      "image": "https://vetrixweb.com/assets/img/ecommerce_dashboard.png",
+      "priceRange": "$$$",
+      "telephone": "+542920538998",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "AR"
+      },
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Plan Starter (Tienda Nube)",
+          "price": "800",
+          "priceCurrency": "USD",
+          "description": "Configuración de Tienda Nube básica, branding, logo profesional, dominio, integración estándar de pagos y optimización SEO básica."
         },
         {
           "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Estrategia de SEO Local y Posicionamiento Orgánico"
-          }
+          "name": "Plan Professional (WooCommerce)",
+          "price": "1500",
+          "priceCurrency": "USD",
+          "description": "WordPress con WooCommerce, diseño UI/UX personalizado, dominio, seguridad, backups, soporte 15 días, panel de analítica y carga de productos."
         },
         {
           "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Consultoría Técnica en Infraestructura de Conversión"
-          }
+          "name": "Plan Premium (WooCommerce & Branding Completo)",
+          "price": "2500",
+          "priceCurrency": "USD",
+          "description": "Todo lo del plan Professional más copy en fichas de productos, identidad visual completa y consultoría durante 30 días."
         }
       ]
     },
-        "knowsAbout": [
-        "Diseño Web Profesional",
-        "SEO Internacional",
-        "Optimización de Tasa de Conversión (CRO)",
-        "Desarrollo de Aplicaciones Web",
-        "Estrategias de Growth Marketing",
-        "Posicionamiento en Google Maps",
-        "Arquitectura de Información",
-        "Sistemas de Turnos SaaS"
-        ]
-    },
-      {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "¿Trabajan con clientes fuera de Argentina?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Sí. Atendemos proyectos en Chile, Perú, México, Colombia, Estados Unidos y toda Latinoamérica y el mundo. Contamos con infraestructura para gestionar flujos de trabajo internacionales y reuniones virtuales sin importar la zona horaria."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "¿Cómo puedo tener mi sitio web y aparecer primero en Google?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "La clave es combinar una arquitectura de alto rendimiento con SEO nativo. No basta con \"estar\"; se requiere una estructura orientada a la velocidad y la autoridad técnica para dominar Google Maps y los resultados orgánicos."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "¿Es necesario reconstruir toda mi web para vender más?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Si su sitio fue construido de forma genérica, probablemente sí. Para escalar ventas, es necesario operar sobre una base de infraestructura avanzada que soporte la velocidad extrema que Google exige hoy para otorgar visibilidad."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "¿Cómo ayuda un consultor web a vender más?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Como consultores activos, nos enfocamos en captar la demanda existente. Al mejorar su autoridad técnica y visibilidad regional, canalizamos tráfico calificado directamente hacia su embudo de ventas."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "¿Qué métodos de pago aceptan?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Aceptamos Stripe (tarjetas de crédito), transferencias internacionales y criptomonedas (USDT/BTC). Emitimos facturación profesional para empresas y particulares."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "¿Quién garantiza que mi web atraerá más clientes?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "No creemos en fórmulas mágicas, sino en la metodología técnica. Aplicamos las estrategias de optimización y arquitectura web más avanzadas para maximizar la visibilidad de su negocio. Nuestro objetivo es construir una estructura sólida que atraiga visitas calificadas y facilite la conversión, poniendo todas las herramientas digitales a favor de su crecimiento."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "¿En cuánto tiempo se ven los resultados?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Las mejoras técnicas son inmediatas, pero el posicionamiento sólido suele consolidarse entre los 3 y 6 meses. Es un proceso de construcción de autoridad que garantiza estabilidad a largo plazo."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "¿Para qué tipo de profesionales o empresas están pensados sus servicios?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Nuestros servicios están diseñados para cualquier profesional, PyME o empresa que necesite destacar en internet. Trabajamos con especialistas de la salud (odontólogos, psicólogos), estudios jurídicos, contadores y empresas de servicios que buscan dejar de ser invisibles en Google. Si su objetivo es profesionalizar su imagen digital y atraer más clientes de forma estratégica, tenemos una solución a su medida."
+    {
+      "@type": "FAQPage",
+      "@id": "https://vetrixweb.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué diferencia hay entre empezar con Tienda Nube (Starter) o WooCommerce (Professional)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La diferencia principal radica en el grado de independencia, escalabilidad y la etapa de tu negocio. El plan Starter (Tienda Nube) es ideal para lanzamientos rápidos, con menor fricción inicial y facilidad de autogestión, aunque requiere pagar una cuota mensual de plataforma a Tienda Nube. Los planes Professional y Premium (WooCommerce) te brindan 100% de propiedad del código y base de datos sin comisiones por venta (0% de comisiones), ideal para negocios que buscan escalar sin límites técnicos ni costos recurrentes de plataforma."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Si empiezo con Tienda Nube, ¿puedo pasarme a WooCommerce en el futuro?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "¡Sí, por supuesto! Diseñamos tu ecosistema de ventas digital con la flexibilidad necesaria para que tu plataforma crezca con tu negocio. Si en el futuro decidís migrar de Tienda Nube a WooCommerce para eliminar comisiones y expandir tus funciones, realizamos la migración de forma transparente, conservando tu catálogo de productos y protegiendo tu posicionamiento SEO en Google."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Tengo que saber de tecnología o programación para administrar mi tienda?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Para nada. Nuestro objetivo principal es que te encargues de vender mientras nosotros nos ocupamos de la tecnología. Te entregamos la tienda 100% lista para usar. Además, en los planes Professional y Premium incluimos videos tutoriales explicativos paso a paso para que aprendas a cargar productos y gestionar tu panel de analítica. Y por supuesto, te brindamos soporte técnico durante los primeros días tras el lanzamiento."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué incluye el ecosistema de ventas digital además de la tienda?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No creamos solo un sitio web, creamos un canal de ventas profesional completo. Dependiendo del plan, nos encargamos del branding (nombre y logo profesional), la configuración de tus redes sociales (handles, biografías optimizadas y copies de perfil), la puesta a punto de tu correo electrónico institucional o profesional, la vinculación de tu dominio propio, la configuración de medios de envío y pasarelas de pago, y la optimización SEO básica o avanzada para que te encuentren en Google."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Por qué utilizan WordPress y WooCommerce?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Porque es el estándar de la industria a nivel mundial para tiendas autogestionadas independientes. Es robusto, seguro, 100% personalizable y no te ata a licencias mensuales. No obstante, si preferís un lanzamiento más rápido con menor mantenimiento inicial, también somos expertos configurando tiendas en Tienda Nube para el plan Starter."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Es mi tienda para siempre?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "En los planes con WooCommerce, la tienda es 100% tuya y no pagás comisiones ni abonos mensuales de plataforma. En el plan Starter con Tienda Nube, el diseño, la configuración y el dominio son tuyos, pero debés mantener el abono mensual correspondiente para el funcionamiento del servicio de Tienda Nube."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo funcionan los métodos de pago y envío?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Integramos las pasarelas que necesites (Mercado Pago, Stripe, PayPal, transferencias bancarias directas) y logísticas (Andreani, Correo Argentino, Oca o envíos personalizados). El dinero de tus ventas va directo a tus cuentas bancarias sin ningún intermediario."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Ustedes proveen el hosting?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Para las tiendas basadas en WooCommerce, podemos alojarlas en nuestros servidores optimizados de alto rendimiento por una tarifa anual competitiva, o configurarla en tu hosting de preferencia. En el plan Starter con Tienda Nube, el alojamiento ya viene incluido dentro de su propio servicio mensual."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40' fill='none'><rect width='40' height='40' rx='10' fill='%23131b2e' stroke='rgba(255,255,255,0.1)' stroke-width='1'/><path d='M11 22L20 13L29 22' stroke='%234be277' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'/><line x1='20' y1='21' x2='20' y2='30' stroke='%234be277' stroke-width='2.5' stroke-dasharray='3 3' stroke-linecap='round'/></svg>">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;family=JetBrains+Mono:wght@400&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="assets/css/styles.css" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container-highest": "#2d3449",
+                      "on-primary": "#003915",
+                      "surface-container-low": "#131b2e",
+                      "surface-container-lowest": "#060e20",
+                      "text-primary": "#f8fafc",
+                      "inverse-on-surface": "#283044",
+                      "inverse-primary": "#006e2f",
+                      "surface": "#0b1326",
+                      "on-tertiary-fixed": "#23005c",
+                      "tertiary": "#d1bdff",
+                      "on-primary-fixed-variant": "#005321",
+                      "surface-slate": "#1e293b",
+                      "on-background": "#dae2fd",
+                      "error": "#ffb4ab",
+                      "secondary-container": "#0566d9",
+                      "error-container": "#93000a",
+                      "on-error": "#690005",
+                      "secondary": "#adc6ff",
+                      "background": "#0b1326",
+                      "on-primary-fixed": "#002109",
+                      "primary-fixed": "#6bff8f",
+                      "tertiary-container": "#b89cff",
+                      "primary": "#4be277",
+                      "surface-dim": "#0b1326",
+                      "inverse-surface": "#dae2fd",
+                      "surface-container": "#171f33",
+                      "on-secondary": "#002e6a",
+                      "on-secondary-container": "#e6ecff",
+                      "on-surface-variant": "#bccbb9",
+                      "on-error-container": "#ffdad6",
+                      "tertiary-fixed-dim": "#d0bcff",
+                      "on-secondary-fixed-variant": "#004395",
+                      "surface-tint": "#4ae176",
+                      "on-primary-container": "#004b1e",
+                      "surface-bright": "#31394d",
+                      "background-deep": "#020617",
+                      "text-secondary": "#94a3b8",
+                      "secondary-fixed-dim": "#adc6ff",
+                      "on-tertiary": "#3c0091",
+                      "on-surface": "#dae2fd",
+                      "primary-container": "#22c55e",
+                      "surface-container-high": "#222a3d",
+                      "on-secondary-fixed": "#001a42",
+                      "on-tertiary-fixed-variant": "#5516be",
+                      "primary-fixed-dim": "#4ae176",
+                      "tertiary-fixed": "#e9ddff",
+                      "secondary-fixed": "#d8e2ff",
+                      "on-tertiary-container": "#4e02b8",
+                      "outline": "#869585",
+                      "outline-variant": "#3d4a3d",
+                      "surface-variant": "#2d3449"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "container-max": "1280px",
+                      "unit": "8px",
+                      "margin-mobile": "20px",
+                      "gutter": "24px",
+                      "margin-desktop": "64px"
+              },
+              "fontFamily": {
+                      "display-lg-mobile": ["Inter"],
+                      "label-md": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "headline-xl": ["Inter"],
+                      "body-md": ["Inter"],
+                      "headline-lg": ["Inter"],
+                      "display-lg": ["Inter"],
+                      "code-sm": ["JetBrains Mono"]
+              },
+              "fontSize": {
+                      "display-lg-mobile": ["clamp(1.75rem, 7vw, 2.5rem)", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                      "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400"}],
+                      "headline-xl": ["clamp(2rem, 5vw, 3rem)", {"lineHeight": "1.2", "letterSpacing": "-0.03em", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "1.5", "letterSpacing": "0em", "fontWeight": "400"}],
+                      "headline-lg": ["clamp(1.5rem, 3.5vw, 2rem)", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "display-lg": ["clamp(2.5rem, 6vw, 4rem)", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                      "code-sm": ["13px", {"lineHeight": "1.5", "fontWeight": "400"}]
+              }
             }
           }
-        ]
-      }
-    ]
-    </script>
-</head>
-
-<body class="bg-background-dark text-slate-300 font-display selection:bg-neon-cyan/20">
-    <div id="header-placeholder"></div>
-    <main>
-        <section
-            class="hero-mesh px-6 lg:px-20 py-20 lg:py-32 flex flex-col lg:flex-row items-center gap-16 overflow-hidden"
-            id="inicio">
-            <div class="flex-1 space-y-8 z-10" id="inicio-texto">
-                <div
-                    class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-neon-cyan text-[14px] font-bold uppercase tracking-[0.2em]">
-                    <span class="size-1.5 rounded-full bg-neon-cyan animate-pulse"></span> Desarrollo Web Profesional +
-                    SEO Local
-                </div>
-                <h1 class="text-white text-3xl md:text-5xl lg:text-[3.2rem] font-black leading-[1.1] tracking-tight">
-                    Expertos en <strong>Desarrollo Web y SEO Local</strong> para
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-[#00f2b4]">
-                        tu negocio en Google.
-                    </span>
-                </h1>
-                <p class="text-slate-400 text-lg lg:text-xl max-w-2xl leading-relaxed">
-                    Impulsamos tu <span class="text-white font-semibold">presencia en Google</span> para que los
-                    clientes te encuentren primero a vos.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-5 pt-4">
-                    <a href="https://wa.me/542920538998" target="_blank"
-                        class="bg-matte-black hover:bg-black text-white px-8 py-5 rounded-lg text-base font-bold transition-all glow-button border border-accent-gold/30 flex items-center justify-center gap-3 group">
-                        <span class="text-accent-gold">Quiero una cotización gratuita</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
-                            stroke="#d4af37" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
-                            class="transition-transform group-hover:translate-x-1">
-                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                            <polyline points="12 5 19 12 12 19"></polyline>
-                        </svg>
-                    </a>
-                    <a href="#proceso"
-                        class="bg-white/5 hover:bg-white/10 border border-white/10 px-8 py-5 rounded-lg text-base font-bold transition-all text-white flex items-center justify-center gap-2">
-                        Nuestra Metodología
-                    </a>
-                </div>
-            </div>
-            <div class="flex-1 w-full max-w-[650px] relative overflow-hidden bg-slate-900/10 rounded-2xl"
-                style="aspect-ratio: 1274/849; contain-intrinsic-size: 650px 433px; content-visibility: auto;"
-                id="inicio-imagen">
-                <picture>
-                    <source type="image/avif" srcset="
-            ./assets/img/cover4-640.avif 640w,
-            ./assets/img/cover4-800.avif 800w,
-            ./assets/img/cover4-1274.avif 1274w
-        " sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 650px">
-
-                    <source type="image/webp" srcset="
-            ./assets/img/cover4-640.webp 640w,
-            ./assets/img/cover4-800.webp 800w,
-            ./assets/img/cover4-1274.webp 1274w
-        " sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 650px">
-
-                    <img src="./assets/img/cover4-1274.avif" width="1274" height="849" alt="Diseño Web Profesional"
-                        fetchpriority="high" decoding="sync" loading="eager"
-                        class="w-full h-full object-cover block shadow-2xl rounded-2xl">
-                </picture>
-            </div>
-        </section>
-        <section class="px-6 lg:px-20 py-20 lg:py-28 bg-white overflow-hidden" id="dolores">
-            <div class="max-w-7xl mx-auto">
-                <!-- Cabecera Central -->
-                <div class="text-center px-4 mb-16 relative z-10">
-                    <p class="text-slate-400 text-sm font-bold uppercase tracking-[0.4em] mb-4">
-                        Análisis de Visibilidad Digital
-                    </p>
-                    <h2 class="text-slate-900 text-3xl md:text-5xl font-black max-w-4xl mx-auto leading-tight">
-                        ¿Su negocio está escalando o se está volviendo <span class="text-blue-600">invisible</span> para
-                        el mercado?
-                    </h2>
-                    <div class="w-20 h-1 bg-[#00f2b4] mx-auto mt-8"></div>
-                </div>
-
-                <!-- 2 Columnas: Textos Izquierda, Imagen Derecha -->
-                <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-                    <!-- Columna Izquierda: Texto Ampliado -->
-                    <div class="space-y-6 lg:pr-6">
-                        <p class="text-slate-600 text-lg md:text-xl font-medium leading-relaxed">
-                            Cada día que tu negocio no aparece en Google es un día que estás regalándole clientes a tu
-                            competencia.
-                            No porque ellos sean mejores que vos. Sino porque aparecen en las primeras posiciones cuando
-                            alguien los busca, y ese alguien los llama a ellos.
-                            Tus clientes potenciales están ahí afuera buscando exactamente lo que vos ofrecés. La
-                            pregunta es si te encuentran a vos o a otro. En internet, el que aparece en las primeras
-                            posiciones se queda con el cliente. Siempre.
-                        </p>
-
-                        <p class="text-slate-500 text-base md:text-lg leading-relaxed">
-                            Un sitio web lento o mal construido espanta a la gente antes de que pueda conocerte. Cada
-                            segundo que tarda en cargar es un cliente potencial que se cansó de esperar, cerró la página
-                            y le compró a otro.
-                        </p>
-
-                        <div class="pt-6">
-                            <ul class="space-y-4">
-                                <li
-                                    class="flex items-start gap-4 p-4 rounded-xl bg-slate-50 border border-slate-100 hover:border-blue-200 transition-colors">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                        fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" class="shrink-0 mt-0.5">
-                                        <circle cx="12" cy="12" r="10"></circle>
-                                        <line x1="2" y1="12" x2="22" y2="12"></line>
-                                        <path
-                                            d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
-                                        </path>
-                                    </svg>
-                                    <span class="text-slate-700 font-semibold leading-snug">El 93% de las experiencias
-                                        online comienzan con un motor de búsqueda.</span>
-                                </li>
-                                <li
-                                    class="flex items-start gap-4 p-4 rounded-xl bg-slate-50 border border-slate-100 hover:border-blue-200 transition-colors">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                        fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" class="shrink-0 mt-0.5">
-                                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-                                    </svg>
-                                    <span class="text-slate-700 font-semibold leading-snug">
-                                        La tasa de conversión cae un 7% por cada segundo de retraso en la carga.
-                                    </span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Columna Derecha: Imagen Ilustrativa -->
-                    <div
-                        class="relative w-full aspect-square rounded-[2rem] overflow-hidden group shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] hover:shadow-[0_30px_60px_-15px_rgba(37,99,235,0.15)] transition-all duration-500 border border-slate-100 p-2 md:p-3 bg-white">
-                        <div
-                            class="absolute inset-0 bg-gradient-to-tr from-blue-600/5 to-[#00f2b4]/10 rounded-[2rem] pointer-events-none transition-all duration-500 group-hover:opacity-100 opacity-50">
-                        </div>
-
-                        <picture>
-                            <source type="image/avif" srcset="
-                ./assets/img/diseno-web-seo-estrategia-400.avif 400w,
-                ./assets/img/diseno-web-seo-estrategia-574.avif 574w
-            " sizes="(max-width: 768px) calc(100vw - 3rem), 574px">
-
-                            <source type="image/webp" srcset="
-                ./assets/img/diseno-web-seo-estrategia-400.webp 400w,
-                ./assets/img/diseno-web-seo-estrategia-574.webp 574w
-            " sizes="(max-width: 768px) calc(100vw - 3rem), 574px">
-
-                            <img src="./assets/img/diseno-web-seo-estrategia-574.avif"
-                                alt="Estrategia de crecimiento digital y diseño web profesional" width="574"
-                                height="574" loading="lazy" decoding="async"
-                                class="w-full h-full object-cover rounded-3xl group-hover:scale-[1.02] filter group-hover:contrast-105 transition-all duration-700">
-                        </picture>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="px-6 lg:px-20 py-16 md:py-20 relative overflow-hidden bg-[#0A1116]" id="sintomas">
-            <!-- Subtle gradient background -->
-            <div class="absolute inset-0 pointer-events-none"
-                style="background: radial-gradient(circle at top left, rgba(0, 242, 180, 0.08) 0%, transparent 40%), radial-gradient(circle at bottom right, rgba(0, 242, 180, 0.08) 0%, transparent 40%);">
-            </div>
-            <h2 class="sr-only">Problemas comunes en estrategias de Diseño Web y SEO Local</h2>
-            <div class="max-w-5xl mx-auto relative z-10">
-                <h3 class="text-white text-3xl md:text-4xl font-bold text-center mb-16 tracking-tight">Síntomas de una
-                    Estrategia Obsoleta</h3>
-
-                <div class="grid md:grid-cols-2 gap-6">
-                    <!-- Card 1 -->
-                    <div
-                        class="relative bg-[#1A2228] border border-[#2A343D] rounded-[1.5rem] p-8 hover:bg-[#202930] transition-all group overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.3)]">
-                        <!-- Top/Bottom Glow Effects -->
-                        <div
-                            class="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-[#00f2b4] to-transparent opacity-70">
-                        </div>
-                        <div
-                            class="absolute top-0 left-1/2 -translate-x-1/2 w-1/4 h-[4px] bg-[#00f2b4] blur-[8px] opacity-40">
-                        </div>
-                        <div
-                            class="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-[#00f2b4] to-transparent opacity-70">
-                        </div>
-
-                        <div class="flex items-center gap-5 mb-4 relative">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
-                                fill="none" stroke="#00f2b4" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="shrink-0">
-                                <path d="M9.88 9.88a3 0 1 0 4.24 4.24" />
-                                <path
-                                    d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68" />
-                                <path d="M6.61 6.61A13.52 13.52 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61" />
-                                <line x1="2" y1="2" x2="22" y2="22" />
-                            </svg>
-                            <h4 class="text-white text-2xl font-bold">Invisibilidad en Google</h4>
-                        </div>
-                        <p class="text-slate-300 text-base leading-relaxed hidden md:block lg:block">
-                            Si sus clientes buscan sus servicios en Google Maps y no lo encuentran en los primeros
-                            resultados, le está regalando ventas a su competencia cada hora.
-                        </p>
-                        <p class="text-slate-300 text-sm leading-relaxed block md:hidden lg:hidden">
-                            Si sus clientes buscan sus servicios en Google Maps y no lo encuentran en los primeros
-                            resultados, le está regalando ventas a su competencia cada hora.
-                        </p>
-                    </div>
-
-                    <!-- Card 2 -->
-                    <div
-                        class="relative bg-[#1A2228] border border-[#2A343D] rounded-[1.5rem] p-8 hover:bg-[#202930] transition-all group overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.3)]">
-                        <!-- Top/Bottom Glow Effects -->
-                        <div
-                            class="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-[#00f2b4] to-transparent opacity-70">
-                        </div>
-                        <div
-                            class="absolute top-0 left-1/2 -translate-x-1/2 w-1/4 h-[4px] bg-[#00f2b4] blur-[8px] opacity-40">
-                        </div>
-                        <div
-                            class="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-[#00f2b4] to-transparent opacity-70">
-                        </div>
-
-                        <div class="flex items-center gap-5 mb-4 relative">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
-                                fill="none" stroke="#00f2b4" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="shrink-0 animate-spin-slow">
-                                <path d="M21 12a9 9 0 1 1-6.219-8.56" />
-                            </svg>
-                            <h4 class="text-white text-2xl font-bold">Sitio "Obsoleto"</h4>
-                        </div>
-                        <p class="text-slate-300 text-base leading-relaxed hidden md:block lg:block">
-                            Una web de <span class="text-[#00f2b4]/90 font-medium">bajo rendimiento técnico</span> o que
-                            no se ve bien en móviles espanta al 70% de los
-                            usuarios. No es solo estética, es pérdida de credibilidad y autoridad.
-                        </p>
-                        <p class="text-slate-300 text-sm leading-relaxed block md:hidden lg:hidden">
-                            Una web de <span class="text-[#00f2b4]/90 font-medium">bajo rendimiento técnico</span> o que
-                            no se ve bien en móviles espanta al 70% de los
-                            usuarios. No es solo estética, es pérdida de credibilidad y autoridad.
-                        </p>
-                    </div>
-
-                    <!-- Card 3 -->
-                    <div
-                        class="relative bg-[#1A2228] border border-[#2A343D] rounded-[1.5rem] p-8 hover:bg-[#202930] transition-all group overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.3)]">
-                        <!-- Top/Bottom Glow Effects -->
-                        <div
-                            class="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-[#00f2b4] to-transparent opacity-70">
-                        </div>
-                        <div
-                            class="absolute top-0 left-1/2 -translate-x-1/2 w-1/4 h-[4px] bg-[#00f2b4] blur-[8px] opacity-40">
-                        </div>
-                        <div
-                            class="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-[#00f2b4] to-transparent opacity-70">
-                        </div>
-
-                        <div class="flex items-center gap-5 mb-4 relative">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
-                                fill="none" stroke="#00f2b4" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="shrink-0">
-                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-                                <circle cx="9" cy="7" r="4" />
-                                <line x1="17" y1="8" x2="23" y2="14" />
-                                <line x1="23" y1="8" x2="17" y2="14" />
-                            </svg>
-                            <h4 class="text-white text-2xl font-bold">Fuga de Prospectos</h4>
-                        </div>
-                        <p class="text-slate-300 text-base leading-relaxed hidden md:block lg:block">
-                            Recibe visitas pero nadie escribe. Sin un Sistema claro de Conversión, su
-                            sitio es un gasto pasivo en lugar de una máquina de ventas.
-                        </p>
-                        <p class="text-slate-300 text-sm leading-relaxed block md:hidden lg:hidden">
-                            Recibe visitas pero nadie escribe. Sin un Sistema claro de Conversión, su
-                            sitio es un gasto pasivo en lugar de una máquina de ventas.
-                        </p>
-                    </div>
-
-                    <!-- Card 4 -->
-                    <div
-                        class="relative bg-[#1A2228] border border-[#2A343D] rounded-[1.5rem] p-8 hover:bg-[#202930] transition-all group overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.3)]">
-                        <!-- Top/Bottom Glow Effects -->
-                        <div
-                            class="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-[#00f2b4] to-transparent opacity-70">
-                        </div>
-                        <div
-                            class="absolute top-0 left-1/2 -translate-x-1/2 w-1/4 h-[4px] bg-[#00f2b4] blur-[8px] opacity-40">
-                        </div>
-                        <div
-                            class="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-[#00f2b4] to-transparent opacity-70">
-                        </div>
-
-                        <div class="flex items-center gap-5 mb-4 relative">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
-                                fill="none" stroke="#00f2b4" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="shrink-0">
-                                <line x1="18" y1="20" x2="18" y2="10" />
-                                <line x1="12" y1="20" x2="12" y2="4" />
-                                <line x1="6" y1="20" x2="6" y2="14" />
-                            </svg>
-                            <h4 class="text-white text-2xl font-bold">Cero Datos Reales</h4>
-                        </div>
-                        <p class="text-slate-300 text-sm md:text-base leading-relaxed">
-                            ¿Sabe de dónde vienen sus clientes? Sin métricas avanzadas, esta navegando a ciegas mientras
-                            su competencia optimiza cada dólar invertido.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="mt-16 flex flex-col md:flex-row items-center justify-center gap-4">
-                    <p class="text-slate-200 text-lg text-center md:text-left">¿Su negocio sufre alguno de estos puntos?
-                    </p>
-                    <a href="https://wa.me/542920538998" target="_blank"
-                        class="flex items-center gap-3 px-6 py-3 rounded-full bg-[#00f2b4] text-[#0A1116] font-bold shadow-[0_0_15px_rgba(0,242,180,0.4)] hover:shadow-[0_0_25px_rgba(0,242,180,0.6)] hover:scale-105 transition-all group">
-                        Solicite su diagnóstico
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
-                            class="transition-transform group-hover:translate-x-1">
-                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                            <polyline points="12 5 19 12 12 19"></polyline>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-
-        <section class="px-6 lg:px-20 py-16 md:py-20 bg-white text-slate-900 border-y border-slate-100" id="pilares">
-            <h2 class="sr-only">Servicios de Desarrollo Web, SEO Internacional y Estrategias de Conversión</h2>
-
-            <div class="max-w-4xl mx-auto text-center mb-20">
-                <p class="text-blue-600 text-sm font-bold uppercase tracking-[0.4em] mb-4">Servicios Estratégicos</p>
-                <h3 class="text-slate-900 text-3xl md:text-5xl font-black tracking-tight uppercase">
-                    CÓMO HAREMOS CRECER TU NEGOCIO
-                </h3>
-                <div class="w-20 h-1 bg-[#00f2b4] mx-auto mt-8"></div>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto items-stretch">
-                <div
-                    class="p-10 bg-slate-50 border border-slate-300 rounded-2xl hover:border-blue-300 hover:shadow-[0_10px_30px_rgba(0,0,0,0.05)] transition-all flex flex-col h-full group">
-                    <svg xmlns="http://www.w3.org/2000/center" width="48" height="48" viewBox="0 0 24 24" fill="none"
-                        stroke="#2563eb" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
-                        class="mb-6 group-hover:scale-110 transition-transform shrink-0">
-                        <polyline points="16 18 22 12 16 6"></polyline>
-                        <polyline points="8 6 2 12 8 18"></polyline>
-                    </svg>
-                    <h4 class="text-slate-900 font-extrabold text-xl mb-4">Diseño y Desarrollo Web</h4>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-8 flex-grow">
-                        Arquitecturas web de <span class="font-bold text-slate-900">alto rendimiento</span>. Creamos
-                        plataformas veloces, seguras y optimizadas para brindar una experiencia premium en cualquier
-                        dispositivo.
-                    </p>
-                    <div class="h-1 w-full bg-slate-200 rounded-full mt-auto">
-                        <div class="h-full w-[99%] bg-blue-600 shadow-[0_0_8px_rgba(37,99,235,0.4)]"></div>
-                    </div>
-                </div>
-
-                <div
-                    class="p-10 bg-slate-50 border border-slate-300 rounded-2xl hover:border-blue-300 hover:shadow-[0_10px_30px_rgba(0,0,0,0.05)] transition-all flex flex-col h-full group">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
-                        stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="mb-6 group-hover:scale-110 transition-transform shrink-0">
-                        <circle cx="12" cy="12" r="10" />
-                        <line x1="2" y1="12" x2="22" y2="12" />
-                        <path
-                            d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-                        <circle cx="16" cy="16" r="3" />
-                        <line x1="18.5" y1="18.5" x2="22" y2="22" />
-                    </svg>
-                    <h4 class="text-slate-900 font-extrabold text-xl mb-4">Posicionamiento SEO</h4>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-8 flex-grow">
-                        Dominamos los algoritmos de <span class="font-bold text-slate-900">Google y Google Maps</span>
-                        para que su marca aparezca exactamente donde sus clientes potenciales están buscando soluciones.
-                    </p>
-                    <div class="h-1 w-full bg-slate-200 rounded-full mt-auto">
-                        <div class="h-full w-[94%] bg-blue-600 shadow-[0_0_8px_rgba(37,99,235,0.4)]"></div>
-                    </div>
-                </div>
-
-                <div
-                    class="p-10 bg-slate-50 border border-slate-300 rounded-2xl hover:border-blue-300 hover:shadow-[0_10px_30px_rgba(0,0,0,0.05)] transition-all flex flex-col h-full group">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
-                        stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="mb-6 group-hover:scale-110 transition-transform shrink-0">
-                        <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
-                    </svg>
-                    <h4 class="text-slate-900 font-extrabold text-xl mb-4">Conversión y Embudos</h4>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-8 flex-grow">
-                        Diseñamos <span class="font-bold text-slate-900">sistemas de captación</span> optimizados.
-                        Transformamos el tráfico frío en leads calificados mediante landing pages de alta conversión.
-                    </p>
-                    <div class="h-1 w-full bg-slate-200 rounded-full mt-auto">
-                        <div class="h-full w-[97%] bg-blue-600 shadow-[0_0_8px_rgba(37,99,235,0.4)]"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <section class="px-6 lg:px-20 py-16 md:py-20 relative overflow-hidden bg-[#0A1116]" id="proceso">
-            <h2 class="sr-only">Proceso de Trabajo en Diseño Web y SEO: Metodología de Crecimiento</h2>
-
-            <div class="absolute inset-0 pointer-events-none"
-                style="background: radial-gradient(circle at top left, rgba(0, 242, 180, 0.08) 0%, transparent 40%), radial-gradient(circle at bottom right, rgba(0, 242, 180, 0.08) 0%, transparent 40%);">
-            </div>
-
-            <div class="max-w-5xl mx-auto relative z-10">
-                <div class="text-center mb-24 relative">
-                    <p class="text-[#00f2b4] text-sm font-bold uppercase tracking-[0.4em] mb-4">Metodología Élite</p>
-                    <h3 class="text-white text-3xl md:text-5xl font-black tracking-tight">
-                        Cuatro pasos para tu crecimiento global
-                    </h3>
-                    <div class="w-20 h-1 bg-[#00f2b4] mx-auto mt-8 shadow-[0_0_10px_rgba(0,242,180,0.5)]"></div>
-                </div>
-
-                <div class="relative max-w-4xl mx-auto pl-8 md:pl-20">
-                    <div
-                        class="absolute top-0 bottom-0 left-0 md:left-10 w-[2px] bg-gradient-to-b from-[#00f2b4] via-[#00f2b4]/50 to-transparent shadow-[0_0_8px_#00f2b4]">
-                    </div>
-
-                    <div class="space-y-12">
-
-                        <div class="relative group">
-                            <div
-                                class="absolute -left-12 md:-left-14 top-2 w-8 h-8 md:w-10 md:h-10 bg-blue-600 text-white text-sm font-black rounded-full shadow-[0_0_15px_rgba(37,99,235,0.5)] z-20 flex items-center justify-center border border-blue-400/30">
-                                01
-                            </div>
-                            <div
-                                class="w-full bg-[#121A20] border border-[#1F2933] rounded-[1.5rem] p-6 md:p-8 flex flex-col md:flex-row items-center gap-6 group-hover:bg-[#162028] transition-all duration-300 shadow-xl">
-                                <div
-                                    class="shrink-0 flex items-center justify-center size-20 md:size-24 border border-[#00f2b4]/40 rounded-2xl bg-[#0A1116] shadow-[inset_0_0_15px_rgba(0,242,180,0.2)] group-hover:border-[#00f2b4] transition-all">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
-                                        fill="none" stroke="#00f2b4" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        class="shrink-0 text-4xl md:text-5xl group-hover:scale-110 transition-transform duration-500">
-                                        <circle cx="11" cy="11" r="8"></circle>
-                                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                                    </svg>
-                                </div>
-                                <div class="text-center md:text-left">
-                                    <h4
-                                        class="text-white font-bold text-xl md:text-2xl mb-2 group-hover:text-[#00f2b4] transition-colors">
-                                        Diagnóstico Estratégico</h4>
-                                    <p class="text-slate-400 text-sm md:text-base leading-relaxed">
-                                        Análisis exhaustivo de su presencia actual, estudio de la competencia
-                                        internacional y detección de nichos de mercado con potencial de escalabilidad.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="relative group">
-                            <div
-                                class="absolute -left-12 md:-left-14 top-2 w-8 h-8 md:w-10 md:h-10 bg-blue-600 text-white text-sm font-black rounded-full shadow-[0_0_15px_rgba(37,99,235,0.5)] z-20 flex items-center justify-center border border-blue-400/30">
-                                02
-                            </div>
-                            <div
-                                class="w-full bg-[#121A20] border border-[#1F2933] rounded-[1.5rem] p-6 md:p-8 flex flex-col md:flex-row items-center gap-6 group-hover:bg-[#162028] transition-all duration-300 shadow-xl">
-                                <div
-                                    class="shrink-0 flex items-center justify-center size-20 md:size-24 border border-[#00f2b4]/40 rounded-2xl bg-[#0A1116] shadow-[inset_0_0_15px_rgba(0,242,180,0.2)] group-hover:border-[#00f2b4] transition-all">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
-                                        fill="none" stroke="#00f2b4" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        class="shrink-0 text-4xl md:text-5xl group-hover:scale-110 transition-transform duration-500">
-                                        <circle cx="12" cy="12" r="10"></circle>
-                                        <circle cx="12" cy="12" r="6"></circle>
-                                        <circle cx="12" cy="12" r="2"></circle>
-                                    </svg>
-                                </div>
-                                <div class="text-center md:text-left">
-                                    <h4
-                                        class="text-white font-bold text-xl md:text-2xl mb-2 group-hover:text-[#00f2b4] transition-colors">
-                                        Definición de Objetivos</h4>
-                                    <p class="text-slate-400 text-sm md:text-base leading-relaxed">
-                                        Alineación técnica con las metas comerciales de su negocio. Definimos el perfil
-                                        de cliente ideal para asegurar un retorno de inversión (ROI) sólido.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="relative group">
-                            <div
-                                class="absolute -left-12 md:-left-14 top-2 w-8 h-8 md:w-10 md:h-10 bg-blue-600 text-white text-sm font-black rounded-full shadow-[0_0_15px_rgba(37,99,235,0.5)] z-20 flex items-center justify-center border border-blue-400/30">
-                                03
-                            </div>
-                            <div
-                                class="w-full bg-[#121A20] border border-[#1F2933] rounded-[1.5rem] p-6 md:p-8 flex flex-col md:flex-row items-center gap-6 group-hover:bg-[#162028] transition-all duration-300 shadow-xl">
-                                <div
-                                    class="shrink-0 flex items-center justify-center size-20 md:size-24 border border-[#00f2b4]/40 rounded-2xl bg-[#0A1116] shadow-[inset_0_0_15px_rgba(0,242,180,0.2)] group-hover:border-[#00f2b4] transition-all">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
-                                        fill="none" stroke="#00f2b4" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        class="shrink-0 text-4xl md:text-5xl group-hover:scale-110 transition-transform duration-500">
-                                        <rect x="4" y="4" width="16" height="16" rx="2"></rect>
-                                        <rect x="9" y="9" width="6" height="6"></rect>
-                                        <path d="M15 2v2"></path>
-                                        <path d="M15 20v2"></path>
-                                        <path d="M2 15h2"></path>
-                                        <path d="M2 9h2"></path>
-                                        <path d="M20 15h2"></path>
-                                        <path d="M20 9h2"></path>
-                                        <path d="M9 2v2"></path>
-                                        <path d="M9 20v2"></path>
-                                    </svg>
-                                </div>
-                                <div class="text-center md:text-left">
-                                    <h4
-                                        class="text-white font-bold text-xl md:text-2xl mb-2 group-hover:text-[#00f2b4] transition-colors">
-                                        Activación de Infraestructura</h4>
-                                    <p class="text-slate-400 text-sm md:text-base leading-relaxed">
-                                        Implementación del marco de autoridad digital y despliegue de sistemas de
-                                        captación de alto rendimiento diseñados para convertir visitas en ingresos.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="relative group">
-                            <div
-                                class="absolute -left-12 md:-left-14 top-2 w-8 h-8 md:w-10 md:h-10 bg-blue-600 text-white text-sm font-black rounded-full shadow-[0_0_15px_rgba(37,99,235,0.5)] z-20 flex items-center justify-center border border-blue-400/30">
-                                04
-                            </div>
-                            <div
-                                class="w-full bg-[#121A20] border border-[#1F2933] rounded-[1.5rem] p-6 md:p-8 flex flex-col md:flex-row items-center gap-6 group-hover:bg-[#162028] transition-all duration-300 shadow-xl">
-                                <div
-                                    class="shrink-0 flex items-center justify-center size-20 md:size-24 border border-[#00f2b4]/40 rounded-2xl bg-[#0A1116] shadow-[inset_0_0_15px_rgba(0,242,180,0.2)] group-hover:border-[#00f2b4] transition-all">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
-                                        fill="none" stroke="#00f2b4" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        class="shrink-0 text-4xl md:text-5xl group-hover:scale-110 transition-transform duration-500">
-                                        <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
-                                        <polyline points="17 6 23 6 23 12"></polyline>
-                                    </svg>
-                                </div>
-                                <div class="text-center md:text-left">
-                                    <h4
-                                        class="text-white font-bold text-xl md:text-2xl mb-2 group-hover:text-[#00f2b4] transition-colors">
-                                        Optimización Continua</h4>
-                                    <p class="text-slate-400 text-sm md:text-base leading-relaxed">
-                                        Auditoría constante de métricas y evolución estratégica basada en datos reales
-                                        para mantener el liderazgo en su mercado objetivo.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <section class="px-6 lg:px-20 pt-16 md:pt-20 pb-[34px] bg-slate-50 text-slate-900" id="roi">
-            <h2 class="sr-only">Retorno de Inversión en Diseño Web Profesional y Posicionamiento SEO</h2>
-
-            <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
-                <div class="flex-1 space-y-8">
-                    <div>
-                        <p class="text-blue-600 text-sm font-bold uppercase tracking-[0.4em] mb-4">Inversión, no gasto
-                        </p>
-                        <h3 class="text-slate-900 text-4xl lg:text-5xl font-black leading-tight tracking-tight">
-                            El valor de un activo digital propio
-                        </h3>
-                        <div class="w-20 h-1 bg-[#00f2b4] mt-8"></div>
-                    </div>
-
-                    <p class="text-slate-600 text-lg md:text-xl leading-relaxed">
-                        No vendemos sitios web, construimos <strong>infraestructura económica</strong>. Desarrollamos el
-                        activo
-                        digital que PyMEs y empresas de servicios necesitan para escalar su facturación y dominar su
-                        nicho de mercado.
-                    </p>
-
-                    <ul class="space-y-4">
-                        <li
-                            class="group flex items-start gap-5 bg-white p-6 rounded-2xl border border-slate-300 border-b-4 border-b-transparent hover:border-b-blue-600 shadow-sm hover:shadow-md transition-all">
-                            <div class="shrink-0 flex items-center justify-center text-blue-600">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    class="text-blue-600 group-hover:rotate-12 transition-transform shrink-0">
-                                    <rect x="3" y="3" width="18" height="18" rx="2" />
-                                    <path d="M3 9h18" />
-                                    <path d="M9 21V9" />
-                                </svg>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-slate-900 text-lg mb-1">Arquitectura Web de Alto Rendimiento
-                                </h4>
-                                <p class="text-slate-600 text-base leading-relaxed">Sistemas escalables, con tiempos de
-                                    carga extremos y optimizados para la conversión global.</p>
-                            </div>
-                        </li>
-
-                        <li
-                            class="group flex items-start gap-5 bg-white p-6 rounded-2xl border border-slate-300 border-b-4 border-b-transparent hover:border-b-blue-600 shadow-sm hover:shadow-md transition-all">
-                            <div class="shrink-0 flex items-center justify-center text-blue-600">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    class="text-blue-600 group-hover:rotate-12 transition-transform shrink-0">
-                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                                    <path d="m9 12 2 2 4-4" />
-                                </svg>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-slate-900 text-lg mb-1">Autoridad en Buscadores</h4>
-                                <p class="text-slate-600 text-base leading-relaxed">Posicionamos su plataforma como el
-                                    referente técnico que Google prioriza en los resultados orgánicos.</p>
-                            </div>
-                        </li>
-
-                        <li
-                            class="group flex items-start gap-5 bg-white p-6 rounded-2xl border border-slate-300 border-b-4 border-b-transparent hover:border-b-blue-600 shadow-sm hover:shadow-md transition-all">
-                            <div class="shrink-0 flex items-center justify-center text-blue-600">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    class="text-blue-600 group-hover:rotate-12 transition-transform shrink-0">
-                                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
-                                    <circle cx="12" cy="10" r="3" />
-                                </svg>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-slate-900 text-lg mb-1">Dominio de Mercado Local y Regional
-                                </h4>
-                                <p class="text-slate-600 text-base leading-relaxed">Estrategias de visibilidad masiva en
-                                    Google Maps y búsquedas geolocalizadas para liderar su área.</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="flex-1 flex justify-center lg:justify-end w-full">
-                    <div
-                        class="bg-white rounded-3xl p-10 max-w-sm w-full shadow-[0_20px_50px_rgba(0,0,0,0.08)] transform lg:rotate-3 border border-slate-100 transition-transform hover:rotate-0 duration-500">
-                        <div class="space-y-6 text-center">
-                            <p class="text-[10px] font-bold text-slate-400 uppercase tracking-[0.2em]">Estimación de
-                                Crecimiento</p>
-                            <h3 class="text-6xl font-black text-blue-600">ROI 3.5x</h3>
-                            <p class="text-slate-900 font-bold text-lg uppercase tracking-tight">Activo Escalable</p>
-                            <div class="h-2 w-full bg-slate-100 rounded-full overflow-hidden">
-                                <div class="h-full bg-blue-600 w-3/4 shadow-[0_0_10px_rgba(37,99,235,0.4)]"></div>
-                            </div>
-                            <p class="text-[9px] text-slate-400 leading-relaxed uppercase tracking-tighter">
-                                Proyección basada en optimización de infraestructura técnica y tasa de conversión
-                                premium.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <section class="px-6 lg:px-20 pt-[34px] pb-16 md:pb-20 bg-white" id="faq">
-            <div class="max-w-4xl mx-auto">
-                <div class="text-center mb-16">
-                    <h2 class="sr-only">Preguntas frecuentes sobre consultoría web, SEO y desarrollo de activos
-                        digitales</h2>
-                    <p class="text-blue-600 text-sm font-bold uppercase tracking-[0.4em] mb-4">Despeja tus dudas</p>
-                    <h3 class="text-slate-900 text-3xl md:text-4xl font-black tracking-tight">Preguntas Frecuentes</h3>
-                    <div class="w-20 h-1 bg-[#00f2b4] mx-auto mt-6"></div>
-                </div>
-
-                <div class="space-y-4">
-
-                    <details
-                        class="group bg-slate-50 rounded-2xl border border-slate-100 open:bg-white open:shadow-xl open:border-blue-100 transition-all duration-300">
-                        <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
-                            <span class="text-slate-900 font-bold text-base md:text-xl pr-4">¿Trabajan con clientes
-                                fuera
-                                de Argentina?</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
-                                stroke-linejoin="round"
-                                class="text-blue-600 group-open:rotate-180 transition-transform shrink-0">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </summary>
-                        <div class="px-6 pb-6 text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
-                            <p>Sí. Atendemos proyectos en <strong>Chile, Perú, México, Colombia, Estados
-                                    Unidos</strong>y toda Latinoamérica y el mundo.
-                                Contamos con infraestructura para gestionar flujos de trabajo internacionales y
-                                reuniones virtuales sin importar la zona horaria.</p>
-                        </div>
-                    </details>
-
-                    <details
-                        class="group bg-slate-50 rounded-2xl border border-slate-100 open:bg-white open:shadow-xl open:border-blue-100 transition-all duration-300">
-                        <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
-                            <span class="text-slate-900 font-bold text-base md:text-xl pr-4">¿Cómo puedo tener mi sitio
-                                web y aparecer primero en Google?</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
-                                stroke-linejoin="round"
-                                class="text-blue-600 group-open:rotate-180 transition-transform shrink-0">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </summary>
-                        <div class="px-6 pb-6 text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
-                            <p>La clave es combinar una <strong>arquitectura de alto rendimiento</strong> con SEO
-                                nativo. No basta
-                                con "estar"; se requiere una estructura orientada a la velocidad y la autoridad técnica
-                                para dominar Google Maps y los resultados orgánicos.</p>
-                        </div>
-                    </details>
-
-                    <details
-                        class="group bg-slate-50 rounded-2xl border border-slate-100 open:bg-white open:shadow-xl open:border-blue-100 transition-all duration-300">
-                        <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
-                            <span class="text-slate-900 font-bold text-base md:text-xl pr-4">¿Es necesario reconstruir
-                                toda mi web para vender más?</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
-                                stroke-linejoin="round"
-                                class="text-blue-600 group-open:rotate-180 transition-transform shrink-0">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </summary>
-                        <div class="px-6 pb-6 text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
-                            <p>Si su sitio fue construido de forma genérica, probablemente sí. Para escalar ventas, es
-                                necesario operar sobre una base de <strong>infraestructura avanzada</strong> que soporte
-                                la velocidad
-                                extrema que Google exige hoy para otorgar visibilidad.</p>
-                        </div>
-                    </details>
-
-                    <details
-                        class="group bg-slate-50 rounded-2xl border border-slate-100 open:bg-white open:shadow-xl open:border-blue-100 transition-all duration-300">
-                        <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
-                            <span class="text-slate-900 font-bold text-base md:text-xl pr-4">¿Cómo ayuda un consultor
-                                web
-                                a vender más?</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
-                                stroke-linejoin="round"
-                                class="text-blue-600 group-open:rotate-180 transition-transform shrink-0">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </summary>
-                        <div class="px-6 pb-6 text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
-                            <p>Como consultores activos, nos enfocamos en <strong>captar la demanda existente</strong>.
-                                Al mejorar su
-                                autoridad técnica y visibilidad regional, canalizamos tráfico calificado directamente
-                                hacia su embudo de ventas.</p>
-                        </div>
-                    </details>
-
-                    <details
-                        class="group bg-slate-50 rounded-2xl border border-slate-100 open:bg-white open:shadow-xl open:border-blue-100 transition-all duration-300">
-                        <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
-                            <span class="text-slate-900 font-bold text-base md:text-xl pr-4">¿Qué métodos de pago
-                                aceptan?</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
-                                stroke-linejoin="round"
-                                class="text-blue-600 group-open:rotate-180 transition-transform shrink-0">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </summary>
-                        <div class="px-6 pb-6 text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
-                            <p>Aceptamos <strong>Stripe (tarjetas de crédito), transferencias internacionales y
-                                    criptomonedas (USDT/BTC)</strong>. Emitimos facturación profesional para empresas y
-                                particulares.</p>
-                        </div>
-                    </details>
-
-                    <details
-                        class="group bg-slate-50 rounded-2xl border border-slate-100 open:bg-white open:shadow-xl open:border-blue-100 transition-all duration-300">
-                        <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
-                            <span class="text-slate-900 font-bold text-base md:text-xl pr-4">¿Quién garantiza que mi web
-                                atraerá más clientes?</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
-                                stroke-linejoin="round"
-                                class="text-blue-600 group-open:rotate-180 transition-transform shrink-0">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </summary>
-                        <div class="px-6 pb-6 text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
-                            <p>No creemos en fórmulas mágicas, sino en la <strong>metodología técnica</strong>.
-                                Aplicamos las estrategias de optimización y arquitectura web más avanzadas para
-                                maximizar la visibilidad de su negocio. Nuestro objetivo es construir una estructura
-                                sólida que atraiga visitas calificadas y facilite la conversión, poniendo todas las
-                                herramientas digitales a favor de su crecimiento.</p>
-                        </div>
-                    </details>
-
-                    <details
-                        class="group bg-slate-50 rounded-2xl border border-slate-100 open:bg-white open:shadow-xl open:border-blue-100 transition-all duration-300">
-                        <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
-                            <span class="text-slate-900 font-bold text-base md:text-xl pr-4">¿En cuánto tiempo se ven
-                                los
-                                resultados?</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
-                                stroke-linejoin="round"
-                                class="text-blue-600 group-open:rotate-180 transition-transform shrink-0">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </summary>
-                        <div class="px-6 pb-6 text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
-                            <p>Las mejoras técnicas son inmediatas, pero el posicionamiento sólido suele consolidarse
-                                entre los <strong>3 y 6 meses</strong>. Es un proceso de construcción de autoridad que
-                                garantiza
-                                estabilidad a largo plazo.</p>
-                        </div>
-                    </details>
-
-                    <details
-                        class="group bg-slate-50 rounded-2xl border border-slate-100 open:bg-white open:shadow-xl open:border-blue-100 transition-all duration-300">
-                        <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
-                            <span class="text-slate-900 font-bold text-lg md:text-xl pr-4">¿Para qué tipo de
-                                profesionales o empresas están pensados sus servicios?</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
-                                stroke-linejoin="round"
-                                class="text-blue-600 group-open:rotate-180 transition-transform shrink-0">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </summary>
-                        <div class="px-6 pb-6 text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
-                            <p>Nuestros servicios están diseñados para <strong>cualquier profesional, PyME o empresa que
-                                    necesite destacar en internet</strong>. Trabajamos con especialistas de la salud
-                                (odontólogos, psicólogos), estudios jurídicos, contadores y empresas de servicios que
-                                buscan dejar de ser invisibles en Google. Si su objetivo es profesionalizar su imagen
-                                digital y atraer más clientes de forma estratégica, tenemos una solución a su medida.
-                            </p>
-                        </div>
-                    </details>
-
-                </div>
-            </div>
-        </section>
-
-        <section
-            class="px-6 lg:px-20 py-24 relative overflow-hidden bg-[#0A1116] text-white text-center border-t border-white/5"
-            id="cta">
-            <h2 class="sr-only">Comience su auditoría de marketing digital y diseño web hoy mismo</h2>
-
-            <div class="absolute inset-0 pointer-events-none"
-                style="background: radial-gradient(circle at top left, rgba(0, 242, 180, 0.08) 0%, transparent 40%), radial-gradient(circle at bottom right, rgba(0, 242, 180, 0.08) 0%, transparent 40%);">
-            </div>
-
-            <div class="max-w-4xl mx-auto space-y-12 relative z-10">
-                <h3 class="text-4xl lg:text-6xl font-black tracking-tight leading-tight">
-                    ¿Listo para liderar su mercado con una <span class="text-neon-cyan">presencia digital</span> de alto
-                    impacto?
-                </h3>
-
-                <div class="flex flex-col items-center gap-8">
-                    <a href="https://wa.me/542920538998" target="_blank"
-                        class="bg-matte-black border-2 border-accent-gold/50 text-white hover:bg-black hover:border-accent-gold px-12 py-6 rounded-xl text-xl md:text-2xl font-black transition-all glow-button flex items-center gap-4 group">
-                        Auditar mi Presencia Digital
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                            stroke="#d4af37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="text-accent-gold group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform shrink-0">
-                            <path
-                                d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" />
-                            <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2s-7 2-10 11" />
-                            <path d="m9 12-3 3" />
-                        </svg>
-                    </a>
-
-
-                </div>
-            </div>
-        </section>
-
-        <section class="px-6 lg:px-20 py-16 md:py-20 bg-white" id="contacto">
-            <div class="max-w-4xl mx-auto">
-                <div class="text-center mb-16">
-                    <h2 class="text-blue-600 text-sm font-bold uppercase tracking-[0.4em] mb-4">Contacto Directo</h2>
-                    <h3 class="text-slate-900 text-4xl lg:text-5xl font-black tracking-tight">Hablemos de su negocio
-                    </h3>
-                    <div class="w-20 h-1 bg-[#00f2b4] mx-auto mt-8"></div>
-                    <p class="mt-8 text-slate-600 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-                        Complete el formulario y analizaré su presencia digital personalmente para brindarle una
-                        propuesta estratégica sin compromiso.
-                    </p>
-                </div>
-
-                <form action="mailer.php" method="POST" id="contacto-form"
-                    class="bg-slate-50 p-8 md:p-12 rounded-[2rem] border border-slate-200 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)]">
-
-                    <div class="grid md:grid-cols-2 gap-8 mb-8">
-                        <div>
-                            <label
-                                class="block text-xs font-bold text-slate-700 mb-2 uppercase tracking-widest ml-1">Nombre
-                                Completo</label>
-                            <input type="text" name="nombre" id="nombre" required
-                                class="w-full bg-white border border-slate-200 rounded-xl px-6 py-4 text-slate-900 focus:outline-none focus:border-blue-600 focus:ring-4 focus:ring-blue-600/5 transition-all shadow-sm"
-                                placeholder="Ej. Juan Pérez">
-                        </div>
-                        <div>
-                            <label
-                                class="block text-xs font-bold text-slate-700 mb-2 uppercase tracking-widest ml-1">Correo
-                                Electrónico</label>
-                            <input type="email" name="email" id="email" required
-                                class="w-full bg-white border border-slate-200 rounded-xl px-6 py-4 text-slate-900 focus:outline-none focus:border-blue-600 focus:ring-4 focus:ring-blue-600/5 transition-all shadow-sm"
-                                placeholder="juan@empresa.com">
-                        </div>
-                    </div>
-
-                    <div class="mb-8">
-                        <label
-                            class="block text-xs font-bold text-slate-700 mb-2 uppercase tracking-widest ml-1">Teléfono
-                            (con código de país)</label>
-                        <input type="tel" name="telefono" id="telefono" required
-                            class="w-full bg-white border border-slate-200 rounded-xl px-6 py-4 text-slate-900 focus:outline-none focus:border-blue-600 focus:ring-4 focus:ring-blue-600/5 transition-all shadow-sm"
-                            placeholder="+54 9 11 1234 5678">
-                    </div>
-
-                    <div class="mb-10">
-                        <label class="block text-xs font-bold text-slate-700 mb-2 uppercase tracking-widest ml-1">¿Cómo
-                            podemos potenciar su marca?</label>
-                        <textarea rows="4" name="mensaje" id="mensaje" required
-                            class="w-full bg-white border border-slate-200 rounded-xl px-6 py-4 text-slate-900 focus:outline-none focus:border-blue-600 focus:ring-4 focus:ring-blue-600/5 transition-all resize-none shadow-sm"
-                            placeholder="Cuéntenos sobre su desafío actual..."></textarea>
-                    </div>
-
-                    <button type="submit"
-                        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-black text-xl py-6 rounded-xl transition-all shadow-lg shadow-blue-600/20 hover:shadow-blue-600/40 hover:-translate-y-1 flex items-center justify-center gap-3 group">
-                        Enviar mensaje
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="group-hover:translate-x-1 transition-transform shrink-0">
-                            <line x1="22" y1="2" x2="11" y2="13"></line>
-                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-                        </svg>
-                    </button>
-
-                    <p
-                        class="text-center text-[10px] text-slate-500 mt-8 font-medium uppercase tracking-widest px-4 leading-relaxed">
-                        Al enviar este formulario, usted acepta nuestros <a href="/terminos"
-                            class="underline text-blue-600 hover:text-[#00f2b4] transition-colors">Términos y
-                            Condiciones</a> y nuestra <a href="/privacidad"
-                            class="underline text-blue-600 hover:text-[#00f2b4] transition-colors">Política de
-                            Privacidad</a>.
-                        <br>Sus datos serán tratados con estricta confidencialidad profesional.
-                    </p>
-
-                    <div id="form-message" class="hidden mt-4 text-center text-sm font-bold p-4 rounded-lg border">
-                    </div>
-                </form>
-            </div>
-        </section>
-    </main>
-    <div id="footer-placeholder"></div>
-    <script src="/assets/js/layout.js"></script>
-
-    <script>
-        // --- MANEJO DEL FORMULARIO AJAX ---
-        const contactForm = document.getElementById('contacto-form');
-        const formMessage = document.getElementById('form-message');
-
-        if (contactForm && formMessage) {
-            contactForm.addEventListener('submit', function (e) {
-                e.preventDefault(); // Evita recargar / ir a pantalla negra
-
-                // Estado de carga inicial
-                formMessage.textContent = 'Enviando mensaje y auditando solicitud...';
-                formMessage.className = 'mt-4 text-center text-sm font-bold p-4 rounded-lg text-slate-600 bg-slate-100 border border-slate-200 transition-all';
-                formMessage.classList.remove('hidden');
-
-                const formData = new FormData(contactForm);
-
-                // Solicitud en segundo plano
-                fetch(contactForm.action, {
-                    method: 'POST',
-                    body: formData,
-                    headers: { 'Accept': 'application/json' }
-                })
-                    .then(response => {
-                        if (response.ok) {
-                            formMessage.textContent = '¡El correo fue remitido satisfactoriamente! Nos contactaremos a la brevedad.';
-                            formMessage.className = 'mt-4 text-center text-sm font-bold p-4 rounded-lg text-emerald-600 bg-emerald-50 border border-emerald-200 transition-all shadow-sm';
-                            contactForm.reset();
-                        } else {
-                            throw new Error('Error en la pasarela.');
-                        }
-                    })
-                    .catch(error => {
-                        formMessage.textContent = 'Ocurrió un error al procesar el envío. Por favor, intente de nuevo o comuníquese por WhatsApp.';
-                        formMessage.className = 'mt-4 text-center text-sm font-bold p-4 rounded-lg text-red-600 bg-red-50 border border-red-200 transition-all shadow-sm';
-                    });
-            });
         }
     </script>
+</head>
+<body class="bg-background-deep text-text-primary min-h-screen overflow-x-hidden selection:bg-primary/30 selection:text-primary">
+<div class="overflow-x-hidden w-full relative flex flex-col min-h-screen">
+<!-- TopNavBar Component -->
+<nav class="bg-surface/80 dark:bg-surface/80 backdrop-blur-xl text-primary dark:text-primary font-label-md text-label-md w-full top-0 sticky border-b border-white/10 shadow-sm z-50 transition-all duration-300">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<a class="flex items-center gap-3 tracking-tighter hover:opacity-90 transition-opacity" href="#">
+  <!-- Logo Icon -->
+  <div class="flex items-center justify-center bg-surface-container-low border border-white/10 rounded-xl p-2 w-10 h-10 shadow-[0_0_15px_rgba(75,226,119,0.15)]">
+    <svg class="w-full h-full text-primary" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Chevron pointing up -->
+      <path d="M11 22L20 13L29 22" stroke="#4be277" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- Dashed line -->
+      <line x1="20" y1="21" x2="20" y2="30" stroke="#4be277" stroke-width="2.5" stroke-dasharray="3 3" stroke-linecap="round"/>
+    </svg>
+  </div>
+  <span class="text-2xl font-black font-headline-lg flex items-center">
+    <span class="text-text-primary">VETRIX</span><span class="text-primary">WEB</span>
+  </span>
+</a>
+<!-- Desktop Nav -->
+<ul class="hidden md:flex gap-8 items-center">
+<li><a class="text-primary font-bold border-b-2 border-primary pb-1 hover:glow-primary transition-all duration-300" href="#inicio">Inicio</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors hover:glow-primary transition-all duration-300" href="#beneficios">Beneficios</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors hover:glow-primary transition-all duration-300" href="#proceso">Proceso</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors hover:glow-primary transition-all duration-300" href="#planes">Planes</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors hover:glow-primary transition-all duration-300" href="#contacto">Contacto</a></li>
+</ul>
+<button class="hidden md:block bg-primary text-on-primary px-6 py-2 rounded font-label-md text-label-md hover:glow-primary transition-all duration-300 scale-95 active:scale-90" onclick="document.getElementById('contacto').scrollIntoView()">Cotizar Proyecto</button>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-primary focus:outline-none" onclick="toggleMobileMenu()">
+<span id="menu-icon" class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<!-- Mobile Menu (Drawer/Overlay) -->
+<div id="mobile-menu" class="hidden md:hidden fixed inset-x-0 top-[73px] bg-surface/95 backdrop-blur-2xl border-b border-white/10 z-40 py-6 px-6 flex flex-col gap-6 shadow-2xl transition-all duration-300">
+  <ul class="flex flex-col gap-4 font-bold text-center">
+    <li><a class="block text-lg text-primary py-2 border-b border-white/5" href="#inicio" onclick="toggleMobileMenu()">Inicio</a></li>
+    <li><a class="block text-lg text-text-primary hover:text-primary py-2 border-b border-white/5 transition-colors" href="#beneficios" onclick="toggleMobileMenu()">Beneficios</a></li>
+    <li><a class="block text-lg text-text-primary hover:text-primary py-2 border-b border-white/5 transition-colors" href="#proceso" onclick="toggleMobileMenu()">Proceso</a></li>
+    <li><a class="block text-lg text-text-primary hover:text-primary py-2 border-b border-white/5 transition-colors" href="#planes" onclick="toggleMobileMenu()">Planes</a></li>
+    <li><a class="block text-lg text-text-primary hover:text-primary py-2 transition-colors" href="#contacto" onclick="toggleMobileMenu()">Contacto</a></li>
+  </ul>
+  <button class="w-full bg-primary text-on-primary py-3 rounded font-bold text-center hover:glow-primary transition-all duration-300" onclick="toggleMobileMenu(); document.getElementById('contacto').scrollIntoView()">Cotizar Proyecto</button>
+</div>
+<main>
+<!-- Hero Section -->
+<section class="relative pt-24 pb-20 md:pt-32 md:pb-32 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto flex flex-col md:flex-row items-center gap-12" id="inicio">
+<!-- Decorative background glow -->
+<div class="absolute top-1/2 left-0 -translate-y-1/2 w-96 h-96 bg-primary/10 rounded-full blur-3xl -z-10"></div>
+<div class="flex-1 space-y-8 relative z-10">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-container/15 border border-secondary-container/30 text-secondary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] text-secondary" data-icon="rocket_launch">rocket_launch</span>
+                    Ecosistemas E-commerce Completos
+                </div>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-text-primary">
+                    Tenés el stock, nosotros te armamos la tienda. <span class="text-primary">Empezá a vender online en tiempo récord.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-text-secondary max-w-2xl">
+                    Nos ocupamos de todo el ecosistema digital: diseño de tienda (Tienda Nube o WooCommerce), dominio, pasarelas de pago, logística, redes sociales y copy persuasivo. Vos vendés, nosotros nos encargamos de la tecnología.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 pt-4">
+<a class="bg-primary text-on-primary px-8 py-4 rounded font-label-md text-label-md hover:glow-primary transition-all duration-300 text-center inline-block" href="#contacto">
+                        Crear mi Tienda Online
+                    </a>
+<a class="bg-transparent text-text-primary border border-white/20 px-8 py-4 rounded font-label-md text-label-md hover:border-primary hover:text-primary transition-all duration-300 text-center inline-block" href="#planes">
+                        Ver Planes
+                    </a>
+</div>
+</div>
+<div class="flex-1 relative w-full aspect-video md:aspect-square">
+<!-- Tech Dashboard Mockup -->
+<div class="absolute inset-0 glass-card rounded-xl overflow-hidden border border-white/10 shadow-2xl z-10">
+<img src="assets/img/ecommerce_dashboard.png" alt="E-commerce Dashboard Mockup" class="w-full h-full object-cover"/>
+<div class="absolute inset-0 bg-background-deep/40 mix-blend-multiply"></div>
+</div>
+<!-- Decorative element -->
+<div class="absolute -bottom-8 -right-8 w-64 h-64 bg-secondary-container/20 rounded-full blur-3xl -z-10"></div>
+</div>
+</section>
+<!-- Trust Bar Section -->
+<section class="py-8 border-y border-white/5 bg-surface-container-lowest overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-4">
+<p class="text-center text-sm font-label-md text-text-secondary tracking-widest uppercase">Tecnologías y herramientas que dominamos</p>
+</div>
+<div class="relative w-full overflow-hidden flex">
+<div class="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-surface-container-lowest to-transparent z-10"></div>
+<div class="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-surface-container-lowest to-transparent z-10"></div>
+<div class="flex animate-marquee py-4 whitespace-nowrap">
+<!-- Set 1 -->
+<div class="flex items-center gap-6 pr-6 shrink-0 opacity-50 grayscale hover:grayscale-0 transition-all duration-300">
+<div class="w-32 h-16 flex items-center justify-center">
+  <img class="max-h-12 max-w-full object-contain" src="assets/img/wordpress.svg" alt="WordPress" />
+</div>
+<div class="w-32 h-16 flex items-center justify-center">
+  <img class="max-h-12 max-w-full object-contain" src="assets/img/woocommerce.svg" alt="WooCommerce" />
+</div>
+<div class="w-32 h-16 flex items-center justify-center">
+  <img class="max-h-12 max-w-full object-contain" src="assets/img/stripe.svg" alt="Stripe" />
+</div>
+<div class="w-32 h-16 flex items-center justify-center">
+  <img class="max-h-12 max-w-full object-contain" src="assets/img/mercadopago.svg" alt="Mercado Pago" />
+</div>
+<div class="w-32 h-16 flex items-center justify-center">
+  <img class="max-h-12 max-w-full object-contain" src="assets/img/paypal.svg" alt="PayPal" />
+</div>
+<div class="w-32 h-16 flex items-center justify-center">
+  <img class="max-h-12 max-w-full object-contain" src="assets/img/transferenciabancaria.svg" alt="Transferencia Bancaria" />
+</div>
+<div class="w-32 h-16 flex items-center justify-center">
+  <img class="max-h-12 max-w-full object-contain" src="assets/img/andreani.svg" alt="Andreani" />
+</div>
+<div class="w-32 h-16 flex items-center justify-center">
+  <img class="max-h-12 max-w-full object-contain" src="assets/img/correoargentino.svg" alt="Correo Argentino" />
+</div>
+<div class="w-32 h-16 flex items-center justify-center">
+  <img class="max-h-12 max-w-full object-contain" src="assets/img/mailchimp.svg" alt="Mailchimp" />
+</div>
+<div class="w-32 h-16 flex items-center justify-center">
+  <img class="max-h-12 max-w-full object-contain" src="assets/img/tailwindcss.svg" alt="Tailwind CSS" />
+</div>
+<div class="w-32 h-16 flex items-center justify-center">
+  <img class="max-h-12 max-w-full object-contain" src="assets/img/googleanalytics.svg" alt="Google Analytics" />
+</div>
+</div>
+<!-- Set 2 (Clone) -->
+<div class="flex items-center gap-6 pr-6 shrink-0 opacity-50 grayscale hover:grayscale-0 transition-all duration-300">
+<div class="w-32 h-16 flex items-center justify-center">
+  <img class="max-h-12 max-w-full object-contain" src="assets/img/wordpress.svg" alt="WordPress" />
+</div>
+<div class="w-32 h-16 flex items-center justify-center">
+  <img class="max-h-12 max-w-full object-contain" src="assets/img/woocommerce.svg" alt="WooCommerce" />
+</div>
+<div class="w-32 h-16 flex items-center justify-center">
+  <img class="max-h-12 max-w-full object-contain" src="assets/img/stripe.svg" alt="Stripe" />
+</div>
+<div class="w-32 h-16 flex items-center justify-center">
+  <img class="max-h-12 max-w-full object-contain" src="assets/img/mercadopago.svg" alt="Mercado Pago" />
+</div>
+<div class="w-32 h-16 flex items-center justify-center">
+  <img class="max-h-12 max-w-full object-contain" src="assets/img/paypal.svg" alt="PayPal" />
+</div>
+<div class="w-32 h-16 flex items-center justify-center">
+  <img class="max-h-12 max-w-full object-contain" src="assets/img/transferenciabancaria.svg" alt="Transferencia Bancaria" />
+</div>
+<div class="w-32 h-16 flex items-center justify-center">
+  <img class="max-h-12 max-w-full object-contain" src="assets/img/andreani.svg" alt="Andreani" />
+</div>
+<div class="w-32 h-16 flex items-center justify-center">
+  <img class="max-h-12 max-w-full object-contain" src="assets/img/correoargentino.svg" alt="Correo Argentino" />
+</div>
+<div class="w-32 h-16 flex items-center justify-center">
+  <img class="max-h-12 max-w-full object-contain" src="assets/img/mailchimp.svg" alt="Mailchimp" />
+</div>
+<div class="w-32 h-16 flex items-center justify-center">
+  <img class="max-h-12 max-w-full object-contain" src="assets/img/tailwindcss.svg" alt="Tailwind CSS" />
+</div>
+<div class="w-32 h-16 flex items-center justify-center">
+  <img class="max-h-12 max-w-full object-contain" src="assets/img/googleanalytics.svg" alt="Google Analytics" />
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Comparison Section -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop bg-surface-container-low" id="beneficios">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-16 space-y-4">
+<h2 class="font-headline-xl text-headline-xl text-text-primary">Elegí la plataforma ideal para tu etapa actual</h2>
+<p class="font-body-lg text-body-lg text-text-secondary max-w-3xl mx-auto">Ya sea que busques un lanzamiento veloz y simple con Tienda Nube, o una estructura robusta e independiente con WooCommerce, nos encargamos de todo el montaje técnico para que empieces a vender online de inmediato.</p>
+</div>
+<div class="grid md:grid-cols-2 gap-8">
+<div class="glass-card rounded-xl p-8 border border-secondary/20 relative overflow-hidden transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-secondary/10 hover:border-secondary/40">
+<div class="absolute top-0 left-0 w-full h-1 bg-secondary"></div>
+<h3 class="font-headline-lg text-headline-lg text-secondary mb-6 flex items-center gap-2"><span class="material-symbols-outlined">rocket_launch</span> Lanzamiento Rápido (Tienda Nube)</h3>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary mt-1">check_circle</span>
+<div>
+<strong class="text-text-primary block">Puesta en marcha inmediata</strong>
+<span class="text-text-secondary text-sm">Configuración rápida y simple, ideal para validar tu catálogo y realizar tus primeras ventas en cuestión de días.</span>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary mt-1">check_circle</span>
+<div>
+<strong class="text-text-primary block">Integraciones locales integradas</strong>
+<span class="text-text-secondary text-sm">Conexión nativa con medios de pago y empresas de envíos nacionales sin complicaciones técnicas.</span>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary mt-1">check_circle</span>
+<div>
+<strong class="text-text-primary block">Menor fricción inicial</strong>
+<span class="text-text-secondary text-sm">Plataforma autogestionable muy intuitiva, ideal si estás dando tus primeros pasos en el comercio digital.</span>
+</div>
+</li>
+</ul>
+</div>
+<div class="glass-card rounded-xl p-8 border border-primary/30 relative overflow-hidden glow-primary/10 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20 hover:border-primary/50">
+<div class="absolute top-0 left-0 w-full h-1 bg-primary"></div>
+<h3 class="font-headline-lg text-headline-lg text-primary mb-6 flex items-center gap-2"><span class="material-symbols-outlined">verified</span> Independencia y Escala (WooCommerce)</h3>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<div>
+<strong class="text-text-primary block">0% Comisiones por venta</strong>
+<span class="text-text-secondary text-sm">Todo lo que vendés es tuyo. Olvidate de pagar porcentajes sobre tu facturación mensual.</span>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<div>
+<strong class="text-text-primary block">100% Dueño de tu tienda</strong>
+<span class="text-text-secondary text-sm">Control absoluto de tu código, base de datos de clientes y ecosistema digital sin límites.</span>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<div>
+<strong class="text-text-primary block">Inversión única y escalable</strong>
+<span class="text-text-secondary text-sm">Desarrollo robusto a medida preparado para crecer, altamente optimizado para SEO a gran escala y alta conversión.</span>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Deep Dive Benefits Section -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop bg-background-deep relative">
+<div class="absolute left-0 top-1/2 -translate-y-1/2 w-64 h-64 bg-primary/5 rounded-full blur-[100px] -z-10 pointer-events-none"></div>
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-16 space-y-4">
+<h2 class="font-headline-xl text-headline-xl text-text-primary">Tecnología optimizada para vender más</h2>
+<p class="font-body-lg text-body-lg text-text-secondary max-w-3xl mx-auto">Montamos y estructuramos tu tienda online pensando en la velocidad, la conversión y el posicionamiento en Google.</p>
+</div>
+<div class="grid lg:grid-cols-2 gap-12 items-center">
+<div class="space-y-8">
+<div class="glass-card p-8 rounded-xl border border-white/5 hover:border-primary/30 transition-all group">
+<div class="flex flex-col items-center text-center md:flex-row md:items-start md:text-left gap-4">
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-primary">trending_up</span>
+</div>
+<div>
+<h3 class="text-2xl font-bold text-text-primary mb-2">Flexibilidad y Crecimiento</h3>
+<p class="text-text-secondary leading-relaxed">Te acompañamos en la evolución de tu negocio. Si preferís empezar de forma ágil con Tienda Nube y más adelante querés migrar a WooCommerce para tener autonomía total, lo hacemos de manera transparente y sin perder tu posicionamiento SEO.</p>
+</div>
+</div>
+</div>
+<div class="glass-card p-8 rounded-xl border border-white/5 hover:border-primary/30 transition-all group">
+<div class="flex flex-col items-center text-center md:flex-row md:items-start md:text-left gap-4">
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-primary">speed</span>
+</div>
+<div>
+<h3 class="text-2xl font-bold text-text-primary mb-2">Conversión y Velocidad (SEO Ready)</h3>
+<p class="text-text-secondary leading-relaxed">Tanto en Tienda Nube como en WooCommerce, optimizamos la velocidad de carga y la estructura de navegación. Cumplimos con los estándares de Google para que tu sitio cargue al instante y convierta visitas en clientes reales.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative rounded-2xl overflow-hidden glass-card border border-white/10 p-8 aspect-auto md:aspect-square lg:aspect-auto flex flex-col justify-center py-12">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary-container/10 -z-10"></div>
+<div class="space-y-6 text-center">
+<div class="inline-block p-4 rounded-full bg-surface-container-highest/80 border border-white/5 backdrop-blur-md">
+<span class="material-symbols-outlined text-primary text-5xl">database</span>
+</div>
+<h3 class="text-3xl font-bold text-text-primary">Ecosistema listo para usar</h3>
+<p class="text-text-secondary max-w-md mx-auto">Te entregamos todo en funcionamiento: pasarelas de pago configuradas, canales de envío vinculados y capacitación práctica para que empieces a facturar desde el primer día.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Authority Section -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop bg-surface-container-low relative">
+<!-- Decorative glow -->
+<div class="absolute top-0 right-0 w-96 h-96 bg-secondary-container/10 rounded-full blur-[100px] -z-10 pointer-events-none"></div>
+<div class="max-w-container-max mx-auto text-center">
+<h2 class="font-headline-xl text-headline-xl text-text-primary mb-16">Más de dos décadas impulsando el comercio electrónico</h2>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="glass-card p-8 rounded-xl border border-white/5 hover:border-primary/50 transition-colors group">
+<div class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center mx-auto mb-6 group-hover:glow-primary transition-all">
+<span class="material-symbols-outlined text-primary text-3xl">military_tech</span>
+</div>
+<h3 class="font-headline-lg text-xl font-bold text-text-primary mb-4">Experiencia Comprobada</h3>
+<p class="text-text-secondary">+20 años desarrollando soluciones digitales robustas para marcas líderes y emprendedores exigentes.</p>
+</div>
+<div class="glass-card p-8 rounded-xl border border-white/5 hover:border-primary/50 transition-colors group">
+<div class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center mx-auto mb-6 group-hover:glow-primary transition-all">
+<span class="material-symbols-outlined text-primary text-3xl">travel_explore</span>
+</div>
+<h3 class="font-headline-lg text-xl font-bold text-text-primary mb-4">SEO Ready</h3>
+<p class="text-text-secondary">Arquitectura técnica diseñada desde cero para dominar los resultados de búsqueda de Google y atraer tráfico orgánico.</p>
+</div>
+<div class="glass-card p-8 rounded-xl border border-white/5 hover:border-primary/50 transition-colors group">
+<div class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center mx-auto mb-6 group-hover:glow-primary transition-all">
+<span class="material-symbols-outlined text-primary text-3xl">trending_up</span>
+</div>
+<h3 class="font-headline-lg text-xl font-bold text-text-primary mb-4">Escalabilidad Total</h3>
+<p class="text-text-secondary">Tu plataforma crece con vos. Preparada para manejar miles de productos y alto volumen de tráfico simultáneo sin caídas.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Process / How We Work Section -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop bg-background-deep relative" id="proceso">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-16 space-y-4">
+<h2 class="font-headline-xl text-headline-xl text-text-primary">¿Cómo trabajamos?</h2>
+<p class="font-body-lg text-body-lg text-text-secondary max-w-3xl mx-auto">Un proceso claro, ágil y enfocado en resultados desde el primer día.</p>
+</div>
+<div class="relative">
+<!-- Connecting line -->
+<div class="hidden md:block absolute top-12 left-0 w-full h-0.5 bg-surface-container-highest">
+<div class="h-full bg-primary/50 w-full"></div>
+</div>
+<div class="grid md:grid-cols-4 gap-8">
+<!-- Step 1 -->
+<div class="relative pt-8 md:pt-0">
+<div class="absolute left-1/2 -translate-x-1/2 top-0 md:top-8 w-8 h-8 rounded-full bg-background-deep border-2 border-primary flex items-center justify-center z-10 shadow-[0_0_15px_rgba(75,226,119,0.5)]">
+<span class="text-primary text-sm font-bold">1</span>
+</div>
+<div class="glass-card mt-8 md:mt-20 p-6 rounded-xl border border-white/5 text-center hover:border-primary/30 transition-all">
+<div class="w-12 h-12 mx-auto rounded-full bg-surface-container-highest flex items-center justify-center mb-4 text-primary">
+<span class="material-symbols-outlined">forum</span>
+</div>
+<h3 class="font-bold text-text-primary mb-2">Briefing y Estrategia</h3>
+<p class="text-sm text-text-secondary">Analizamos tu modelo de negocio, catálogo y objetivos para definir la arquitectura ideal.</p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="relative pt-8 md:pt-0">
+<div class="absolute left-1/2 -translate-x-1/2 top-0 md:top-8 w-8 h-8 rounded-full bg-background-deep border-2 border-primary flex items-center justify-center z-10">
+<span class="text-primary text-sm font-bold">2</span>
+</div>
+<div class="glass-card mt-8 md:mt-20 p-6 rounded-xl border border-white/5 text-center hover:border-primary/30 transition-all">
+<div class="w-12 h-12 mx-auto rounded-full bg-surface-container-highest flex items-center justify-center mb-4 text-primary">
+<span class="material-symbols-outlined">design_services</span>
+</div>
+<h3 class="font-bold text-text-primary mb-2">Diseño y Desarrollo</h3>
+<p class="text-sm text-text-secondary">Creamos interfaces de alta conversión y programamos la tienda a medida, optimizada para SEO.</p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="relative pt-8 md:pt-0">
+<div class="absolute left-1/2 -translate-x-1/2 top-0 md:top-8 w-8 h-8 rounded-full bg-background-deep border-2 border-primary flex items-center justify-center z-10">
+<span class="text-primary text-sm font-bold">3</span>
+</div>
+<div class="glass-card mt-8 md:mt-20 p-6 rounded-xl border border-white/5 text-center hover:border-primary/30 transition-all">
+<div class="w-12 h-12 mx-auto rounded-full bg-surface-container-highest flex items-center justify-center mb-4 text-primary">
+<span class="material-symbols-outlined">rule</span>
+</div>
+<h3 class="font-bold text-text-primary mb-2">Testing y Carga</h3>
+<p class="text-sm text-text-secondary">Pruebas rigurosas de flujos de pago, envíos y rendimiento. Capacitación para tu equipo.</p>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="relative pt-8 md:pt-0">
+<div class="absolute left-1/2 -translate-x-1/2 top-0 md:top-8 w-8 h-8 rounded-full bg-background-deep border-2 border-primary flex items-center justify-center z-10 shadow-[0_0_15px_rgba(75,226,119,0.5)]">
+<span class="text-primary text-sm font-bold">4</span>
+</div>
+<div class="glass-card mt-8 md:mt-20 p-6 rounded-xl border border-primary/30 bg-primary/5 text-center hover:glow-primary transition-all">
+<div class="w-12 h-12 mx-auto rounded-full bg-primary/20 flex items-center justify-center mb-4 text-primary">
+<span class="material-symbols-outlined">rocket_launch</span>
+</div>
+<h3 class="font-bold text-text-primary mb-2">Launch &amp; Growth</h3>
+<p class="text-sm text-text-secondary">Lanzamiento oficial. Monitoreo continuo y escalabilidad a medida que crecen tus ventas.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials Section -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop bg-surface-container-low">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-16 space-y-4">
+<h2 class="font-headline-xl text-headline-xl text-text-primary">Impulsando negocios reales</h2>
+<p class="font-body-lg text-body-lg text-text-secondary max-w-3xl mx-auto">Lo que dicen los emprendedores y empresas que ya dieron el salto a su plataforma propia.</p>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<!-- Testimonial 1 -->
+<div class="glass-card p-8 rounded-xl border border-white/5 flex flex-col h-full relative">
+<span class="material-symbols-outlined text-4xl text-primary/20 absolute top-6 right-6">format_quote</span>
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest border border-primary/30 flex items-center justify-center text-primary font-bold">
+                                ML
+                            </div>
+<div>
+<h4 class="font-bold text-text-primary">Martín L.</h4>
+<p class="text-xs text-text-secondary">Importador Directo</p>
+</div>
+</div>
+<p class="text-text-secondary italic flex-1">"Pasar de MercadoLibre a nuestra propia tienda nos permitió aumentar nuestro margen de ganancia un 15% inmediato. La plataforma de Vetrixweb es robusta y muy fácil de administrar."</p>
+<div class="flex gap-1 text-primary mt-6">
+<span class="material-symbols-outlined text-sm" data-icon="star">star</span><span class="material-symbols-outlined text-sm" data-icon="star">star</span><span class="material-symbols-outlined text-sm" data-icon="star">star</span><span class="material-symbols-outlined text-sm" data-icon="star">star</span><span class="material-symbols-outlined text-sm" data-icon="star">star</span>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="glass-card p-8 rounded-xl border border-white/5 flex flex-col h-full relative">
+<span class="material-symbols-outlined text-4xl text-primary/20 absolute top-6 right-6">format_quote</span>
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest border border-primary/30 flex items-center justify-center text-primary font-bold">
+                                SV
+                            </div>
+<div>
+<h4 class="font-bold text-text-primary">Sofía V.</h4>
+<p class="text-xs text-text-secondary">Dueña de Marca de Indumentaria</p>
+</div>
+</div>
+<p class="text-text-secondary italic flex-1">"Teníamos problemas con las caídas de nuestra tienda anterior durante eventos de descuento. Con esta nueva arquitectura, soportamos miles de visitas sin que la página se ponga lenta."</p>
+<div class="flex gap-1 text-primary mt-6">
+<span class="material-symbols-outlined text-sm" data-icon="star">star</span><span class="material-symbols-outlined text-sm" data-icon="star">star</span><span class="material-symbols-outlined text-sm" data-icon="star">star</span><span class="material-symbols-outlined text-sm" data-icon="star">star</span><span class="material-symbols-outlined text-sm" data-icon="star">star</span>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="glass-card p-8 rounded-xl border border-white/5 flex flex-col h-full relative">
+<span class="material-symbols-outlined text-4xl text-primary/20 absolute top-6 right-6">format_quote</span>
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest border border-primary/30 flex items-center justify-center text-primary font-bold">
+                                GR
+                            </div>
+<div>
+<h4 class="font-bold text-text-primary">Gastón R.</h4>
+<p class="text-xs text-text-secondary">Distribuidor Mayorista</p>
+</div>
+</div>
+<p class="text-text-secondary italic flex-1">"El trabajo en SEO técnico que hicieron fue clave. Hoy en día recibimos cotizaciones orgánicas de todo el país sin tener que invertir tanto en pauta publicitaria. Excelente inversión."</p>
+<div class="flex gap-1 text-primary mt-6">
+<span class="material-symbols-outlined text-sm" data-icon="star">star</span><span class="material-symbols-outlined text-sm" data-icon="star">star</span><span class="material-symbols-outlined text-sm" data-icon="star">star</span><span class="material-symbols-outlined text-sm" data-icon="star">star</span><span class="material-symbols-outlined text-sm" data-icon="star">star</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Pricing Section -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop bg-surface-container relative" id="planes">
+<div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-[120px] -z-10 pointer-events-none"></div>
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-16 space-y-4">
+<h2 class="font-headline-xl text-headline-xl text-text-primary">Elegí el plan ideal para escalar tu negocio</h2>
+<p class="font-body-lg text-body-lg text-primary">Precios transparentes en USD. Inversión única.</p>
+</div>
+<div class="grid lg:grid-cols-3 gap-8 items-center">
+<!-- Starter -->
+<div class="glass-card rounded-xl p-8 border border-white/10 hover:border-white/30 transition-all flex flex-col h-full">
+<h3 class="text-2xl font-bold text-text-primary mb-2">Starter</h3>
+<p class="text-text-secondary mb-6 text-sm">Para nuevos emprendimientos que buscan pisar fuerte.</p>
+<div class="mb-8 flex items-baseline gap-1">
+<span class="text-4xl font-bold text-text-primary whitespace-nowrap">USD 800</span>
+<span class="text-text-secondary text-sm whitespace-nowrap">/pago único</span>
+</div>
+<ul class="space-y-4 mb-8 flex-1">
+<li class="flex items-center gap-3 text-text-secondary"><span class="material-symbols-outlined text-primary text-sm">check</span> Nombre de la marca</li>
+<li class="flex items-center gap-3 text-text-secondary"><span class="material-symbols-outlined text-primary text-sm">check</span> Logo Profesional</li>
+<li class="flex items-center gap-3 text-text-secondary"><span class="material-symbols-outlined text-primary text-sm">check</span> Dominio propio</li>
+<li class="flex items-center gap-3 text-text-secondary"><span class="material-symbols-outlined text-primary text-sm">check</span> Handles de redes</li>
+<li class="flex items-center gap-3 text-text-secondary"><span class="material-symbols-outlined text-primary text-sm">check</span> Bio y Copy de Perfil</li>
+<li class="flex items-center gap-3 text-text-secondary"><span class="material-symbols-outlined text-primary text-sm">check</span> Email Profesional</li>
+<li class="flex items-center gap-3 text-text-secondary"><span class="material-symbols-outlined text-primary text-sm">check</span> Diseño único y personalizado</li>
+<li class="flex items-center gap-3 text-text-secondary"><span class="material-symbols-outlined text-primary text-sm">check</span> Configuración de Tienda Nube básica</li>
+<li class="flex items-center gap-3 text-text-secondary"><span class="material-symbols-outlined text-primary text-sm">check</span> Optimización SEO Básica</li>
+<li class="flex items-center gap-3 text-text-secondary"><span class="material-symbols-outlined text-primary text-sm">check</span> Integración estándar de pagos</li>
+</ul>
+<a class="block w-full py-3 text-center rounded border border-white/20 text-text-primary hover:bg-white/5 transition-colors" href="#contacto">Seleccionar Plan</a>
+</div>
+<!-- Professional (Highlighted) -->
+<div class="glass-card rounded-xl p-8 border-2 border-primary relative transform lg:-translate-y-4 shadow-[0_0_30px_rgba(75,226,119,0.15)] flex flex-col h-full z-10 bg-surface-container-highest hover:shadow-[0_0_40px_rgba(75,226,119,0.25)] transition-shadow duration-300">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary text-on-primary px-4 py-1 rounded-full text-xs font-bold tracking-wider">MÁS POPULAR</div>
+<h3 class="text-2xl font-bold text-primary mb-2">Professional</h3>
+<p class="text-text-secondary mb-6 text-sm">Para negocios establecidos listos para dominar su nicho.</p>
+<div class="mb-8 flex items-baseline gap-1">
+<span class="text-4xl sm:text-5xl font-bold text-text-primary whitespace-nowrap">USD 1.500</span>
+<span class="text-text-secondary text-sm whitespace-nowrap">/pago único</span>
+</div>
+<ul class="space-y-4 mb-8 flex-1">
+<li class="flex items-center gap-3 text-text-primary"><span class="material-symbols-outlined text-primary text-sm">check</span> Todo Starter</li>
+<li class="flex items-center gap-3 text-text-primary"><span class="material-symbols-outlined text-primary text-sm">check</span> WordPress con WooCommerce</li>
+<li class="flex items-center gap-3 text-text-primary"><span class="material-symbols-outlined text-primary text-sm">check</span> Diseño UI/UX Personalizado</li>
+<li class="flex items-center gap-3 text-text-primary"><span class="material-symbols-outlined text-primary text-sm">check</span> Dominio propio</li>
+<li class="flex items-center gap-3 text-text-primary"><span class="material-symbols-outlined text-primary text-sm">check</span> Correo institucional</li>
+<li class="flex items-center gap-3 text-text-primary"><span class="material-symbols-outlined text-primary text-sm">check</span> Seguridad</li>
+<li class="flex items-center gap-3 text-text-primary"><span class="material-symbols-outlined text-primary text-sm">check</span> Backups</li>
+<li class="flex items-center gap-3 text-text-primary"><span class="material-symbols-outlined text-primary text-sm">check</span> Catálogo de hasta 15 productos</li>
+<li class="flex items-center gap-3 text-text-primary"><span class="material-symbols-outlined text-primary text-sm">check</span> Videos explicativos de carga y config.</li>
+<li class="flex items-center gap-3 text-text-primary"><span class="material-symbols-outlined text-primary text-sm">check</span> Soporte durante los primeros 15 días</li>
+<li class="flex items-center gap-3 text-text-primary"><span class="material-symbols-outlined text-primary text-sm">check</span> Panel de Analítica</li>
+</ul>
+<a class="block w-full py-4 text-center rounded bg-primary text-on-primary font-bold hover:glow-primary transition-all duration-300 scale-100 hover:scale-[1.02]" href="#contacto">Seleccionar Plan</a>
+</div>
+<!-- Premium -->
+<div class="glass-card rounded-xl p-8 border border-white/10 hover:border-white/30 transition-all flex flex-col h-full">
+<h3 class="text-2xl font-bold text-text-primary mb-2">Premium</h3>
+<p class="text-text-secondary mb-6 text-sm">Para grandes importadores y corporaciones.</p>
+<div class="mb-8 flex items-baseline gap-1">
+<span class="text-4xl font-bold text-text-primary whitespace-nowrap">USD 2.500</span>
+<span class="text-text-secondary text-sm whitespace-nowrap">/pago único</span>
+</div>
+<ul class="space-y-4 mb-8 flex-1">
+<li class="flex items-center gap-3 text-text-secondary"><span class="material-symbols-outlined text-primary text-sm">check</span> Todo Professional</li>
+<li class="flex items-center gap-3 text-text-secondary"><span class="material-symbols-outlined text-primary text-sm">check</span> Copy en fichas de productos</li>
+<li class="flex items-center gap-3 text-text-secondary"><span class="material-symbols-outlined text-primary text-sm">check</span> Identidad visual completa</li>
+<li class="flex items-center gap-3 text-text-secondary"><span class="material-symbols-outlined text-primary text-sm">check</span> Consultoría durante 30 días</li>
+</ul>
+<a class="block w-full py-3 text-center rounded border border-white/20 text-text-primary hover:bg-white/5 transition-colors" href="#contacto">Seleccionar Plan</a>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop bg-background-deep border-t border-white/5">
+<div class="max-w-3xl mx-auto">
+<div class="text-center mb-16 space-y-4">
+<h2 class="font-headline-xl text-headline-xl text-text-primary">Preguntas Frecuentes</h2>
+<p class="text-text-secondary">Resolvemos tus dudas antes de dar el salto.</p>
+</div>
+<div class="space-y-4">
+<details class="glass-card rounded-lg border border-white/10 group overflow-hidden">
+<summary class="flex justify-between items-center font-bold cursor-pointer list-none p-6 text-text-primary hover:text-primary transition-colors">
+<span>¿Qué diferencia hay entre empezar con Tienda Nube (Starter) o WooCommerce (Professional)?</span>
+<span class="transition group-open:rotate-180 material-symbols-outlined">expand_more</span>
+</summary>
+<div class="p-6 pt-0 text-text-secondary text-sm border-t border-white/5 mt-2">
+                            La diferencia principal radica en el grado de independencia, escalabilidad y la etapa de tu negocio. El plan <strong>Starter (Tienda Nube)</strong> es ideal para lanzamientos rápidos, con menor fricción inicial y facilidad de autogestión, aunque requiere pagar una cuota mensual de plataforma a Tienda Nube. Los planes <strong>Professional y Premium (WooCommerce)</strong> te brindan 100% de propiedad del código y base de datos sin comisiones por venta (0% de comisiones), ideal para negocios que buscan escalar sin límites técnicos ni costos recurrentes de plataforma.
+                        </div>
+</details>
+<details class="glass-card rounded-lg border border-white/10 group overflow-hidden">
+<summary class="flex justify-between items-center font-bold cursor-pointer list-none p-6 text-text-primary hover:text-primary transition-colors">
+<span>Si empiezo con Tienda Nube, ¿puedo pasarme a WooCommerce en el futuro?</span>
+<span class="transition group-open:rotate-180 material-symbols-outlined">expand_more</span>
+</summary>
+<div class="p-6 pt-0 text-text-secondary text-sm border-t border-white/5 mt-2">
+                            ¡Sí, por supuesto! Diseñamos tu ecosistema de ventas digital con la flexibilidad necesaria para que tu plataforma crezca con tu negocio. Si en el futuro decidís migrar de Tienda Nube a WooCommerce para eliminar comisiones y expandir tus funciones, realizamos la migración de forma transparente, conservando tu catálogo de productos y protegiendo tu posicionamiento SEO en Google.
+                        </div>
+</details>
+<details class="glass-card rounded-lg border border-white/10 group overflow-hidden">
+<summary class="flex justify-between items-center font-bold cursor-pointer list-none p-6 text-text-primary hover:text-primary transition-colors">
+<span>¿Tengo que saber de tecnología o programación para administrar mi tienda?</span>
+<span class="transition group-open:rotate-180 material-symbols-outlined">expand_more</span>
+</summary>
+<div class="p-6 pt-0 text-text-secondary text-sm border-t border-white/5 mt-2">
+                            Para nada. Nuestro objetivo principal es que te encargues de vender mientras nosotros nos ocupamos de la tecnología. Te entregamos la tienda 100% lista para usar. Además, en los planes Professional y Premium incluimos videos tutoriales explicativos paso a paso para que aprendas a cargar productos y gestionar tu panel de analítica. Y por supuesto, te brindamos soporte técnico durante los primeros días tras el lanzamiento.
+                        </div>
+</details>
+<details class="glass-card rounded-lg border border-white/10 group overflow-hidden">
+<summary class="flex justify-between items-center font-bold cursor-pointer list-none p-6 text-text-primary hover:text-primary transition-colors">
+<span>¿Qué incluye el ecosistema de ventas digital además de la tienda?</span>
+<span class="transition group-open:rotate-180 material-symbols-outlined">expand_more</span>
+</summary>
+<div class="p-6 pt-0 text-text-secondary text-sm border-t border-white/5 mt-2">
+                            No creamos solo un sitio web, creamos un canal de ventas profesional completo. Dependiendo del plan, nos encargamos del branding (nombre y logo profesional), la configuración de tus redes sociales (handles, biografías optimizadas y copies de perfil), la puesta a punto de tu correo electrónico institucional o profesional, la vinculación de tu dominio propio, la configuración de medios de envío y pasarelas de pago, y la optimización SEO básica o avanzada para que te encuentren en Google.
+                        </div>
+</details>
+<details class="glass-card rounded-lg border border-white/10 group overflow-hidden">
+<summary class="flex justify-between items-center font-bold cursor-pointer list-none p-6 text-text-primary hover:text-primary transition-colors">
+<span>¿Por qué utilizan WordPress y WooCommerce?</span>
+<span class="transition group-open:rotate-180 material-symbols-outlined">expand_more</span>
+</summary>
+<div class="p-6 pt-0 text-text-secondary text-sm border-t border-white/5 mt-2">
+                            Porque es el estándar de la industria a nivel mundial para tiendas autogestionadas independientes. Es robusto, seguro, 100% personalizable y no te ata a licencias mensuales. No obstante, si preferís un lanzamiento más rápido con menor mantenimiento inicial, también somos expertos configurando tiendas en Tienda Nube para el plan Starter.
+                        </div>
+</details>
+<details class="glass-card rounded-lg border border-white/10 group overflow-hidden">
+<summary class="flex justify-between items-center font-bold cursor-pointer list-none p-6 text-text-primary hover:text-primary transition-colors">
+<span>¿Es mi tienda para siempre?</span>
+<span class="transition group-open:rotate-180 material-symbols-outlined">expand_more</span>
+</summary>
+<div class="p-6 pt-0 text-text-secondary text-sm border-t border-white/5 mt-2">
+                            En los planes con WooCommerce, la tienda es 100% tuya y no pagás comisiones ni abonos mensuales de plataforma. En el plan Starter con Tienda Nube, el diseño, la configuración y el dominio son tuyos, pero debés mantener el abono mensual correspondiente para el funcionamiento del servicio de Tienda Nube.
+                        </div>
+</details>
+<details class="glass-card rounded-lg border border-white/10 group overflow-hidden">
+<summary class="flex justify-between items-center font-bold cursor-pointer list-none p-6 text-text-primary hover:text-primary transition-colors">
+<span>¿Cómo funcionan los métodos de pago y envío?</span>
+<span class="transition group-open:rotate-180 material-symbols-outlined">expand_more</span>
+</summary>
+<div class="p-6 pt-0 text-text-secondary text-sm border-t border-white/5 mt-2">
+                            Integramos las pasarelas que necesites (Mercado Pago, Stripe, PayPal, transferencias bancarias directas) y logísticas (Andreani, Correo Argentino, Oca o envíos personalizados). El dinero de tus ventas va directo a tus cuentas bancarias sin ningún intermediario.
+                        </div>
+</details>
+<details class="glass-card rounded-lg border border-white/10 group overflow-hidden">
+<summary class="flex justify-between items-center font-bold cursor-pointer list-none p-6 text-text-primary hover:text-primary transition-colors">
+<span>¿Ustedes proveen el hosting?</span>
+<span class="transition group-open:rotate-180 material-symbols-outlined">expand_more</span>
+</summary>
+<div class="p-6 pt-0 text-text-secondary text-sm border-t border-white/5 mt-2">
+                            Para las tiendas basadas en WooCommerce, podemos alojarlas en nuestros servidores optimizados de alto rendimiento por una tarifa anual competitiva, o configurarla en tu hosting de preferencia. En el plan Starter con Tienda Nube, el alojamiento ya viene incluido dentro de su propio servicio mensual.
+                        </div>
+</details>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop bg-surface-container-low relative" id="contacto">
+<!-- Decorative glow -->
+<div class="absolute bottom-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-[100px] -z-10 pointer-events-none"></div>
+<div class="max-w-container-max mx-auto">
+<div class="grid md:grid-cols-2 gap-16">
+<div>
+<h2 class="font-headline-xl text-headline-xl text-text-primary mb-6">¿Listo para empezar a vender online?</h2>
+<p class="text-text-secondary mb-12 text-lg">Comunicate con nuestro equipo de expertos para analizar tu caso y comenzar a construir tu ecosistema de ventas digital.</p>
+<div class="space-y-6">
+<a class="flex items-center gap-4 text-text-primary hover:text-primary transition-colors p-4 glass-card rounded-xl border border-white/5 hover:border-primary/30 group" href="https://wa.me/542920538998" target="_blank">
+<div class="bg-surface-container-highest p-3 rounded-full group-hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-primary">chat</span>
+</div>
+<div>
+<h4 class="font-bold">WhatsApp Directo</h4>
+<p class="text-text-secondary text-sm">Respuesta inmediata</p>
+</div>
+</a>
+<a class="flex items-center gap-4 text-text-primary hover:text-primary transition-colors p-4 glass-card rounded-xl border border-white/5 hover:border-primary/30 group" href="mailto:hola@vetrixweb.com">
+<div class="bg-surface-container-highest p-3 rounded-full group-hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-primary">mail</span>
+</div>
+<div>
+<h4 class="font-bold">Email Comercial</h4>
+<p class="text-text-secondary text-sm">hola@vetrixweb.com</p>
+</div>
+</a>
+</div>
+</div>
+<div>
+<form id="contactForm" class="glass-card px-4 py-6 sm:p-8 rounded-xl border border-white/10 space-y-6">
+<div>
+<label class="block text-sm font-medium text-text-secondary mb-2" for="name">Nombre Completo</label>
+<input class="w-full bg-surface-container-highest border border-white/10 rounded-lg px-4 py-3 text-text-primary focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" id="name" name="name" placeholder="Tu nombre" type="text" required/>
+</div>
+<div>
+<label class="block text-sm font-medium text-text-secondary mb-2" for="email">Email de Contacto</label>
+<input class="w-full bg-surface-container-highest border border-white/10 rounded-lg px-4 py-3 text-text-primary focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" id="email" name="email" placeholder="tu@email.com" type="email" required/>
+</div>
+<div>
+<label class="block text-sm font-medium text-text-secondary mb-2" for="phone">Teléfono / WhatsApp</label>
+<input class="w-full bg-surface-container-highest border border-white/10 rounded-lg px-4 py-3 text-text-primary focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" id="phone" name="phone" placeholder="+54 9..." type="tel" required/>
+</div>
+<div>
+<label class="block text-sm font-medium text-text-secondary mb-2" for="business">Tipo de Negocio</label>
+<select class="w-full bg-surface-container-highest border border-white/10 rounded-lg px-4 py-3 text-text-primary focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors appearance-none" id="business" name="business" required>
+<option value="">Selecciona una opción</option>
+<option value="importador">Importador</option>
+<option value="fabricante">Fabricante / Marca Propia</option>
+<option value="retail">Retail / Revendedor</option>
+<option value="otro">Otro</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium text-text-secondary mb-2" for="message">Mensaje Adicional</label>
+<textarea class="w-full bg-surface-container-highest border border-white/10 rounded-lg px-4 py-3 text-text-primary focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors resize-none" id="message" name="message" placeholder="Contanos brevemente sobre tu proyecto..." rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary font-bold py-4 rounded-lg hover:glow-primary transition-all duration-300 scale-100 hover:scale-[1.02]" type="submit">
+                                Enviar Mensaje
+                            </button>
+<div id="formResponse" class="mt-4 text-center text-sm font-semibold hidden"></div>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer Component -->
+<footer class="bg-background-deep dark:bg-background-deep text-primary dark:text-primary font-body-md text-body-md w-full border-t border-white/5">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop py-12 max-w-container-max mx-auto gap-8 text-center md:text-left opacity-80 hover:opacity-100 transition-opacity">
+<a class="flex items-center gap-3 tracking-tighter hover:opacity-90 transition-opacity" href="#inicio">
+  <!-- Logo Icon -->
+  <div class="flex items-center justify-center bg-surface-container-low border border-white/10 rounded-xl p-2 w-10 h-10 shadow-[0_0_15px_rgba(75,226,119,0.15)]">
+    <svg class="w-full h-full text-primary" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Chevron pointing up -->
+      <path d="M11 22L20 13L29 22" stroke="#4be277" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- Dashed line -->
+      <line x1="20" y1="21" x2="20" y2="30" stroke="#4be277" stroke-width="2.5" stroke-dasharray="3 3" stroke-linecap="round"/>
+    </svg>
+  </div>
+  <span class="text-2xl font-black font-headline-lg flex items-center">
+    <span class="text-text-primary">VETRIX</span><span class="text-primary">WEB</span>
+  </span>
+</a>
+<div class="text-text-secondary flex flex-col gap-2 items-center md:items-start">
+                    <div class="text-xs uppercase tracking-wider text-text-secondary/60 font-semibold">
+                        © 2026 VETRIX WEB INFRASTRUCTURE
+                    </div>
+                    <div class="flex items-center gap-2 font-black text-sm uppercase tracking-wide">
+                        <span class="text-text-secondary/80 font-bold text-xs">DESIGNED BY</span> 
+                        <span class="text-text-primary">VETRIXWEB</span>
+                        <svg class="inline-block w-6 h-4 rounded-sm shadow-sm" viewBox="0 0 36 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="36" height="24" rx="3" fill="#75AADB"/>
+                            <rect y="8" width="36" height="8" fill="white"/>
+                            <circle cx="18" cy="12" r="2.5" fill="#F4B41A"/>
+                            <circle cx="18" cy="12" r="1" fill="#D49400"/>
+                        </svg>
+                    </div>
+                    <div class="flex gap-4 flex-wrap justify-center md:justify-start text-xs opacity-70 mt-1">
+                        <a class="hover:text-primary transition-all duration-300" href="privacidad.html">Privacidad</a>
+                        <span class="text-white/10 select-none">•</span>
+                        <a class="hover:text-primary transition-all duration-300" href="terminos.html">Términos</a>
+                        <span class="text-white/10 select-none">•</span>
+                        <a class="hover:text-primary transition-all duration-300" href="cookies.html">Cookies</a>
+                    </div>
+                </div>
+<ul class="flex gap-8 items-center">
+<li>
+  <a class="text-text-secondary hover:text-primary transition-all duration-300 flex items-center" href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
+    <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+    </svg>
+  </a>
+</li>
+<li>
+  <a class="text-text-secondary hover:text-primary transition-all duration-300 flex items-center" href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
+    <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+      <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
+    </svg>
+  </a>
+</li>
+</ul>
+</div>
+</footer>
+</div>
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/542920538998" target="_blank" class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:bg-[#20ba5a] hover:scale-110 hover:shadow-[0_0_20px_rgba(37,211,102,0.6)] transition-all duration-300 flex items-center justify-center" aria-label="Chat on WhatsApp">
+  <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.262 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.504-5.727-1.465L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.42 9.864-9.852.002-2.63-1.023-5.101-2.883-6.963C16.588 1.976 14.118.953 11.487.953c-5.442 0-9.866 4.417-9.87 9.848-.002 1.71.453 3.382 1.32 4.874L1.87 21.083l5.88-1.541l-.103-.388zM17.15 14.47c-.29-.145-1.713-.846-1.977-.942-.265-.096-.458-.145-.65.145-.193.29-.747.942-.916 1.134-.168.192-.337.216-.627.072-2.92-1.46-4.78-3.48-5.55-4.8-.192-.33-.02-.509.145-.673.15-.149.337-.396.506-.59.168-.193.224-.33.337-.55.112-.22.056-.41-.028-.553-.084-.144-.65-1.564-.89-2.14-.233-.563-.49-.486-.673-.496-.172-.01-.37-.01-.567-.01-.197 0-.518.073-.79.37-.27.296-1.034 1.01-1.034 2.463 0 1.453 1.057 2.857 1.205 3.05.148.192 2.08 3.176 5.04 4.453.704.304 1.254.486 1.682.622.707.225 1.35.193 1.86.117.567-.084 1.713-.7 1.954-1.376.24-.677.24-1.257.168-1.376-.07-.12-.265-.192-.553-.337z"/>
+  </svg>
+</a>
+</main>
+<script>
+  function toggleMobileMenu() {
+    const menu = document.getElementById('mobile-menu');
+    const icon = document.getElementById('menu-icon');
+    if (menu.classList.contains('hidden')) {
+      menu.classList.remove('hidden');
+      icon.textContent = 'close';
+    } else {
+      menu.classList.add('hidden');
+      icon.textContent = 'menu';
+    }
+  }
 
-</body>
-
-</html>
+  // Form submit handler
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('contactForm');
+    if (form) {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const responseDiv = document.getElementById('formResponse');
+        
+        // Reset state
+        responseDiv.textContent = '';
+        responseDiv.className = 'mt-4 text-center text-sm font-semibold hidden';
+        
+        // Disable button
+        const originalText = submitBtn.textContent;
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Enviando...';
+        
+        try {
+          const formData = new FormData(form);
+          const response = await fetch('send-email.php', {
+            method: 'POST',
+            body: formData
+          });
+          
+          let result;
+          try {
+            result = await response.json();
+          } catch (e) {
+            result = { status: 'error', message: 'Algo salió mal. Intentá más tarde o escribinos por WhatsApp sin compromiso' };
+          }
+          
+          responseDiv.classList.remove('hidden');
+          if (response.ok && result.status === 'success') {
+            responseDiv.textContent = result.message || 'Mensaje enviado satisfactoriamente';
+            responseDiv.className = 'mt-4 text-center text-sm font-semibold text-primary';
+            form.reset();
+          } else {
+            throw new Error(result.message || 'Algo salió mal. Intentá más tarde o escribinos por WhatsApp sin compromiso');
+          }
+        } catch (error) {
+          responseDiv.classList.remove('hidden');
+          responseDiv.textContent = error.message || 'Algo salió mal. Intentá más tarde o escribinos por WhatsApp sin compromiso';
+          responseDiv.className = 'mt-4 text-center text-sm font-semibold text-red-500';
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.textContent = originalText;
+        }
+      });
+    }
+  });
+</script>
+</body></html>

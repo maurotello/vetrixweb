@@ -1,179 +1,154 @@
 <!DOCTYPE html>
-<html lang="es-ES">
-
+<html class="dark scroll-smooth overflow-x-hidden" lang="es">
 <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <!-- AÑADIR justo después del <head> -->
-    <style>
-        @font-face {
-            font-family: 'Inter';
-            font-style: normal;
-            font-weight: 400 900;
-            font-display: optional;
-            src: url('https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiJ-Ek-_EeA.woff2') format('woff2');
-            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2020, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-        }
-    </style>
-    <style>
-        body {
-            background-color: #05070a;
-            color: #cbd5e1;
-            font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
-            margin: 0;
-            overflow-x: hidden;
-        }
-
-        h1 {
-            line-height: 1.1;
-            margin-bottom: 1rem;
-        }
-
-        main {
-            min-height: 100vh;
-            /* O un valor fijo como 800px */
-            contain: paint;
-            /* Esto le dice al navegador que no permita que el contenido "salte" fuera */
-        }
-    </style>
-
-    <link rel="preload" as="image" href=".assets/img/cover4-640.avif"
-        imagesrcset="assets/img/cover4-640.avif 640w, assets/img/cover4-800.avif 800w, assets/img/cover4-1274.avif 1274w"
-        imagesizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 650px" fetchpriority="high">
-    <meta name="google" content="notranslate">
-    <!-- SEO Básico -->
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Política de Privacidad | Vetrixweb</title>
-    <meta name="description"
-        content="Conocé nuestra política de privacidad. Te informamos sobre cómo protegemos y tratamos tus datos personales de acuerdo a la Ley 25.326 de Argentina." />
-    <meta name="author" content="Vetrix Web" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://vetrixweb.com/privacidad" />
-
-    <!-- Open Graph (WhatsApp, LinkedIn, Facebook) -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://vetrixweb.com/privacidad" />
-    <meta property="og:title" content="Política de Privacidad | Vetrix Web" />
-    <meta property="og:description" content="Conoce nuestras políticas de privacidad y cómo protegemos tus datos personales en Vetrix Web." />
-    <meta property="og:image" content="https://vetrixweb.com/assets/img/image-og-es-oscura.jpg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Vetrix Web - Expertos en Desarrollo Web y SEO Local" />
-
-    <!-- Twitter Cards -->
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Política de Privacidad | Vetrix Web" />
-    <meta name="twitter:description" content="Seguridad y transparencia sobre el uso de tus datos personales." />
-    <meta name="twitter:image" content="assets/img/vetrixweb-perfil-redes.svg" />
-    <link rel="alternate" hreflang="es" href="https://vetrixweb.com/privacidad" />
-    <link rel="alternate" hreflang="en" href="https://vetrixweb.com/en/privacy" />
-    <link rel="alternate" hreflang="pt" href="https://vetrixweb.com/pt/privacidade" />
-    <link rel="alternate" hreflang="x-default" href="https://vetrixweb.com/privacidad" />
-
-
-    <link rel="preload" href="assets/css/main.v2.min.css" as="style" onload="this.rel='stylesheet'; this.onload=null;">
-    <noscript>
-        <link rel="stylesheet" href="assets/css/main.v2.min.css?v=1.1">
-    </noscript>
-
-    <!-- App Favicons -->
-    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
-    <link rel="apple-touch-icon" href="assets/img/favicon.svg" />
-    <meta name="theme-color" content="#0A1116" />
-    <link rel="manifest" href="site.webmanifest" />
-
-
-    <!-- Schema.org / JSON-LD -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "Política de Privacidad | Vetrix Web",
-      "url": "https://vetrixweb.com/privacidad",
-      "publisher": {
-        "@type": "Organization",
-        "name": "Vetrix Web",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://vetrixweb.com/assets/img/vetrixweb-perfil-redes.svg"
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40' fill='none'><rect width='40' height='40' rx='10' fill='%23131b2e' stroke='rgba(255,255,255,0.1)' stroke-width='1'/><path d='M11 22L20 13L29 22' stroke='%234be277' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'/><line x1='20' y1='21' x2='20' y2='30' stroke='%234be277' stroke-width='2.5' stroke-dasharray='3 3' stroke-linecap='round'/></svg>">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="assets/css/styles.css" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#4be277",
+                "on-primary": "#003915",
+                "surface": "#0b1326",
+                "surface-container": "#171f33",
+                "surface-container-low": "#131b2e",
+                "surface-container-lowest": "#060e20",
+                "background-deep": "#020617",
+                "text-primary": "#f8fafc",
+                "text-secondary": "#94a3b8"
+              }
+            }
+          }
         }
-      }
-    }
     </script>
 </head>
+<body class="bg-background-deep text-text-primary min-h-screen selection:bg-primary/30 selection:text-primary">
+    <div class="overflow-x-hidden w-full relative flex flex-col min-h-screen">
+        <!-- TopNavBar Component -->
+        <nav class="bg-surface/80 backdrop-blur-xl text-primary font-bold w-full top-0 sticky border-b border-white/10 shadow-sm z-50 transition-all duration-300">
+            <div class="flex justify-between items-center px-6 md:px-16 py-4 max-w-[1280px] mx-auto">
+                <a class="flex items-center gap-3 tracking-tighter hover:opacity-90 transition-opacity" href="index.html">
+                    <div class="flex items-center justify-center bg-surface-container-low border border-white/10 rounded-xl p-2 w-10 h-10 shadow-[0_0_15px_rgba(75,226,119,0.15)]">
+                        <svg class="w-full h-full text-primary" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 22L20 13L29 22" stroke="#4be277" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <line x1="20" y1="21" x2="20" y2="30" stroke="#4be277" stroke-width="2.5" stroke-dasharray="3 3" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <span class="text-2xl font-black flex items-center">
+                        <span class="text-text-primary">VETRIX</span><span class="text-primary">WEB</span>
+                    </span>
+                </a>
+                <!-- Desktop Nav -->
+                <ul class="hidden md:flex gap-8 items-center text-sm font-semibold tracking-wider">
+                    <li><a class="text-on-surface-variant hover:text-primary transition-colors hover:glow-primary transition-all duration-300" href="index.html#inicio">Inicio</a></li>
+                    <li><a class="text-on-surface-variant hover:text-primary transition-colors hover:glow-primary transition-all duration-300" href="index.html#beneficios">Beneficios</a></li>
+                    <li><a class="text-on-surface-variant hover:text-primary transition-colors hover:glow-primary transition-all duration-300" href="index.html#proceso">Proceso</a></li>
+                    <li><a class="text-on-surface-variant hover:text-primary transition-colors hover:glow-primary transition-all duration-300" href="index.html#planes">Planes</a></li>
+                    <li><a class="text-on-surface-variant hover:text-primary transition-colors hover:glow-primary transition-all duration-300" href="index.html#contacto">Contacto</a></li>
+                </ul>
+                <a class="hidden md:block bg-primary text-on-primary px-6 py-2 rounded text-sm hover:glow-primary transition-all duration-300 scale-95 active:scale-90" href="index.html#contacto">Cotizar Proyecto</a>
+                <!-- Mobile Menu Toggle -->
+                <button class="md:hidden text-primary focus:outline-none" onclick="toggleMobileMenu()">
+                    <span id="menu-icon" class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu (Drawer/Overlay) -->
+        <div id="mobile-menu" class="hidden md:hidden fixed inset-x-0 top-[73px] bg-surface/95 backdrop-blur-2xl border-b border-white/10 z-40 py-6 px-6 flex flex-col gap-6 shadow-2xl transition-all duration-300">
+          <ul class="flex flex-col gap-4 font-bold text-center">
+            <li><a class="block text-lg text-text-primary hover:text-primary py-2 border-b border-white/5 transition-colors" href="index.html#inicio" onclick="toggleMobileMenu()">Inicio</a></li>
+            <li><a class="block text-lg text-text-primary hover:text-primary py-2 border-b border-white/5 transition-colors" href="index.html#beneficios" onclick="toggleMobileMenu()">Beneficios</a></li>
+            <li><a class="block text-lg text-text-primary hover:text-primary py-2 border-b border-white/5 transition-colors" href="index.html#proceso" onclick="toggleMobileMenu()">Proceso</a></li>
+            <li><a class="block text-lg text-text-primary hover:text-primary py-2 border-b border-white/5 transition-colors" href="index.html#planes" onclick="toggleMobileMenu()">Planes</a></li>
+            <li><a class="block text-lg text-text-primary hover:text-primary py-2 transition-colors" href="index.html#contacto" onclick="toggleMobileMenu()">Contacto</a></li>
+          </ul>
+          <a class="w-full bg-primary text-on-primary py-3 rounded font-bold text-center hover:glow-primary transition-all duration-300" href="index.html#contacto" onclick="toggleMobileMenu()">Cotizar Proyecto</a>
+        </div>
 
-<body class="bg-background-dark text-slate-300 font-display selection:bg-neon-cyan/20">
-    <div id="header-placeholder"></div>
+        <main class="flex-grow py-16 px-6 md:px-16 max-w-4xl mx-auto w-full">
+            <h1 class="text-4xl font-extrabold text-text-primary mb-8 border-b border-white/10 pb-4">Política de Privacidad</h1>
+            
+            <div class="glass-card rounded-2xl p-8 border border-white/10 space-y-6 text-text-secondary leading-relaxed">
+                <p><strong>Última actualización: Junio de 2026</strong></p>
+                
+                <p>En <strong>Vetrixweb</strong> nos tomamos muy en serio la privacidad y protección de los datos de nuestros usuarios. A continuación, detallamos el tratamiento que le damos a la información que recopilamos en nuestro sitio web, en estricto cumplimiento con la <strong>Ley de Protección de Datos Personales N° 25.326</strong> de la República Argentina.</p>
 
-    <main class="px-6 lg:px-20 py-20 lg:py-32">
-        <article
-            class="max-w-4xl mx-auto prose prose-invert prose-headings:font-bold prose-h1:text-4xl prose-h1:text-white prose-p:text-slate-400 prose-a:text-neon-cyan hover:prose-a:text-white transition-colors">
+                <h2 class="text-2xl font-bold text-text-primary mt-6">1. Información que recopilamos</h2>
+                <p>Recopilamos información personal únicamente a través de nuestro formulario de contacto y solicitudes de cotización. Esta información incluye:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>Nombre Completo</li>
+                    <li>Dirección de correo electrónico</li>
+                    <li>Teléfono / Número de WhatsApp</li>
+                    <li>Tipo de Negocio / Proyecto</li>
+                    <li>Mensaje o descripción del requerimiento</li>
+                </ul>
 
-            <h1 class="mb-4">Política de Privacidad</h1>
-            <p class="text-sm text-slate-500 uppercase tracking-widest font-bold">Última actualización: Febrero 2026</p>
+                <h2 class="text-2xl font-bold text-text-primary mt-6">2. Uso de la Información</h2>
+                <p>Los datos que nos proporcionás se utilizarán con las siguientes finalidades:</p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>Responder a tus consultas y brindarte información detallada sobre nuestros servicios de desarrollo e-commerce.</li>
+                    <li>Preparar y enviar propuestas técnicas y comerciales personalizadas de acuerdo con tu solicitud.</li>
+                    <li>Ponernos en contacto con vos a través de WhatsApp o correo electrónico para coordinar reuniones informativas.</li>
+                </ul>
 
-            <hr class="border-white/10 my-10">
+                <h2 class="text-2xl font-bold text-text-primary mt-6">3. Confidencialidad y Seguridad</h2>
+                <p>Vetrixweb no vende, alquila, transfiere ni comparte tus datos personales con terceros bajo ningún concepto, salvo consentimiento expreso del usuario o requerimiento legal. Implementamos medidas de seguridad técnicas y organizativas para resguardar tu información de accesos no autorizados, alteración o divulgación.</p>
 
-            <h2>1. Responsable del Tratamiento de los Datos</h2>
-            <p>De conformidad con la <strong>Ley de Protección de Datos Personales N° 25.326</strong> de la República
-                Argentina, se informa que el responsable de los datos personales recabados en este sitio web es:</p>
-            <ul>
-                <li><strong>Titular:</strong> Mauro Tello</li>
-                <li><strong>Domicilio:</strong> Jaime Harris 118, Carmen de Patagones (Código Postal 8504), Provincia de
-                    Buenos Aires, Argentina.</li>
-                <li><strong>Email de contacto:</strong> <a href="mailto:info@vetrixweb.com">info@vetrixweb.com</a></li>
-                <li><strong>Teléfono:</strong> +54 2920 538998</li>
-            </ul>
+                <h2 class="text-2xl font-bold text-text-primary mt-6">4. Cookies y Tecnologías de Seguimiento</h2>
+                <p>Este sitio web utiliza cookies básicas de análisis técnico y estadístico (como Google Analytics) para entender cómo navegan los usuarios y optimizar el rendimiento de la página. Estas cookies no recopilan información personal identificable directa. Para más detalles, consultá nuestra <a href="cookies.html" class="text-primary hover:underline">Política de Cookies</a>.</p>
 
-            <h2>2. Finalidad de la Recopilación de Datos</h2>
-            <p>Los datos solicitados a través de nuestro formulario de contacto (Nombre, Correo Electrónico, Teléfono y
-                Mensaje) tienen las siguientes finalidades exclusivas:</p>
-            <ul>
-                <li>Responder a sus consultas técnicas o comerciales enviadas mediante el formulario web.</li>
-                <li>Remitirle información relacionada con su solicitud de presupuestos, diagnósticos gratuitos o
-                    servicios de "Vetrix Web".</li>
-                <li>Habilitar canales de contacto directos, tales como correo electrónico o atención mediante WhatsApp.
-                </li>
-            </ul>
-            <p><strong>Bajo ninguna circunstancia sus datos serán prestados, alquilados, cedidos ni vendidos a terceros,
-                    empresas publicitarias u otras agencias.</strong></p>
+                <h2 class="text-2xl font-bold text-text-primary mt-6">5. Tus Derechos (Derechos ARCO)</h2>
+                <p>Como titular de los datos personales, tenés derecho a acceder, rectificar, actualizar o solicitar la eliminación definitiva de tus datos almacenados en nuestras bases de datos, de acuerdo con la Ley N° 25.326. Para ejercer estos derechos, podés enviar un correo electrónico a <a href="mailto:hola@vetrixweb.com" class="text-primary hover:underline">hola@vetrixweb.com</a> con el asunto "Derechos de Datos Personales".</p>
+                
+                <p class="text-sm border-t border-white/10 pt-4 mt-8">La Agencia de Acceso a la Información Pública (AAIP) es el Órgano de Control de la Ley N° 25.326 y tiene la atribución de atender las denuncias y reclamos que se interpongan con relación al incumplimiento de las normas sobre protección de datos personales.</p>
+            </div>
+        </main>
 
-            <h2>3. Uso de Inteligencia Artificial en Nuestro Contenido</h2>
-            <p>Para su conocimiento y mayor transparencia, aclaramos que todo el contenido visual <strong>(imágenes y
-                    fotografías)</strong> y el código/texto presentes en nuestro sitio web han sido elaborados
-                utilizando tecnologías de vanguardia de Inteligencia Artificial (IA). En caso de incluir siluetas o
-                fotografías que simulen personas humanas en la web, estas no corresponden a la identidad real de ninguna
-                persona, preservando así cualquier derecho de imagen, privacidad y de propiedad intelectual de terceros.
-            </p>
-
-            <h2>4. Derechos ARCO (Acceso, Rectificación, Cancelación y Oposición)</h2>
-            <p>Como usuario y titular de los datos personales, la <strong>Ley Argentina N° 25.326</strong> le otorga a
-                usted la potestad y el derecho irrenunciable de solicitar el acceso, rectificación, actualización o la
-                supresión completa de sus datos personales de nuestros registros en cualquier momento. </p>
-            <p>Para hacer efectivo este derecho, bastará con enviar un simple correo electrónico indicando su voluntad a
-                <strong>info@vetrixweb.com</strong> manifestando su requerimiento.
-            </p>
-            <p>Le informamos además que la entidad matriz, la <em>Agencia de Acceso a la Información Pública</em>, en su
-                carácter de Órgano de Control de la Ley N° 25.326, tiene la atribución de atender las denuncias y
-                reclamos que se interpongan con relación al incumplimiento de las normas sobre protección de datos
-                personales.</p>
-
-            <h2>5. Medidas de Seguridad</h2>
-            <p>Vetrix Web se compromete con el uso riguroso y confidencial de la información obtenida. Toda acción de
-                recolección en los formularios se envía de forma cifrada desde su navegador hacia nuestros servidores
-                mediante el protocolo estándar de seguridad SSL (HTTPS), asegurando la integridad criptográfica entre su
-                dispositivo y nuestro equipo.</p>
-
-            <h2>6. Cambios en la Política de Privacidad</h2>
-            <p>Nos reservamos el derecho exclusivo de actualizar y/o modificar la presente política sin previo aviso,
-                con el fin de adaptarla a novedades legales, jurisprudencia argentina o simples actualizaciones de
-                servicio de la infraestructura tecnológica provista. Toda modificación será reflejada oportunamente en
-                esta misma sección del sitio.</p>
-
-        </article>
-    </main>
-
-    <div id="footer-placeholder"></div>
-    <script src="/assets/js/layout.js"></script>
+        <!-- Footer Component -->
+        <footer class="bg-background-deep text-text-secondary font-body-md text-sm w-full border-t border-white/5 mt-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center px-6 md:px-16 py-8 max-w-[1280px] mx-auto gap-4 text-center md:text-left opacity-80 hover:opacity-100 transition-opacity">
+                <div class="flex flex-col gap-2 items-center md:items-start text-left">
+                    <div class="text-xs uppercase tracking-wider text-text-secondary/60 font-semibold">
+                        © 2026 VETRIX WEB INFRASTRUCTURE
+                    </div>
+                    <div class="flex items-center gap-2 font-black text-sm uppercase tracking-wide">
+                        <span class="text-text-secondary/80 font-bold text-xs">DESIGNED BY</span> 
+                        <span class="text-text-primary">VETRIXWEB</span>
+                        <svg class="inline-block w-6 h-4 rounded-sm shadow-sm" viewBox="0 0 36 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="36" height="24" rx="3" fill="#75AADB"/>
+                            <rect y="8" width="36" height="8" fill="white"/>
+                            <circle cx="18" cy="12" r="2.5" fill="#F4B41A"/>
+                            <circle cx="18" cy="12" r="1" fill="#D49400"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="flex gap-4 flex-wrap justify-center text-xs">
+                    <a class="hover:text-primary transition-all duration-300" href="privacidad.html">Política de Privacidad</a>
+                    <a class="hover:text-primary transition-all duration-300" href="terminos.html">Términos y Condiciones</a>
+                    <a class="hover:text-primary transition-all duration-300" href="cookies.html">Política de Cookies</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                icon.textContent = 'close';
+            } else {
+                menu.classList.add('hidden');
+                icon.textContent = 'menu';
+            }
+        }
+    </script>
 </body>
-
 </html>

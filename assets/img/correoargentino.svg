@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 50" width="100%" height="100%">
+  <!-- Correo Argentino Wings Circle Symbol -->
+  <g fill="none" stroke="#94a3b8" stroke-width="3">
+    <circle cx="25" cy="25" r="18" />
+    <path d="M13,22 C18,16 28,16 33,22" />
+    <path d="M14,28 C19,22 27,22 32,28" />
+  </g>
+  <!-- Text -->
+  <text x="50" y="32" font-family="'Inter', 'Arial Black', sans-serif" font-size="20" font-weight="900" font-style="italic" letter-spacing="-0.5" fill="#94a3b8">correo</text>
+  <text x="118" y="32" font-family="'Inter', 'Arial', sans-serif" font-size="20" font-weight="500" font-style="italic" letter-spacing="-0.5" fill="#94a3b8">argentino</text>
+</svg>

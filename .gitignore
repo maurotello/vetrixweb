@@ -1,7 +1,0 @@
-node_modules/
-tailwind.exe
-package-lock.json
-*.log
-.DS_Store
-informe/
-tailwindcss.exe

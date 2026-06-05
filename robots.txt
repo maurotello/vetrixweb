@@ -1,6 +1,5 @@
 User-agent: *
 Allow: /
-Allow: /en/
-Allow: /pt/
 
+# Sitemap Location
 Sitemap: https://vetrixweb.com/sitemap.xml
